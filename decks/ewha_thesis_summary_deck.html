@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>고은아 학위논문 발표자료 — 요약본 (30분)</title>
+<style>
+@font-face{font-family:NanumSquare_ac;src:url('NanumSquare_acR.ttf') format('truetype');font-weight:400}
+@font-face{font-family:NanumSquare_ac;src:url('NanumSquare_acB.ttf') format('truetype');font-weight:700}
+@font-face{font-family:NanumSquare_ac;src:url('NanumSquare_acEB.ttf') format('truetype');font-weight:800}
+@font-face{font-family:Pretendard;src:url('PretendardVariable.ttf') format('truetype');font-weight:100 900}
+:root{--ewha:#00663F;--ewha-deep:#00462c;--ewha-soft:#eef7f2;--mint:#dbeee6;--paper:#eef2f0;--ink:#14211b;--muted:#607169;--line:#d7e3dd;--gold:#c89f42;--navy:#15392a;--soft-gray:#f7faf8;}
+*{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--paper);font-family:"NanumSquare_ac","NanumSquare",Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif;color:var(--ink);word-break:keep-all} body{counter-reset:page} @page{size:297mm 210mm;margin:0}
+.page{width:297mm;height:210mm;min-width:297mm;min-height:210mm;max-width:297mm;max-height:210mm;margin:0 auto 8mm;background:#fff;position:relative;overflow:hidden;padding:31mm 16mm 16mm 16mm;box-shadow:0 12px 30px rgba(15,55,35,.10);page-break-after:always;}
+.page:before{content:"";position:absolute;left:0;top:0;width:100%;height:3.2mm;background:linear-gradient(90deg,var(--ewha),#45a06e)}
+@media print{body{background:#fff}.page{margin:0;box-shadow:none;page-break-after:always}.page:last-child{page-break-after:auto}}
+.side-label{position:absolute;left:16mm;right:16mm;top:7mm;height:17mm;border-bottom:1px solid var(--line);display:flex;gap:5mm;align-items:flex-end;padding-bottom:3.4mm;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.side-label .roman{font-size:13.5pt;font-weight:800;color:var(--ewha-deep)}.side-label .alpha{font-size:12.5pt;font-weight:700;color:#304e40}.side-label .num{font-size:11.2pt;color:#5d7068;overflow:hidden;text-overflow:ellipsis}.side-label:after{content:"";position:absolute;bottom:-1px;left:0;width:38mm;height:2px;background:var(--gold)}
+header{height:9mm;display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:5.5mm}header .tag{font-size:8.5pt;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--ewha)}header img{height:8mm;width:auto;object-fit:contain}
+footer{position:absolute;left:16mm;right:16mm;bottom:6mm;height:8mm;display:flex;align-items:center;gap:8mm;border-top:1px solid var(--line);padding-top:2.2mm;color:#728078;font-size:8.2pt}.foot-brand{display:flex;align-items:center;gap:2mm;min-width:47mm}.foot-brand img{height:4.8mm;width:auto}.foot-title{flex:1;text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.pg:after{counter-increment:page;content:counter(page, decimal-leading-zero);font-weight:800;color:var(--ewha-deep);letter-spacing:.08em}
+h1,h2,h3,p,ul{margin:0}h1{font-size:34pt;line-height:1.13;letter-spacing:-.055em;color:#10251c}h2{font-size:21.7pt;line-height:1.2;letter-spacing:-.04em;margin-bottom:4mm;color:#12261d}h3{font-size:14.3pt;color:var(--ewha-deep);margin-bottom:2mm}.eyebrow{font-size:9.6pt;font-weight:800;color:var(--ewha);letter-spacing:.16em;text-transform:uppercase;margin-bottom:4mm}.cover{padding:30mm 18mm 18mm 18mm}.cover .wordmark{position:absolute;right:16mm;top:14mm;height:15mm}.cover .seal-bg{position:absolute;right:-12mm;bottom:-16mm;width:125mm;opacity:.06}.cover-sub{font-size:16.5pt;line-height:1.5;color:#355246;margin-top:6mm;font-weight:700}.agenda{display:grid;grid-template-columns:repeat(5,1fr);gap:4mm;margin-top:3mm}.agenda div{border:1px solid var(--line);border-radius:5mm;padding:5mm;background:linear-gradient(180deg,#fff,#f9fcfa);min-height:50mm}.agenda b{display:block;font-size:21pt;color:var(--ewha);margin-bottom:2mm}.agenda strong{display:block;font-size:16pt;letter-spacing:-.03em;margin-bottom:2mm}.agenda span{font-size:11.5pt;line-height:1.55;color:#58695f}.bullet-list{padding-left:5.5mm;margin-top:1mm;max-width:248mm}.bullet-list li{font-size:13.35pt;line-height:1.50;margin:1.65mm 0;color:#263931}.bullet-list li::marker,.table-summary li::marker{color:var(--ewha);font-size:.9em}.figure-box{height:116mm;border:1px solid var(--line);border-radius:5mm;background:var(--soft-gray);display:flex;align-items:center;justify-content:center;padding:5mm}.figure-box img{max-width:100%;max-height:100%;object-fit:contain}.table-wrap{height:118mm;display:flex;align-items:flex-start;overflow:hidden}.data-table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:3.5mm;overflow:hidden;font-size:8.8pt;line-height:1.30;table-layout:fixed}.data-table th{background:var(--ewha-deep);color:#fff;text-align:left;padding:1.8mm;font-weight:800;vertical-align:top;border-right:1px solid rgba(255,255,255,.18)}.data-table td{padding:1.45mm 1.7mm;border-top:1px solid var(--line);border-right:1px solid var(--line);vertical-align:top;color:#26372f}.data-table tr:nth-child(even) td{background:#fbfdfc}.data-table td:first-child{font-weight:800;background:#f1f8f4;color:#143c29}.data-table th:last-child,.data-table td:last-child{border-right:0}.data-table.dense{font-size:7.85pt;line-height:1.22}.data-table.dense th{padding:1.35mm}.data-table.dense td{padding:1.15mm 1.3mm}.data-table.ultra{font-size:7.0pt;line-height:1.16}.table-summary{margin-top:3.5mm;padding-left:5.5mm;border-left:4px solid var(--gold);background:#fffdf8;border-radius:0 3mm 3mm 0;padding-top:2mm;padding-bottom:2mm;padding-right:4mm}.table-summary li{font-size:10.8pt;line-height:1.38;margin:0.8mm 0;color:#35463e}.closing .thanks{height:142mm;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.thanks img{width:34mm;margin-bottom:9mm}.thanks h1{font-size:40pt;color:var(--ewha)}
+
+/* v4 layout refinements */
+.page{padding-top:31mm;}
+.side-label{height:19mm;align-items:flex-end;white-space:normal;overflow:hidden;}
+.side-label .num{white-space:normal;line-height:1.22;max-width:150mm;display:block;}
+.side-label .num .num-main{display:block;font-weight:700;color:#50675c;}
+.side-label .num .num-sub{display:block;color:#6b7d74;font-size:10.4pt;margin-top:.5mm;}
+.table-wrap{height:auto;max-height:132mm;overflow:visible;align-items:flex-start;}
+.table-summary{margin-top:2.5mm;margin-bottom:0;display:block;}
+.data-table{font-size:8.3pt;line-height:1.23;}
+.data-table th{padding:1.35mm 1.45mm;}
+.data-table td{padding:1.05mm 1.2mm;}
+.data-table.dense{font-size:6.7pt;line-height:1.12;}
+.data-table.dense th{padding:0.95mm 1.0mm;}
+.data-table.dense td{padding:0.72mm 0.85mm;}
+.data-table.ultra{font-size:5.75pt;line-height:1.06;}
+.data-table.ultra th{padding:0.6mm 0.7mm;}
+.data-table.ultra td{padding:0.45mm 0.55mm;}
+.data-table.mega{font-size:5.25pt;line-height:1.02;}
+.data-table.mega th{padding:0.48mm 0.55mm;}
+.data-table.mega td{padding:0.34mm 0.42mm;}
+.table-summary li{font-size:10.1pt;line-height:1.30;margin:.55mm 0;}
+.table-summary.compact li{font-size:9.35pt;line-height:1.24;margin:.35mm 0;}
+
+/* v5 readability and local figure refinements */
+.table-summary{margin-top:3mm !important;margin-bottom:0 !important;background:#fffdf8;border-left:4px solid var(--gold);padding:2.4mm 4.5mm 2.4mm 5.5mm;}
+.table-summary li{font-size:12.4pt !important;line-height:1.42 !important;margin:0.9mm 0 !important;color:#273a31;}
+.table-summary.compact li{font-size:11.6pt !important;line-height:1.34 !important;margin:.65mm 0 !important;}
+.data-table{font-size:11.1pt !important;line-height:1.26 !important;}
+.data-table th{padding:1.55mm 1.65mm !important;}
+.data-table td{padding:1.15mm 1.35mm !important;}
+.data-table.dense{font-size:9.8pt !important;line-height:1.18 !important;}
+.data-table.dense th{padding:1.15mm 1.25mm !important;}
+.data-table.dense td{padding:.82mm .95mm !important;}
+.data-table.ultra{font-size:8.7pt !important;line-height:1.12 !important;}
+.data-table.ultra th{padding:.82mm .92mm !important;}
+.data-table.ultra td{padding:.62mm .72mm !important;}
+.data-table.mega{font-size:7.95pt !important;line-height:1.08 !important;}
+.data-table.mega th{padding:.65mm .72mm !important;}
+.data-table.mega td{padding:.48mm .58mm !important;}
+.table-wrap{height:auto !important;max-height:none !important;overflow:visible !important;}
+.stage-compare col:first-child{width:14% !important;}
+.stage-compare col:nth-child(2){width:43% !important;}
+.stage-compare col:nth-child(3){width:43% !important;}
+.stage-compare td:first-child,.stage-compare th:first-child{text-align:center;vertical-align:middle;}
+.figure-box img{max-width:100%;max-height:100%;object-fit:contain;}
+
+
+/* v6 page-specific readability refinements */
+.figure-compact .figure-box{height:42mm !important;padding:2.2mm 3mm !important;background:#fff !important;border-radius:4mm !important;align-items:center !important;justify-content:center !important;}
+.figure-compact .figure-box img{max-width:100% !important;max-height:36mm !important;width:auto !important;height:auto !important;}
+.figure-compact .table-summary{margin-top:2.2mm !important;}
+.figure-compact .table-summary li{font-size:12.6pt !important;line-height:1.42 !important;}
+.table-readable .data-table{font-size:12.35pt !important;line-height:1.28 !important;}
+.table-readable .data-table th{padding:1.65mm 1.75mm !important;}
+.table-readable .data-table td{padding:1.2mm 1.4mm !important;}
+.result-table-range .data-table{font-size:11.45pt !important;line-height:1.20 !important;}
+.result-table-range .data-table th{padding:1.15mm 1.25mm !important;}
+.result-table-range .data-table td{padding:.82mm .92mm !important;}
+.result-table-range .data-table td:first-child,.result-table-range .data-table th:first-child{text-align:center;vertical-align:middle;}
+.post109-tables .data-table{font-size:11.35pt !important;line-height:1.22 !important;}
+.post109-tables .data-table th{padding:1.15mm 1.25mm !important;}
+.post109-tables .data-table td{padding:.86mm .98mm !important;}
+.post109-tables .data-table.dense{font-size:10.95pt !important;line-height:1.18 !important;}
+.post109-tables .data-table.ultra{font-size:10.35pt !important;line-height:1.14 !important;}
+.post109-tables .data-table.mega{font-size:9.6pt !important;line-height:1.10 !important;}
+.visibility-compare th:nth-child(1),.visibility-compare td:nth-child(1){width:9% !important;text-align:center;}
+.visibility-compare th:nth-child(2),.visibility-compare td:nth-child(2){width:18% !important;}
+.visibility-compare th:nth-child(3),.visibility-compare td:nth-child(3){width:19% !important;}
+.visibility-compare th:nth-child(4),.visibility-compare td:nth-child(4){width:24% !important;}
+.visibility-compare th:nth-child(5),.visibility-compare td:nth-child(5){width:30% !important;}
+.stage-page .stage-compare{font-size:10.75pt !important;line-height:1.14 !important;}
+.stage-page .stage-compare th{padding:1.0mm 1.05mm !important;}
+.stage-page .stage-compare td{padding:.72mm .86mm !important;}
+.stage-page .stage-compare td:first-child,.stage-page .stage-compare th:first-child{text-align:center;vertical-align:middle;}
+.stage-page .table-summary li{font-size:11.4pt !important;line-height:1.28 !important;}
+
+
+/* v7 refinements */
+.figure-fit .figure-box{height:auto !important;width:fit-content !important;max-width:100% !important;margin:0 auto !important;padding:2.2mm 2.8mm !important;background:#fff !important;border-radius:4mm !important;display:flex !important;align-items:center !important;justify-content:center !important;}
+.figure-fit .figure-box img{display:block !important;width:auto !important;height:auto !important;max-width:246mm !important;max-height:58mm !important;object-fit:contain !important;}
+.figure-fit .table-summary{margin-top:2.2mm !important;}
+.figure-fit .table-summary li{font-size:12.7pt !important;line-height:1.42 !important;}
+.natural-hypothesis .data-table{font-size:11.7pt !important;line-height:1.22 !important;}
+.natural-hypothesis .data-table th{padding:1.1mm 1.25mm !important;}
+.natural-hypothesis .data-table td{padding:.78mm .95mm !important;}
+.natural-hypothesis .data-table th:first-child,.natural-hypothesis .data-table td:first-child{width:6% !important;text-align:center !important;vertical-align:middle !important;}
+.natural-hypothesis .data-table th:nth-child(2),.natural-hypothesis .data-table td:nth-child(2){width:24% !important;}
+.natural-hypothesis .data-table th:nth-child(3),.natural-hypothesis .data-table td:nth-child(3){width:24% !important;}
+.natural-hypothesis .data-table th:nth-child(4),.natural-hypothesis .data-table td:nth-child(4){width:27% !important;}
+.natural-hypothesis .data-table th:nth-child(5),.natural-hypothesis .data-table td:nth-child(5){width:19% !important;}
+.education-suggestions .bullet-list li{font-size:13.15pt !important;line-height:1.43 !important;margin:1.15mm 0 !important;}
+
+
+/* v8 requested refinements */
+.figure-v6-large .figure-box{height:116mm !important;width:100% !important;max-width:100% !important;margin:0 !important;padding:5mm !important;background:var(--soft-gray) !important;border-radius:5mm !important;}
+.figure-v6-large .figure-box img{max-width:100% !important;max-height:100% !important;width:auto !important;height:auto !important;object-fit:contain !important;}
+.figure-v6-large .table-summary{margin-top:3mm !important;}
+.method-validity-continued .bullet-list li{font-size:12.85pt !important;line-height:1.42 !important;margin:1.15mm 0 !important;}
+.method-validity .bullet-list li{font-size:12.8pt !important;line-height:1.40 !important;margin:1.05mm 0 !important;}
+.method-analysis .bullet-list li{font-size:13.15pt !important;line-height:1.45 !important;margin:1.18mm 0 !important;}
+
+/* v9 requested text additions and overflow safeguards */
+.long-page .bullet-list li{font-size:11.35pt !important;line-height:1.28 !important;margin:.72mm 0 !important;}
+.long-summary .table-summary li{font-size:10.85pt !important;line-height:1.28 !important;margin:.55mm 0 !important;}
+.page.long-summary .table-summary{padding-top:1.7mm !important;padding-bottom:1.7mm !important;}
+.result-table-range.long-summary .data-table{font-size:10.6pt !important;line-height:1.16 !important;}
+.result-table-range.long-summary .data-table th{padding:.85mm 1mm !important;}
+.result-table-range.long-summary .data-table td{padding:.55mm .7mm !important;}
+
+</style></head>
+<body>
+<section class="page cover">
+<img alt="Ewha" class="wordmark" src="ewha_assets/ewha_wordmark.png"/>
+<img alt="" class="seal-bg" src="ewha_assets/ewha_seal.png"/>
+<div class="eyebrow">Master's Thesis Presentation</div>
+<h1>지구과학 관련 재해 교육 프로그램에서 나타난<br/>중학생의 추론 특성</h1>
+<p class="cover-sub">이화여자대학교 대학원 과학교육학과 · 212SIG01 고은아</p>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">Title</div><div class="pg"></div></footer>
+</section><section class="page">
+<header><span class="tag">Contents</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>발표 구성</h2>
+<div class="agenda">
+<div><b>Ⅰ</b><strong>서론</strong><span>연구 필요성, 목적, 연구 문제</span></div>
+<div><b>Ⅱ</b><strong>선행 연구</strong><span>자연재해 교육과 과학교육 추론의 연결</span></div>
+<div><b>Ⅲ</b><strong>연구 방법</strong><span>질적 사례 연구, 참여자, 프로그램, 자료 분석</span></div>
+<div><b>Ⅳ</b><strong>연구 결과</strong><span>유형별 특징, 추론 흐름, 변화, 교육적 의미</span></div>
+<div><b>Ⅴ</b><strong>결론 및 제언</strong><span>결론, 교육적 제언, 후속 연구 제언</span></div>
+</div>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">Contents</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅰ. 서론</div><div class="alpha">A. 연구의 필요성</div><div class="num">1. 자연재해 교육의 사회적·교육적 필요성</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>1. 자연재해 교육의 사회적·교육적 필요성</h2>
+<ul class="bullet-list"><li>최근 자연재해는 특정 지역에서 예외적으로 발생하는 사건이 아니라, 학교 교육이 지속적으로 다루어야 하는 삶의 맥락 속 위험으로 자리하고 있다.</li><li>재난 위험 경감 교육(Disaster Risk Reduction Education)은 자연재해로 인한 인명 피해와 사회적 손실을 줄이기 위한 핵심 수단으로 이해되며, 학교는 이러한 교육이 체계적으로 이루어져야 할 중심 공간으로 강조되고 있다(UNESCO, 2012; UNESCO, 2024).</li><li>특히 학교 안전은 단순한 시설 보호의 차원을 넘어 학생과 교직원의 생명 보호, 학습의 지속성, 공동체 회복력 형성과 직접 연결된다는 점에서 교육적 의미가 크다(UNESCO, 2012; UNESCO, 2024; GADRRRES, 2024).</li><li>이와 같은 흐름은 재난교육의 방향을 단순한 비상 대응 훈련 중심에서 교육과정 기반의 체계적 교육으로 전환하도록 요구한다.</li><li>학교 기반 재난교육 프로그램을 체계적으로 검토한 연구들은 재난교육이 학생들의 재난 관련 지식, 대비 행동, 생존 기술 향상에 긍정적인 효과를 보일 수 있다고 보고하였으며, 교육의 효과가 일회적 훈련이나 정보 전달에 머무를 경우 실제 판단과 실천으로 이어지기 어렵다는 점도 함께 지적하였다(Seddighi et al., 2022; Johnson et al., 2014).</li><li>또한 최근 재난 위험 경감 교육의 동향을 다룬 연구는 기후 위기와 복합 재난의 시대에 학교 재난교육이 더 이상 부차적 교육 주제가 아니라, 회복력과 지속 가능성을 형성하는 핵심 교육 영역으로 자리해야 한다고 보았다(Tyas et al., 2025; UNESCO, 2024; Seddighi et al., 2022).</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">1. 자연재해 교육의 사회적·교육적 필요성</div><div class="pg"></div></footer>
+</section><section class="page long-page">
+<div class="side-label"><div class="roman">Ⅰ. 서론</div><div class="alpha">A. 연구의 필요성</div><div class="num">2. 과학교육에서 자연재해 교육을 다룰 필요성</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>2. 과학교육에서 자연재해 교육을 다룰 필요성</h2>
+<ul class="bullet-list"><li>자연재해 교육은 안전교육의 하위 영역이면서 동시에 과학교육의 중요한 실천적 영역의 교육이기도 하다.</li><li>현대 과학교육은 사실과 개념의 습득만이 아니라 설명 구성, 증거 활용, 논증, 모델 개발, 인과적 추론과 같은 과학적 실천을 핵심으로 본다.</li><li>K-12 과학교육 프레임워크는 학생들이 현상을 설명하고, 증거를 평가하며, 논증에 참여하는 과정을 과학교육의 중심에 놓아야 한다고 제안한다(National Research Council, 2012).</li><li>이러한 관점에서 자연재해는 자연현상에 대한 과학적 이해와 실제 삶 속 문제 해결이 직접 만나는 대표적 주제라고 할 수 있다.</li><li>과학교육에서 학생은 단순히 교사가 제시한 지식을 수용하는 존재가 아니라, 현상을 해석하고 설명을 구성하며, 그 설명의 타당성을 검토하고 정당화하는 존재로 이해된다(Osborne &amp; Patterson, 2011; Reiser et al., 2012).</li><li>Lawson은 과학적 추론을 관찰과 단서로부터 가능한 설명과 결론을 이끌어 내는 사고 과정으로 설명하였고, Toulmin은 주장과 근거, 이유를 연결하는 정당화의 구조를 강조하였다(Lawson, 2004; Toulmin, 2003).</li><li>이러한 논의는 자연재해 교육에서도 적용될 수 있는데, 학생이 자연재해를 접할 때 무엇이 위험의 신호인지, 어떤 조건에서 위험이 커지는지, 그리고 어떤 대응이 더 적절한지를 함께 판단해야 하기 때문이다(National Research Council, 2012; Reiser et al., 2012).</li><li>특히 자연재해는 자연현상에 대한 과학적 설명이 곧바로 위험 판단과 대응 선택으로 이어져야 한다는 점에서, 과학교육의 실천적 의미를 가장 뚜렷하게 드러내는 주제 가운데 하나라고 볼 수 있다(National Research Council, 2012; Reiser et al., 2012; 이규호와 권병두, 2010).</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">2. 과학교육에서 자연재해 교육을 다룰 필요성</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅰ. 서론</div><div class="alpha">A. 연구의 필요성</div><div class="num">3. 지구과학 관련 재해 선택의 필요성</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>3. 지구과학 관련 재해 선택의 필요성</h2>
+<ul class="bullet-list"><li>본 연구에서 지구과학 관련 재해를 중심으로 프로그램을 구성한 이유는, 자연재해가 지구과학 교육의 핵심 개념과 직접적으로 연결되기 때문이다.</li><li>폭염, 태풍, 미세먼지, 황사, 대설은 대기와 기후, 에너지 순환, 인간 활동과 연결되는 주제이며, 지진과 산사태는 지권의 변화, 지형, 지각 운동과 연결된다.</li><li>즉 이들 재해는 지구 시스템의 상호작용이 실제 생활 속 위험으로 드러나는 대표적인 사례라고 할 수 있다(National Research Council, 2012; UNESCO, 2024).</li><li>지구과학 교육의 중요한 특징 가운데 하나는, 학생이 눈앞의 단순 현상을 넘어서 시간적으로 길고 공간적으로 넓은 과정, 직접 볼 수 없는 구조, 여러 단서의 종합을 통해 현상을 이해해야 한다는 점이다(김현주 외, 2018; 오필석과 김찬종, 2005).</li><li>지구과학 교육은 공간 자료와 시각 자료를 해석하면서 공간적 추론을 형성하는 과정을 포함한다(송동혁과 맹승호, 2019).</li><li>지구과학에서는 현재의 지형, 지층, 대기 현상, 자료와 지도, 모형 등을 통해 과거와 미래의 과정, 보이지 않는 구조, 잠재적 위험을 추론해야 하는 경우가 많으며, 이러한 이유로 지구과학 영역에서 귀추적 추론이 특히 중요하다(Engelhardt &amp; Zimmermann, 1988; 오필석과 김찬종, 2005; 박종원, 2000; 이규호와 권병두, 2010; 맹승호 외, 2007; Oviedo &amp; Clement, 2003; Oreskes, 1999).</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">3. 지구과학 관련 재해 선택의 필요성</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅰ. 서론</div><div class="alpha">A. 연구의 필요성</div><div class="num">4. 중학생 대상 지구과학 관련 재해 교육의 중요성</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>4. 중학생 대상 지구과학 관련 재해 교육의 중요성</h2>
+<ul class="bullet-list"><li>중학생은 지구과학 관련 재해 교육을 다루기에 특히 중요한 학습자 집단이다.</li><li>청소년기는 아동기에 비해 복합적인 설명과 근거 제시, 자기조절, 의사결정이 가능해지는 시기인 동시에, 여전히 감각적 경험과 생활 경험의 인상이 강하게 작동하는 시기이다(Keating, 2011).</li><li>따라서 단순한 수칙 암기보다 상황을 해석하고 근거를 들어 판단하는 학습 경험이 주어질 때 교육적 효과가 더 크게 나타날 가능성이 있다(Keating, 2011; Reiser et al., 2012; Sampson &amp; Clark, 2008; Sandoval &amp; Millwood, 2005).</li><li>국내 중학생 대상 과학교육 연구는 이 시기의 학생들이 설명과 논의, 논증, 정당화를 수행할 수 있는 가능성을 보여 준다.</li><li>지구과학 영역에서도 중학생이 귀추 전략을 적용하여 지구과학 탐구 문제를 해결할 수 있다는 연구 결과가 보고된 바 있다(맹승호 외, 2007; 정찬미, 2018; 강현지와 신동희, 2021; 최하늘과 신동희, 2021).</li><li>이러한 연구는 중학생 대상 지구과학 관련 재해 교육이 단순한 정보 전달이 아니라, 학생들의 추론 과정과 판단 근거를 드러내는 방향으로 설계될 수 있음을 시사한다.</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">4. 중학생 대상 지구과학 관련 재해 교육의 중요성</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅰ. 서론</div><div class="alpha">A. 연구의 필요성</div><div class="num">5. 본 연구의 필요성</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>5. 본 연구의 필요성</h2>
+<ul class="bullet-list"><li>재난교육 및 재난 위험 경감 교육 관련 선행 연구는 학교가 재난 대비와 회복력 형성의 핵심 공간이라는 점을 반복적으로 제시해 왔다.</li><li>학교 기반 재난교육 프로그램의 효과를 검토한 연구들은 학생들의 재난 관련 지식, 태도, 대비 행동, 회복력 향상 가능성을 확인하였고, 교육과정과의 통합과 지역사회 연계의 중요성도 함께 강조하였다(Seddighi et al., 2022; Tyas et al., 2025; UNESCO, 2012; UNESCO, 2024).</li><li>국내 연구들 역시 학교 안전 교육의 실태, 재난안전교육에 대한 인식, 교육과정 속 재난 안전 내용의 체계성을 중심으로 논의를 전개해 왔다(이효철과 김정환, 2021; 정희수와 송창근, 2022).</li><li>과학교육과 지구과학교육에서의 추론 연구는 학생들이 설명을 구성하고, 증거를 활용하며, 근거를 통해 판단을 정당화하는 과정을 중요하게 다루어 왔다(National Research Council, 2012; Reiser et al., 2012).</li><li>국내 중학생 대상 연구들 역시 학생들이 또래 논의와 탐구 과정을 통해 설명과 근거, 논의와 정당화를 수행할 수 있음을 보여 주었다(박지연 외, 2020; 장경화 외, 2016).</li><li>또한 지구과학 교육 맥락에서는 지구과학적 현상의 특성을 반영한 추론 중심 탐구 수업 모형, 귀추법에 대한 이론적 고찰, 중학생의 귀추 전략 활용, 공간적 추론 연구 등이 축적되어 왔다(이규호와 권병두, 2010; 김영민, 2019; 오필석과 김찬종, 2005; 송동혁과 맹승호, 2019; 정용재와 송진웅, 2006; 맹승호 외, 2007).</li><li>본 연구는 자연재해 교육 연구를 지식·태도·준비도 중심 논의에서 확장하여, 학생들의 실제 추론 과정과 재난 유형별 사고 구조를 질적으로 드러내고자 한 시도이다.</li><li>동시에 과학교육과 지구과학 교육에서의 설명, 논증, 정당화, 귀추적 추론 연구를 자연재해 교육이라는 삶의 맥락에 적용함으로써, 두 연구 영역을 연결하는 의미도 가진다.</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">5. 본 연구의 필요성</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅰ. 서론</div><div class="alpha">B. 연구 목적과 연구 문제</div><div class="num"></div></div>
+<header><span class="tag">Subsection</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>B. 연구 목적과 연구 문제</h2>
+<ul class="bullet-list"><li>본 연구의 목적은 지구과학 관련 재해 교육 프로그램에서 나타나는 중학생의 추론 특성을 분석하는 것이다.</li><li>본 연구의 목적을 달성하기 위하여 다음과 같은 연구 문제를 설정하였다.</li><li>첫째, 자연재해 교육 프로그램에서 자연재해 유형별로 나타나는 학생들의 추론 과정의 특징은 무엇인가?</li><li>둘째, 자연재해 교육 프로그램에서 나타나는 학생들의 추론 과정은 어떠한 흐름을 보이는가?</li><li>셋째, 자연재해 교육 프로그램 적용 이후 학생들의 자연재해 이해, 판단 근거는 어떻게 변화하는가?</li><li>넷째, 자연재해 교육 프로그램은 어떠한 교육적 의미를 가지는가?</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">B. 연구 목적과 연구 문제</div><div class="pg"></div></footer>
+</section><section class="page long-page">
+<div class="side-label"><div class="roman">Ⅱ. 선행 연구</div><div class="alpha">A. 자연재해 교육</div><div class="num">1. 자연재해 교육의 의미와 필요성</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>1. 자연재해 교육의 의미와 필요성</h2>
+<ul class="bullet-list"><li>자연재해(Natural Disaster)는 인간의 통제 범위를 벗어난 지구 시스템의 자연적 변동성(hazard)이 인간 사회의 내재적 취약성(vulnerability) 및 지리적 노출(exposure)과 결합하여 발생하는 복합적인 위기 상황을 의미한다(Wisner et al., 2004; Kelman, 2020).</li><li>과거의 인식은 재난을 자연 현상 그 자체의 물리적 파괴력으로만 규정하였고, 재해가 발생했을 때 사후적으로 피해를 복구하거나 일차원적인 대피 행동 요령을 전달하는 데 국한되었다(Smith, 2013; 이재은, 2015).</li><li>그러나 기후변화에 관한 정부간 협의체(IPCC)의 최근 보고서들이 경고하듯, 급격한 기후변화와 무분별한 도시화로 인해 현대의 자연재해는 발생 빈도가 증가했을 뿐만 아니라 복합적이며 예측 불가능한 형태로 전개되고 있다(IPCC, 2023; Alexander, 2016).</li><li>이러한 위험과 불확실성은 기존의 사후 대응적, 매뉴얼 중심적 방재 체계가 지닌 한계를 드러내었다.</li><li>현대의 자연재해 교육은 단순히 예기치 못한 재난 상황이 발생했을 때 취해야 하는 수칙을 암기하는 수동적인 안전 훈련이 아니다(Hoffmann &amp; Muttarak, 2017; Bell et al., 2024).</li><li>진정한 자연재해 교육은 학습자가 자신이 속한 지역사회의 복합적인 위험 요소를 스스로 식별하고, 재해 현상을 과학적 논리로 이해하여 합리적인 의사결정을 내리도록 돕는 능동적 역량 강화 과정이다(Zeidler, 2014).</li><li>학교 안전 교육이 실제로 운영되고 있으나, 학생들의 지식 수준과 실천 수준 사이에 차이가 존재할 수 있으며, 이는 학생들이 재난 관련 정보를 어느 정도 알고 있더라도 실제 상황에서의 판단과 행동으로 곧바로 연결되지 않을 수 있음을 의미한다(이효철과 김정환, 2021).</li><li>따라서 자연재해 교육은 단순히 재난의 종류와 수칙을 전달하는 방식에 머물지 않고, 학생들이 위험을 해석하고 스스로 판단할 수 있도록 하는 방향으로 재구성될 필요가 있다(이효철과 김정환, 2021; 정희수와 송창근, 2022).</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">1. 자연재해 교육의 의미와 필요성</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅱ. 선행 연구</div><div class="alpha">A. 자연재해 교육</div><div class="num">2. 학교 자연재해 교육의 내용과 접근 방식</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>2. 학교 자연재해 교육의 내용과 접근 방식</h2>
+<ul class="bullet-list"><li>학교는 학생들에게 재난 대비를 일상적으로 자연스럽게 체득시키고, 나아가 학생들을 매개로 개별 가정과 지역사회 전반으로 선진화된 방재 문화를 널리 확산할 수 있는 가장 효율적인 핵심 장소이다(Kagawa &amp; Selby, 2012; Amri et al., 2017).</li><li>해외의 자연재해 교육 사례를 살펴보면, 재난의 과학적 원리 이해와 더불어 실제 데이터와 지역적 맥락을 활용한 장소 기반 교육(Place-Based Education, PBE)이 주를 이룬다.</li><li>일본과 미국의 방재 교육은 지역의 지질학적, 기상학적 특성을 반영한 맞춤형 교육과정을 운영하며, 학생들이 주도적으로 거주지의 취약성을 분석하여 커뮤니티 방재 지도(hazard map)를 제작하거나 과거의 재난 사례를 분석하여 최적의 대응 방안을 논의하는 탐구 중심의 접근을 적극적으로 도입하고 있다(Shiwaku et al., 2007; Mochizuki &amp; Bryan, 2015; UNESCO, 2012).</li><li>국내의 경우 2014년 세월호 참사 및 연이은 대형 지진(경주, 포항 지진)과 최근의 극단적 국지성 호우, 폭염 등을 겪으며 학교 안전 및 자연재해 교육의 중요성이 국가적 차원에서 강력하게 대두되었다(교육부, 2015; 정희수와 송창근, 2022).</li><li>현재 중학교 교육과정에서는 '학교 안전 교육 7대 표준안'에 명시된 기준에 따라 재난 안전 교육을 의무적으로 시행하고 있으며, 자연 재난으로는 태풍, 홍수, 지진, 해일, 대설, 한파, 폭염, 낙뢰, 황사, 미세먼지를 다루고 있다.</li><li>그러나 학교 현장에서 이루어지는 자연재해 교육이 여전히 매뉴얼 숙지나 동영상 시청 중심의 주입식 훈련에 크게 편중되어 있어 학습자의 지식과 실제적 실천의 간극이 발생한다(정희수와 송창근, 2022; Guo et al., 2021).</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">2. 학교 자연재해 교육의 내용과 접근 방식</div><div class="pg"></div></footer>
+</section><section class="page long-page">
+<div class="side-label"><div class="roman">Ⅱ. 선행 연구</div><div class="alpha">A. 자연재해 교육</div><div class="num">3. 자연재해 교육 관련 선행 연구의 동향</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>3. 자연재해 교육 관련 선행 연구의 동향</h2>
+<ul class="bullet-list"><li>자연재해 교육과 관련하여 지금까지 수행된 국내외 선행 연구는 크게 세 가지 흐름으로 전개되어 왔다.</li><li>첫 번째 흐름은 국가 재난 관리 시스템과 연계된 거시적인 교육 정책 분석, 학교 안전 인프라 구축 방안, 교사의 방재 역량 강화를 모색하는 법·제도 및 행정적 차원의 연구들이다(UNESCO, 2023; Ronan et al., 2016; Bell et al., 2024).</li><li>이러한 연구들은 자연재해 교육이 공교육 체제 내에 안착하기 위한 물적, 제도적 기반을 마련하는 데 필수적인 토대를 제공하였다.</li><li>두 번째 흐름은 특정한 방재 교육 프로그램이나 융합형 수업 모형을 개발한 뒤, 그에 따른 교육적 효과를 정량적으로 검증하는 효과성 연구이다(Seddighi et al., 2022; UNESCO, 2024).</li><li>이 단계의 선행 연구들은 재해 교육 처치를 투입하기 전과 후에 학생들이 나타내는 '안전 및 위험 인식의 변화', '재해 대응 지식의 학업 성취도', '프로그램에 대한 정의적 만족도', '방재 준비도' 등 외형적으로 드러나는 결과 변인을 리커트 척도(Likert scale) 형태의 설문지를 통해 통계적으로 측정하는 방법으로 진행되었다(Seddighi et al., 2022; Johnson et al., 2014; Tyas et al., 2025).</li><li>세 번째 흐름은, 학습자의 인지적 과정과 의사결정 메커니즘 자체에 깊숙이 개입하여 이를 질적으로 조사하는 심층 연구이다.</li><li>자연재해 상황은 모든 변인이 완벽하게 제어된 실험실 환경과 달리, 파편화되고 상충하는 정보가 실시간으로 주어지는 매우 불확실하고 비구조화된 문제(ill-structured problem) 상황이다(Jonassen, 1997; Schwartz et al., 2018).</li><li>학습자가 혼란스러운 상황 속에서 '어떠한 과학적 단서'를 유의미하게 식별해 내고, '과학적 선지식'을 어떻게 동원하며, 어떠한 논리적 단계를 거쳐 '위험 시나리오를 추론'하고 최종적인 행동을 결정하는지 그 사고의 과정을 세밀하게 분석한 연구는 부족한 실정이다((오필석, 2006; 맹승호 외, 2007; 정찬미, 2018).</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">3. 자연재해 교육 관련 선행 연구의 동향</div><div class="pg"></div></footer>
+</section><section class="page long-page">
+<div class="side-label"><div class="roman">Ⅱ. 선행 연구</div><div class="alpha">B. 과학교육에서의 추론</div><div class="num">1. 추론의 의미와 과학교육적 성격</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>1. 추론의 의미와 과학교육적 성격</h2>
+<ul class="bullet-list"><li>인간의 인지적 활동에서 '추론(Reasoning)'이란 이미 알고 있는 지식이나 관찰된 사실 등의 전제를 바탕으로, 아직 알지 못하는 새로운 결론이나 법칙을 논리적으로 도출해 내는 고도의 사고 과정을 의미한다(Lawson, 2004; 권용주 외, 2003).</li><li>전통적인 철학 및 심리학적 맥락에서 추론은 주로 형식 논리에 입각한 연역(deduction)과 경험적 일반화를 도모하는 귀납(induction)으로 구분하여 설명되어 왔다(Dunbar &amp; Klahr, 2012).</li><li>이는 자연 현상에 내재된 불확실성을 통제하고, 관찰된 데이터와 추상적인 이론 간의 간극을 연결하며, 새로운 가설을 생성 및 평가하는 총체적이고 역동적인 인식론적 실천(epistemic practice)이다(Lawson, 2005; Zimmerman, 2007; Kelly, 2008).</li><li>최근의 과학교육은 과학을 '완성된 지식의 집합체'로 간주하여 이를 전달하는 데 치중하던 전통적 관점에서 탈피하여, 지식이 생성되고 합의되는 '실천적 과정(practice)' 자체를 학습하는 방향으로 진화하였다(National Research Council, 2012; Reiser et al., 2012).</li><li>이러한 패러다임의 전환 속에서 추론은 과학적 실천을 이끄는 가장 핵심적인 과정으로 자리하였다.</li><li>과학교육적 맥락에서 추론이 지니는 독특한 성격은 철저히 '맥락 의존적(context-dependent)'이며 '문제 해결 지향적(problem-solving oriented)'이라는 점에 있다(Osborne, 2014).</li><li>교실이나 일상생활에서 마주하는 과학적 문제들은 교과서의 공식처럼 명확한 변인들로 구성되어 있지 않다. 따라서 학습자는 불완전하고 파편화된 증거들을 수집하고, 자신의 기존 지식 체계와 끊임없이 비교·대조하며 타당한 의미를 부여(sense-making)해야 한다(Braaten &amp; Windschitl, 2011).</li><li>결론적으로 과학교육에서의 추론은 학습자가 자연의 불확실성 앞에서도 과학적 원리와 증거를 능동적으로 구성하여 현상을 이해하고 합리적인 결정을 내릴 수 있도록 돕는 본질적인 인지적 도구라 할 수 있다(Duschl &amp; Grandy, 2013).</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">1. 추론의 의미와 과학교육적 성격</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅱ. 선행 연구</div><div class="alpha">B. 과학교육에서의 추론</div><div class="num">2. 과학교육에서의 설명, 논증, 정당화</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>2. 과학교육에서의 설명, 논증, 정당화</h2>
+<ul class="bullet-list"><li>과학교육에서 학습자의 내적 추론 과정은 단일한 사고 작용으로 끝나는 것이 아니라, 주로 '설명(Explanation)', '논증(Argumentation)', 그리고 '정당화(Justification)'라는 세 가지 실천 단계를 통해 교실 내에서 표출되고 사회적으로 구성된다(Osborne &amp; Patterson, 2011; 강석진 외, 2014).</li><li>이 세 가지 개념은 상호 밀접하게 연관되어 과학적 탐구의 뼈대를 형성하면서도, 과학교육적 목적과 기능 면에서 분명하고 독립적인 차이를 지닌다.</li><li>첫째, '설명(Explanation)'은 특정한 자연 현상이나 사물이 '왜' 일어났고, '어떻게' 작동하는가에 대한 인과적 메커니즘(causal mechanism)을 기술하는 과정이다(Magnani, 2011; McNeill &amp; Krajcik, 2008; 심해숙 외, 2003).</li><li>과학교육에서 진정한 의미의 과학적 설명은 현상의 표면적 상태를 그대로 묘사하는 것을 넘어, 기존에 수립된 보편적인 과학적 법칙이나 이론을 구체적인 현상에 적용하여 그 발생 이유를 합리적으로 풀어내는 과정이다.</li><li>학습자는 설명을 구성하는 과정에서 자신이 새롭게 관찰한 경험적 단서를 내면에 내재된 과학적 선지식과 연결하는 인지적 다리를 놓게 되며, 이를 통해 현상에 대한 심층적인 이해에 도달한다(Reiser et al., 2012; 정용재와 송진웅, 2006).</li><li>둘째, '논증(Argumentation)'은 자신이 구성한 설명이나 주장이 타당함을 타인에게 설득하거나, 여러 주장들 사이에서 어느 것이 더 과학적으로 우월한지를 증거에 기반하여 경쟁적으로 평가하는 사회적·인식론적 상호작용 과정이다(Toulmin, 1958; Erduran et al., 2004; Erduran &amp; Jiménez-Aleixandre, 2008).</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">2. 과학교육에서의 설명, 논증, 정당화</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅱ. 선행 연구</div><div class="alpha">B. 과학교육에서의 추론</div><div class="num">2. 과학교육에서의 설명, 논증, 정당화</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>2. 과학교육에서의 설명, 논증, 정당화 — 정당화</h2>
+<ul class="bullet-list"><li>셋째, '정당화(Justification)'는 학습자가 제시한 설명이나 논증의 구조가 과연 과학적으로 수용될 수 있는지를 비판적으로 검증하는 과정이다(Sandoval &amp; Millwood, 2005; 박미정과 장신호, 2011).</li><li>정당화 과정에서 학습자는 "나의 주장을 뒷받침하는 증거가 충분히 신뢰할 만한가?", "이 증거는 믿을 수 있는 출처에서 비롯되었는가?", "다른 대안적 설명론보다 내 설명이 더 우월한 이유는 무엇인가?"를 끊임없이 스스로 성찰하게 된다(Osborne &amp; Patterson, 2011; 김익균 외, 2014).</li><li>결과적으로 과학교육에서의 추론은 직관적 아이디어가 과학적 '설명'으로 구체화되고, '논증'의 장에서 비판적 검토를 거치며, 확고한 과학적 기준에 의해 '정당화'되는 연속적이고 역동적인 지식 구성 과정을 형성한다.</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">2. 과학교육에서의 설명, 논증, 정당화 — 정당화</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅱ. 선행 연구</div><div class="alpha">B. 과학교육에서의 추론</div><div class="num">3. 중학생 과학교육에서의 추론 연구</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>3. 중학생 과학교육에서의 추론 연구</h2>
+<ul class="bullet-list"><li>중학교 시기는 피아제(Piaget)의 인지 발달 이론에 근거할 때, 눈에 보이는 구체적 사물과 직관에 주로 의존하는 구체적 조작기(concrete operational stage)에서 벗어나, 보이지 않는 변인을 통제하고 추상적인 논리를 전개할 수 있는 형식적 조작기(formal operational stage)로 이행하는 결정적인 발달 단계에 해당한다(Piaget, 1972; 이윤하와 강순희, 2011).</li><li>이 시기의 학생들은 현상에 대해 가설-연역적(hypothetico-deductive) 사고를 수행할 수 있는 잠재력을 지니게 되며, 겉으로 드러난 현상 이면의 추상적인 인과 구조를 생각하고 이를 증거를 통해 체계적으로 검증하려는 지적 역량이 급격히 발달한다(Kuhn et al., 1988).</li><li>따라서 국내외 과학교육 연구자들은 중학생의 추론 역량을 발달시키고 그 인지적 특성을 규명하는 데 관심을 기울여 왔다.</li><li>로슨(Lawson)은 과학적 추론에 대한 학생들의 보편적인 인지 발달 수준을 로슨의 진단 도구(Lawson's Classroom Test of Scientific Reasoning) 등을 활용하여 정량적으로 측정하였고(Lawson, 1995), 이후 학생들의 논증 능력을 분석하고 이를 개선하기 위한 스캐폴딩(scaffolding) 전략을 개발하는 연구가 증가하였다(Reiser &amp; Berland, 2009; Driver et al., 2000).</li><li>이러한 연구들은 중학생들이 자신의 주장을 제시하는 데는 비교적 익숙하지만, 이를 타당한 증거와 연결하여 정당화하는 '이유'를 구성하거나, 반론에 대응하는 데에는 인지적 어려움을 겪는다는 점을 지적해 왔다(Jiménez-Aleixandre et al., 2000).</li><li>최근에는 사회과학적 쟁점(SSI, Socio-Scientific Issues)이나 기후변화와 같은 지구환경 문제 등, 정답이 하나로 명확히 정해지지 않고 윤리적·사회적 가치가 혼재된 비구조화된 상황에서 학생들이 어떻게 추론을 전개하는지를 탐색하는 질적 연구가 주목받고 있다(Sadler, 2004; Evagorou &amp; Osborne, 2013).</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">3. 중학생 과학교육에서의 추론 연구</div><div class="pg"></div></footer>
+</section><section class="page long-page">
+<div class="side-label"><div class="roman">Ⅱ. 선행 연구</div><div class="alpha">C. 자연재해 교육과 추론</div><div class="num">1. 자연재해 교육에서 추론이 필요한 이유</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>1. 자연재해 교육에서 추론이 필요한 이유</h2>
+<ul class="bullet-list"><li>자연재해 상황은 교과서에 제시된 정제된 과학 실험이나 변인이 통제된 조건과는 본질적으로 구조를 달리하는, 고도의 불확실성과 파편화된 정보만이 실시간으로 주어지는 극단적인 '비구조화된 문제' 환경이다(Jonassen, 1997; Links et al., 2018).</li><li>재난이 발생하는 찰나의 순간, 혹은 서서히 위험이 다가오는 상황 속에서 학습자는 감각 기관을 통해 입력되는 불완전하고 모호한 환경적 단서(증거)들을 즉각적으로 식별해 내야 한다.</li><li>나아가 자신이 내면에 축적하고 있던 지구과학적 선지식과 일상적 경험(규칙)을 동원하여, 현재의 위험 상태를 진단하고 향후 전개될 상황(가설)을 머릿속으로 시뮬레이션해야만 생존을 위한 합리적 의사결정을 내릴 수 있다(Hoffmann &amp; Muttarak, 2017; 오필석과 김찬종, 2005).</li><li>이러한 맥락에서 볼 때, 자연재해에 성공적으로 대처하는 과정은 겉으로 드러난 현상의 결과들을 바탕으로 가장 타당한 배후의 원인과 메커니즘을 역추적해 내는 전형적인 과학적 '추론', 특히 '귀추적 추론'의 과정과 구조적으로 유사하다(Magnani, 2001).</li><li>그동안의 전통적인 자연재해 교육이 행동 요령의 기계적 암기와 반복 숙달에만 머물렀던 가장 큰 이유는, 재난 대응을 고차원적인 '인지적 사고의 영역'이 아닌 조건반사적인 '행동의 영역'으로만 축소하여 간주했기 때문이다(Pant et al., 2024; Preston, 2012).</li><li>그러나 미리 정해진 획일적인 매뉴얼은 시시각각 변화하고 예측 불가능하게 전개되는 실제 재난의 징후와 완벽히 들어맞지 않는다.</li><li>즉, 자연재해 교육에서 추론이 필수적으로 요구되는 이유는, 학습자가 재난을 막연한 공포나 통제 불가능한 결과로 받아들이지 않고, 과학적 원리에 의해 분석하고 예측할 수 있는 물리적 현상으로 인식하게 만들기 위함이다(Zeidler, 2014).</li><li>막연한 두려움이나 직관적인 회피 반응에서 출발한 학습자의 사고가, 과학적 원리에 기반한 단서 탐색과 위험 상황에 대한 설명 구성을 거쳐, 최적의 대응을 선택하고 그 이유를 논리적으로 밝히는 '정당화'에 이르는 일련의 체계적인 추론 과정을 경험할 때, 비로소 자연재해 교육은 단순히 아는 것을 넘어 실천적인 생존 역량으로 발현될 수 있다(Seddighi et al., 2022; UNESCO, 2024; Tyas et al., 2025).</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">1. 자연재해 교육에서 추론이 필요한 이유</div><div class="pg"></div></footer>
+</section><section class="page long-page">
+<div class="side-label"><div class="roman">Ⅱ. 선행 연구</div><div class="alpha">C. 자연재해 교육과 추론</div><div class="num">2. 자연재해 유형과 추론 구조의 관련성</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>2. 자연재해 유형과 추론 구조의 관련성</h2>
+<ul class="bullet-list"><li>자연재해는 그 발생을 주도하는 지구 시스템의 권역에 따라 물리적 특성과 진행 속도, 그리고 관찰 가능한 징후가 확연히 다르며, 이는 학습자가 위험을 인지하고 추론을 전개하는 방식에 영향을 미친다(Alexander, 2016).</li><li>그럼에도 불구하고 기존의 학교 안전 교육은 지진, 화산, 폭염, 미세먼지 등 본질적으로 전혀 다른 발생 메커니즘을 지닌 재해들을 '재난'이라는 하나의 포괄적인 범주로 묶어 획일적인 교육 방식으로 접근해 온 한계가 있다(정희수와 송창근, 2022; Kelman, 2020).</li><li>하지만 학습자가 재해 상황에서 동원해야 하는 인지적 자원과 추론의 논리 구조는 재해의 '시간적 점진성'과 '감각적 지각성'에 따라 극명하게 갈라진다(송동혁과 맹승호, 2019).</li><li>예를 들어, 지진이나 산사태와 같은 '지질학적 재해(geological disaster)'는 전조증상이 극히 짧거나 거의 알아차리기 힘든 돌발성 재난이다(Smith, 2013).</li><li>이 경우 학습자는 갑작스러운 땅의 흔들림, 건물의 균열, 굉음 등 즉각적이고 물리적인 감각 단서에 의존하여 찰나의 순간에 직관적 공포를 과학적 추론으로 전환해야 한다.</li><li>따라서 지질 재해 상황에서는 매우 빠르고 본능적인 단서 수집과, 파편화된 물리적 증거로부터 붕괴 방향과 규모를 순식간에 그려내는 고도의 즉각적 귀추 사고 및 공간적 추론 능력이 핵심적으로 요구된다(이규호와 권병두, 2010).</li><li>반면, 폭염이나 미세먼지, 가뭄과 같은 '기상·기후학적 재해(meteorological/climatological disaster)'는 상대적으로 진행 속도가 느리고 그 피해가 서서히 누적되는 점진성 재난이다(IPCC, 2023; Hoffmann &amp; Muttarak, 2017).</li><li>폭염이나 미세먼지 상황에서는 즉각적인 구조물의 붕괴나 파괴를 눈으로 관찰하기 어려우며, 기온과 습도의 점진적 변화, 기상청의 예보 데이터, 애플리케이션의 수치, 신체의 미세한 온열 질환 징후 등 매우 추상적이고 간접적인 데이터를 해석하는 능력이 생존의 열쇠가 된다.</li><li>이 경우 학습자의 추론 구조는 순간적인 단서 포착보다는 장기적인 인과 관계의 연결, 누적되는 위험 요소의 평가, 그리고 기후 시스템과 인간 건강 간의 상호작용을 통합적으로 이해하는 시스템 사고의 형태를 띠게 된다(Mochizuki &amp; Bryan, 2015; Muttarak &amp; Lutz, 2014).</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">2. 자연재해 유형과 추론 구조의 관련성</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅱ. 선행 연구</div><div class="alpha">C. 자연재해 교육과 추론</div><div class="num">3. 자연재해 교육 연구의 한계와 본 연구의 위치</div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>3. 자연재해 교육 연구의 한계와 본 연구의 위치</h2>
+<ul class="bullet-list"><li>앞서 고찰한 바와 같이, 자연재해 대응은 단순히 습득한 지식을 꺼내어 쓰는 것이 아니라 고차원적인 과학적 추론을 실시간으로 요구하는 역동적인 인지 과정이며, 재해의 유형(돌발성 vs 점진성)에 따라 그 추론의 구조와 발현 양상이 상이하게 나타난다.</li><li>그러나 지금까지 수행된 대부분의 자연재해 교육의 선행 연구들은 교육 프로그램 투입 전후의 안전 의식 수준, 재난 대피 지식의 학업 성취도, 프로그램에 대한 정의적 만족도 등을 리커트 척도 기반의 객관식 설문지를 통해 정량적으로 측정하는 결과 중심의 양적 연구에 집중하고 있었다(Johnson et al., 2014; Seddighi et al., 2022).</li><li>한편, 과학교육계에서 이루어진 추론 관련 연구들 역시 정제된 환경이나 순수 학문적 개념의 획득 과정 자체를 밝히는 데 집중되어 있어, 이를 '재난'이라는 실제 삶의 위기 대응 맥락으로 확장하여 분석한 심층 연구는 드물었다(Sun et al., 2024).</li><li>즉, 학생들이 복잡한 재해 상황 속에서 어떠한 인지적 과정을 거치고, 최종적인 생존 및 대응 판단의 논리를 어떻게 구축하여 정당화해 나가는지 그 사고의 과정을 집중 추적하는 연구가 필요하다(Seddighi et al., 2022).</li><li>따라서 본 연구는 단순히 자연재해 교육의 전후 효과를 확인하는 거시적 접근을 벗어나, 자연재해라는 특수한 상황 맥락 속에서 발현되는 학습자의 미시적인 '추론 과정'을 깊이 있게 탐색하는 데 목적을 둔다.</li><li>이를 위해 본 연구는 중학생들을 대상으로 폭염, 지진, 태풍, 미세먼지, 황사, 산사태, 대설 7가지의 다양한 자연재해 현상을 아우르는 8회차 교육 프로그램을 설계 및 적용할 것이다.</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">3. 자연재해 교육 연구의 한계와 본 연구의 위치</div><div class="pg"></div></footer>
+
+</section>
+<section class="page">
+<div class="side-label"><div class="roman">Ⅲ. 연구 방법</div><div class="alpha">A. 연구 설계 및 참여자</div><div class="num"></div></div>
+<header><span class="tag">Section</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>Ⅲ. 연구 방법 — 연구 설계 및 참여자</h2>
+<ul class="bullet-list"><li>본 연구는 재난교육을 통한 중학생의 자연재해 인식 변화와 대응 역량 형성 과정을 심층적으로 탐색하기 위하여 <strong>질적 사례 연구</strong>로 설계되었다.</li>
+<li>질적 연구는 참여자가 특정 맥락 속에서 어떠한 경험을 하고, 그 경험에 어떠한 의미를 부여하는지를 이해하는 데 적합한 접근이다(Creswell, 2013).</li>
+<li>연구 참여자는 <strong>중학생 9명</strong>(1학년 5명, 2학년 3명, 3학년 1명 / 남 7명, 여 2명)이다.</li>
+<li>참여 기간: 2022년 5월 7일 ~ 8월 13일, 총 8차시(40시간)</li>
+<li>중학생은 자연재해의 원인과 맥락을 구조적으로 이해할 수 있으면서도, 재난에 대한 직관적·경험적 인식이 강하게 나타날 수 있는 시기의 학습자라는 점에서 본 연구의 목적에 적합한 대상이다.</li>
+<li>주요 분석 자료: 사전 검사지, 차시별 활동지 1·2·3</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">Ⅲ. 연구 방법 — 연구 설계 및 참여자</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅲ. 연구 방법</div><div class="alpha">B. 프로그램 구성</div><div class="num"></div></div>
+<header><span class="tag">Table</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>프로그램 구성 및 주요 내용</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th style="width:22%">프로그램 단계</th><th>주요 내용</th></tr></thead><tbody>
+<tr><td>사전 검사지</td><td>재난의 정의, 인식, 사전 지식, 경험, 감정, 현재 대응 행동 서술</td></tr>
+<tr><td>초기 대응 선택<br/>(활동지 1)</td><td>재난 영상 시청 후 즉각적 대응 선택과 그 근거 서술</td></tr>
+<tr><td>자연재해 지식 습득</td><td>교사 강의 — 정의, 발생 원리, 측정·예보 체계, 피해 양상, 대비·대응 방법</td></tr>
+<tr><td>최종 대응 선택<br/>(활동지 2)</td><td>재난 영상 재시청 후 최종 대응 선택과 변경 근거 서술</td></tr>
+<tr><td>상황별 대응 구성<br/>(활동지 3)</td><td>새로운 상황(지문) 제시 후 대응 선택과 근거 서술</td></tr>
+</tbody></table></div>
+<ul class="table-summary"><li>총 8차시 구성: 1차시 오리엔테이션, 2~8차시 폭염·지진·태풍·미세먼지·황사·산사태·대설</li>
+<li>7가지 자연재해는 우리나라 학생들의 삶과 밀접한 연관이 있는 지구과학 관련 재해로 구성하였다.</li>
+<li>상황별 대응 단계에서는 새로운 상황을 영상이 아닌 지문으로 제시하여 보다 정교한 추론 단서를 제공하였다.</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">프로그램 구성 및 주요 내용</div><div class="pg"></div></footer>
+</section><section class="page long-page">
+<div class="side-label"><div class="roman">Ⅲ. 연구 방법</div><div class="alpha">C. 자료 수집 및 분석</div><div class="num"></div></div>
+<header><span class="tag">Part Summary</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>자료 수집 및 분석</h2>
+<ul class="bullet-list"><li><strong>핵심 자료:</strong> 사전 검사지(초기 인식 파악) + 차시별 활동지 1(초기 대응)·활동지 2(최종 대응)·활동지 3(상황별 대응) — 총 64부</li>
+<li><strong>분석 방법:</strong> 귀납적 범주화와 비교 분석 — 자료 속 반복적 의미 단위와 패턴을 식별하고 범주화(Creswell, 2013; Merriam, 1998)</li>
+<li><strong>분석 3단계:</strong><br/>① 전체 자료를 반복적으로 읽으며 학생 응답의 특징을 개방적으로 파악<br/>② 의미 단위를 범주화하고 비교하여 상위 범주로 정리<br/>③ 프로그램 전후 변화와 교육적 의미를 해석</li>
+<li><strong>타당도 확보 방안:</strong><br/>① 자료 교차 검증 — 사전 검사지와 활동지 간 대조<br/>② 학생별·재해 유형별·프로그램 전후 반복적 비교 분석<br/>③ 맥락 중심 해석 — 정답 여부가 아닌 사고의 흐름 속에서 해석<br/>④ 범주 점검 및 정교화<br/>⑤ 사례 제시를 통한 해석 타당성 확보</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">자료 수집 및 분석</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha"></div><div class="num"></div></div>
+<header><span class="tag">Section</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>Ⅳ. 연구 결과 개요</h2>
+<ul class="bullet-list"><li>본 연구의 목적은 중학생의 자연재해 교육 프로그램을 개발·적용하여, 프로그램 전 과정에서 드러나는 추론 과정의 흐름과 그 특징을 파악하고 자연재해 교육 프로그램의 의미를 확인하는 것이다.</li>
+<li>총 8차시(40시간)의 '자연재해 서바이벌' 프로그램을 개발·실행한 뒤, 수집된 자료를 귀납적으로 분석하여 다음과 같이 정리하였다.</li>
+<li><strong>A. 자연재해 유형별 추론 과정의 특징</strong> — 7가지 재난 유형별 추론 양상의 차이</li>
+<li><strong>B. 자연재해 교육 프로그램에서 나타난 추론 과정의 흐름</strong> — 5단계 추론 구조와 기존 과학교육 추론과의 비교</li>
+<li><strong>C. 자연재해 교육 프로그램에서 나타난 학생의 변화</strong> — 자연재해 이해와 판단 근거의 변화</li>
+<li><strong>D. 자연재해 교육 프로그램의 교육적 의미</strong> — 5가지 교육적 의미</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">Ⅳ. 연구 결과 개요</div><div class="pg"></div></footer>
+</section><section class="page long-page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 자연재해 유형별 추론 과정의 특징</div><div class="num"></div></div>
+<header><span class="tag">Subsection</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>A. 자연재해 유형별 추론 과정의 특징</h2>
+<ul class="bullet-list"><li>학생들의 추론은 <strong>직관적 반응 → 단서 탐색 → 설명 구성 → 대응 선택 → 정당화</strong>의 순서로 구조화되었다.</li>
+<li>그러나 그 시작점과 중심 단서, 설명 방식, 대응 판단의 구조는 재난 유형에 따라 달랐다.</li>
+<li><strong>생활 경험이 풍부한 재난(폭염, 대설):</strong> 생활 감각·몸의 경험이 출발점이 되고, "이런 날은 이렇게 해야 한다"는 생활 수준의 설명 구성·정당화로 발전하였다.</li>
+<li><strong>교육 경험이 앞서는 재난(지진):</strong> 암기된 대표 수칙("책상 밑으로", "밖으로 나가기")이 출발점이 되고, 이후 공간 판단·조건 판단으로 확장되었다.</li>
+<li><strong>위험이 비가시적인 재난(미세먼지, 황사):</strong> 답답함·색감 변화 등 막연한 불편에서 출발하여, 단서 탐색·설명 구성에서 정보·개념 활용 비중이 증가하였다.</li>
+<li><strong>결과 장면 충격이 큰 재난(지진, 태풍):</strong> 공포·놀라움 중심 직관에서 출발하여, 공간 위험 식별·우선순위 판단으로 전개되었다.</li>
+<li><strong>복합 위험 구조의 재난(태풍, 대설):</strong> 여러 위험의 동시 인식에서 출발하여, 우선순위 판단과 연속적 대응 구성이 나타났다.</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">A. 자연재해 유형별 추론 과정의 특징</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 자연재해 유형별 추론 과정의 특징</div><div class="num">추론 과정의 흐름</div></div>
+<header><span class="tag">Figure</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>[그림 Ⅳ-A-1] 자연재해 교육 프로그램에서 나타난 추론 과정의 흐름</h2>
+<div class="figure-box"><img alt="추론 과정의 흐름" src="ewha_assets/[그림Ⅳ-A-1].png"/></div>
+<ul class="table-summary"><li><strong>직관적 반응:</strong> 재난 장면에 대한 감정적·감각적 반응 ("무섭다", "답답하다", "많이 더워 보인다")</li>
+<li><strong>단서 탐색:</strong> 상황 속 핵심 징후·정보·조건을 포착 (낙하물, 침수, 기온, 마스크 종류)</li>
+<li><strong>설명 구성:</strong> 단서의 의미를 연결해 위험의 원인과 전개를 설명 (열사병 위험, 감전, 기관지 위해)</li>
+<li><strong>대응 선택:</strong> 설명에 근거하여 적절한 행동을 선택 (외출 자제, 높은 곳 대피, KF80 이상 착용)</li>
+<li><strong>정당화:</strong> 선택한 행동의 이유를 구체적 위험과 연결 (탈수 예방, 추락·갇힘 방지, 감전 방지)</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">[그림 Ⅳ-A-1] 추론 과정의 흐름</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">B. 추론 과정의 흐름</div><div class="num"></div></div>
+<header><span class="tag">Figure</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>[그림 Ⅳ-B-1] 과학교육의 추론 과정과 자연재해 교육 프로그램의 추론 과정</h2>
+<div class="figure-box"><img alt="추론 과정 비교" src="ewha_assets/[그림Ⅳ-B-1].jpg"/></div>
+<ul class="table-summary"><li>자연재해 교육 프로그램의 추론 과정은 기존 과학교육의 추론 구조(관찰 → 가설 → 증거 → 정당화)와 공통점을 가지면서도, <strong>정서·위험 인식</strong>과 <strong>실제 생활 경험</strong>의 개입이 더 강하게 나타났다.</li>
+<li>특히 <strong>대응 선택</strong>이 필수적이고 중심적인 단계로 나타나며, 인지적 판단과 실천적 판단이 결합되는 점에서 기존 과학교육 추론과 차별화된다.</li>
+<li>단서 탐색과 설명 구성은 위험 해석과 대응 행동 판단으로 직접 연결되며, 정당화는 행동의 타당성이 핵심이 되었다.</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">[그림 Ⅳ-B-1] 추론 과정 비교</div><div class="pg"></div></footer>
+</section><section class="page long-page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">C. 학생의 변화</div><div class="num"></div></div>
+<header><span class="tag">Subsection</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>C. 자연재해 교육 프로그램에서 나타난 학생의 변화</h2>
+<ul class="bullet-list"><li><strong>자연재해 이해의 변화 — 네 가지 방향:</strong></li>
+<li>① 결과 장면·현상 이름 중심 이해 → <strong>원인과 조건</strong>을 포함한 구조적 이해</li>
+<li>② 감각·정서에 기대던 이해 → <strong>구체적 위험 요소</strong>(낙하물, 탈수, 열사병, 침수, 호흡기 위해 등) 파악</li>
+<li>③ 단일 현상·대표 장면 중심 이해 → 재난의 <strong>전개 과정과 복합 위험</strong>을 포함하는 이해</li>
+<li>④ 생활과 분리된 재난 이해 → 자신의 <strong>생활세계</strong>(등하교, 외출, 실내 생활 등)와 연결된 이해</li>
+<li><strong>판단 근거의 변화 — 네 가지 방향:</strong></li>
+<li>① 감정·인상 중심 판단 → <strong>단서와 징후</strong> 기반 판단</li>
+<li>② 행동 요령 단순 제시 → <strong>목적과 효과를 설명하는 정당화</strong> 수준으로 발전</li>
+<li>③ 단일 행동 중심 대응 → <strong>조건과 우선순위</strong>를 고려한 연속적 대응 구성</li>
+<li>④ 즉각적 회피 반응 → <strong>생활 유지와 사전 대비</strong>를 포함한 구조적 대응 판단</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">C. 학생의 변화</div><div class="pg"></div></footer>
+</section><section class="page long-page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">D. 교육적 의미</div><div class="num"></div></div>
+<header><span class="tag">Subsection</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>D. 자연재해 교육 프로그램의 교육적 의미</h2>
+<ul class="bullet-list"><li><strong>1. 추론 형성 중심 교육:</strong> 자연재해 교육은 결과 지식 습득이 아니라 사고 형성의 과정이며, 학생을 수동적 수용자가 아닌 의미 구성자로 위치시키고, 설명 가능한 판단을 형성하는 교육이다.</li>
+<li><strong>2. 재난 유형별 추론 구조 차이:</strong> 자연재해는 내용이 아니라 사고 구조의 차이로도 구분되어야 하며, 이 차이는 교수·학습 설계의 차이로 이어져야 한다.</li>
+<li><strong>3. 대응 역량 형성:</strong> 대응 역량은 수칙 암기보다 상황 판단 능력과 더 깊이 연결되며, 삶의 맥락과 연결될 때 실제성을 가지고, 회복력과 실천 가능성을 함께 길러 준다.</li>
+<li><strong>4. 중학생 대상 교육 설계 시사점:</strong> 직관을 배제하기보다 구조화해야 하며, 자료와 과제는 장면·정보·행동 판단을 연결하도록 설계되어야 하고, 평가는 이해와 판단 구조를 드러내는 방식이어야 한다.</li>
+<li><strong>5. 지구과학 교육에서의 의미:</strong> 자연재해 교육은 지구과학 개념을 생활세계 속 문제로 전환하고, 설명 중심 교과에서 판단 중심 교과로 확장하며, 과학적 소양과 재난 문해력을 함께 기른다.</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">D. 교육적 의미</div><div class="pg"></div></footer>
+</section><section class="page long-page">
+<div class="side-label"><div class="roman">Ⅴ. 결론 및 제언</div><div class="alpha">A. 결론</div><div class="num"></div></div>
+<header><span class="tag">Section</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>Ⅴ. 결론</h2>
+<ul class="bullet-list"><li>본 연구는 폭염, 지진, 태풍, 미세먼지, 황사, 산사태, 대설을 포함하는 총 8차시의 자연재해 교육 프로그램을 구성·운영하고, 중학생의 추론 과정을 질적으로 분석하였다.</li>
+<li><strong>결론 1:</strong> 학생들의 추론 과정은 모든 재난에서 동일하게 나타나지 않으며, 자연재해 유형의 성격에 따라 서로 다른 양상으로 조직된다.</li>
+<li><strong>결론 2:</strong> 학생들의 추론은 직관적 반응 → 단서 탐색 → 설명 구성 → 대응 선택 → 정당화의 흐름을 따랐으며, 실제 대응 판단을 포함한다는 점에서 기존 과학교육 추론과 차별성을 가진다.</li>
+<li><strong>결론 3:</strong> 프로그램 적용 이후 학생들의 자연재해 이해가 보다 구조적이고 생활세계와 연결된 방향으로 변화하였다.</li>
+<li><strong>결론 4:</strong> 학생들의 판단 근거가 감정·상식 수준에서 구체적이고 설명 가능한 수준으로 발전하였다.</li>
+<li><strong>결론 5:</strong> 본 연구의 자연재해 교육은 추론 형성, 재난 유형별 사고 구조 이해, 대응 역량 형성, 중학생 대상 교육 설계, 지구과학 교육의 확장이라는 측면에서 중요한 교육적 의미를 가진다.</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">Ⅴ. 결론</div><div class="pg"></div></footer>
+</section><section class="page">
+<div class="side-label"><div class="roman">Ⅴ. 결론 및 제언</div><div class="alpha">B. 제언</div><div class="num"></div></div>
+<header><span class="tag">Subsection</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<h2>교육적 제언 및 후속 연구를 위한 제언</h2>
+<ul class="bullet-list"><li><strong>교육적 제언 1:</strong> 학교 자연재해 교육은 자연재해 유형별 사고 구조의 차이를 반영하여 설계될 필요가 있다. 생활 경험 풍부 재난은 경험의 구조적 전환, 교육 경험 우위 재난은 수칙의 상황 판단 재구성, 비가시적 재난은 개념·정보 활용 활동, 복합 재난은 우선순위와 연속적 대응 구성 활동이 필요하다.</li>
+<li><strong>교육적 제언 2:</strong> 자연재해 교육은 단순한 행동 요령 중심 교육을 넘어 추론 과정 중심 교육으로 확대될 필요가 있다.</li>
+<li><strong>교육적 제언 3:</strong> 자연재해 교육의 평가 방식은 정답 여부가 아닌 사고의 흐름과 판단의 구조를 드러내는 방향으로 전환될 필요가 있다.</li>
+<li><strong>후속 연구 제언 1:</strong> 초등학생, 고등학생 등 다른 학교급을 포함하거나, 다양한 지역과 학교 환경을 가진 집단을 대상으로 연구를 확장할 필요가 있다.</li>
+<li><strong>후속 연구 제언 2:</strong> 학교급 간 비교는 재난교육 내용과 방법의 수준화를 설계하는 데 중요한 시사점을 제공할 수 있다.</li>
+<li><strong>후속 연구 제언 3:</strong> 지역사회 연계 교육이나 디지털 기반 시뮬레이션 교육 등 다양한 교수·학습 방법과의 비교 연구도 필요하다.</li></ul>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">교육적 제언 및 후속 연구 제언</div><div class="pg"></div></footer>
+</section><section class="page closing">
+<header><span class="tag">Closing</span><img alt="Ewha" src="ewha_assets/ewha_wordmark.png"/></header>
+<div class="thanks">
+<img alt="" src="ewha_assets/ewha_seal.png"/>
+<h1>감사합니다</h1>
+</div>
+<footer><div class="foot-brand"><img alt="" src="ewha_assets/ewha_seal.png"/>이화여자대학교 대학원</div><div class="foot-title">Closing</div><div class="pg"></div></footer>
+</section>
+
+</body>
+</html>

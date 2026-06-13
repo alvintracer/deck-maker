@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>하나은행 스테이블코인 유통 규제준수 TranSight KYT 및 TTR 제안서</title>
+<style>
+@font-face{font-family:'NanumSquare_ac';src:url('../fonts/NanumSquare_acL.ttf') format('truetype');font-weight:300;font-style:normal}
+@font-face{font-family:'NanumSquare_ac';src:url('../fonts/NanumSquare_acR.ttf') format('truetype');font-weight:400;font-style:normal}
+@font-face{font-family:'NanumSquare_ac';src:url('../fonts/NanumSquare_acB.ttf') format('truetype');font-weight:700;font-style:normal}
+@font-face{font-family:'NanumSquare_ac';src:url('../fonts/NanumSquare_acEB.ttf') format('truetype');font-weight:800;font-style:normal}
+@font-face{font-family:'Pretendard';src:url('../fonts/PretendardVariable.ttf') format('truetype');font-weight:100 900;font-style:normal}
+:root{
+  --hana:#008375;
+  --hana-dark:#00695c;
+  --blue:#1557d6;
+  --blue2:#1f5f9f;
+  --navy:#173A63;
+  --navy2:#0B1F3A;
+  --soft:#eef4fa;
+  --soft2:#f7f9fc;
+  --line:#cbd5e1;
+  --ink:#142033;
+  --muted:#647085;
+  --red:#9a1f1f;
+  --green:#19733E;
+  --gold:#b98a16;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#e9eef5;color:var(--ink);font-family:'NanumSquare_ac','NanumSquare','Pretendard','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',Arial,sans-serif;}
+@page{size:297mm 210mm;margin:0}
+.page{width:297mm;height:210mm;margin:0 auto 8mm;background:#fff;position:relative;overflow:hidden;padding:14mm 17mm 17mm;page-break-after:always;box-shadow:0 10px 32px rgba(15,30,60,.12)}
+@media print{*{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;color-adjust:exact!important}body{background:#fff;margin:0;padding:0}.page{margin:0;box-shadow:none;page-break-after:always;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}.page:last-child{page-break-after:auto}.page:before,.card,.card.blue,.card.hana,.card.red,.card.soft,.note,.std-table th,.num-badge,.tag,.hero-card,.strip-card,.content-card,.statement-card,.phase .label,.chip{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}}
+.page:before{content:"";position:absolute;left:0;top:0;width:100%;height:4mm;background:linear-gradient(90deg,var(--blue) 0 55%,var(--hana) 55% 100%)}
+h1,h2,h3,p,li,td,th{word-break:keep-all} h1,h2,h3,p{margin:0} ul{margin:0;padding-left:18px}
+h1{font-size:35pt;line-height:1.08;letter-spacing:-.045em;color:#0b1f3a} h2{font-size:24pt;line-height:1.18;letter-spacing:-.035em;color:#102043} h3{font-size:14pt;line-height:1.35;color:#102043;letter-spacing:-.02em} p,li{font-size:10.4pt;line-height:1.6;color:#4d5b70}.small{font-size:9pt;color:#657085;line-height:1.55}.tiny{font-size:7.8pt;color:#7a8596;line-height:1.4}.strong{font-weight:800;color:#0b1f3a}.blue{color:var(--blue)}.hana{color:var(--hana)}
+.header{height:12mm;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d7deea;padding-bottom:3mm;margin-bottom:8mm}.header .title{font-size:8.5pt;color:#647085;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.header .logos{display:flex;align-items:center;gap:4mm}.header img{max-height:6mm;width:auto}.footer{position:absolute;left:17mm;right:17mm;bottom:7mm;height:8mm;border-top:1px solid #d7deea;padding-top:2.5mm;display:flex;align-items:center;gap:3mm;color:#8a95a6;font-size:8pt}.footer .copy{flex:1;text-align:left}.footer .page-no{font-weight:900;color:#102043}.footer img{max-height:5mm;width:auto}.sep{height:11px;width:1px;background:#cbd4e2}
+.kicker{display:block;font-size:8.8pt;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:var(--blue);margin-bottom:3mm}.section-head{margin-bottom:7mm}.section-head p{margin-top:2mm;color:#5f6f84;font-size:10.6pt}.eyebrow{font-size:8.3pt;font-weight:900;color:var(--hana);letter-spacing:.13em;text-transform:uppercase}.chip-row{display:flex;gap:2.5mm;flex-wrap:wrap;margin-top:6mm}.chip{border:1px solid #ccd7e6;background:#f8fbff;border-radius:999px;padding:1.8mm 4mm;font-size:9pt;font-weight:800;color:#28415f}.chip.h{background:#eef9f7;color:#00695c;border-color:#bfe3dd}.chip.b{background:#eaf1ff;color:#1557d6;border-color:#c6d6ff}.chip.r{background:#fff2f2;color:#9a1f1f;border-color:#f0c6c6}
+.cover{padding-top:34mm}.cover:after{content:"";position:absolute;right:-25mm;top:8mm;width:115mm;height:115mm;background:radial-gradient(circle,rgba(21,87,214,.12),transparent 67%);border-radius:50%}.cover-grid{display:grid;grid-template-columns:1fr;gap:14mm;align-items:center;position:relative;z-index:1}.cover h1{font-size:34pt;line-height:1.3}.subtitle{font-size:14.4pt;line-height:1.55;color:#536174;max-width:165mm;margin-top:7mm}.cover-logos{display:flex;align-items:center;gap:6mm;margin-top:16mm}.cover-logos img{height:6.3mm;width:auto}.cover-date{margin-top:5mm;font-size:13pt;font-weight:900;color:#3f4a5f;letter-spacing:.04em}.hero-card{border:1px solid #dbe4f0;border-radius:6mm;background:linear-gradient(135deg,#f8fbff,#fff);padding:7mm;box-shadow:0 8px 24px rgba(20,55,120,.08)}.hero-card .metric{padding:4.2mm 0;border-bottom:1px solid #e4ebf4}.hero-card .metric:last-child{border-bottom:0}.metric b{display:block;font-size:22pt;color:var(--blue);letter-spacing:-.03em}.metric:nth-child(2) b{color:var(--hana)}.metric:nth-child(3) b{color:var(--gold)}.metric span{display:block;font-size:9.5pt;color:#5f6b7c;margin-top:1mm}
+.contents{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:12mm}.content-card{border:1px solid #dce3ef;background:#fff;border-radius:4mm;padding:5mm;min-height:35mm}.content-card .num{font-size:18pt;font-weight:900;color:#d0d8e6}.content-card h3{margin-top:2mm}.content-card p{margin-top:2mm;font-size:9.5pt}.exec-grid{display:grid;grid-template-columns:1fr 1fr;gap:7mm}.statement-card{border:1px solid #dce3ef;border-radius:5mm;padding:7mm;background:#fff;position:relative;min-height:64mm}.statement-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px}.statement-card.blue:before{background:var(--blue)}.statement-card.hana:before{background:var(--hana)}.big-line{font-size:17pt;font-weight:900;line-height:1.28;color:#102043;margin:4mm 0;letter-spacing:-.035em}.summary-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin-top:7mm}.strip-card{border:1px solid #dce3ef;background:#fbfcff;border-radius:3mm;padding:4mm}.strip-card b{display:block;font-size:11.5pt;color:#102043;margin-bottom:1.2mm}.strip-card span{font-size:9pt;color:#637185;line-height:1.4}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:7mm}.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm}.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm}.card{border:1px solid #dce3ef;background:#fff;border-radius:4mm;padding:5mm}.card.soft{background:#f7f9fc}.card.blue{border-color:#bdd0ff;background:#f8fbff}.card.hana{border-color:#bfe3dd;background:#f4fbf9}.card.red{border-color:#efc8c8;background:#fff7f7}.card h3{margin-bottom:2mm}.card p,.card li{font-size:9.7pt}.note{border-left:4px solid var(--hana);background:#f4fbf9;border-radius:2mm;padding:4mm 5mm;margin-top:5mm;font-size:10pt;line-height:1.6;color:#405267}.note b{color:#102043}.image-box{border:1px solid #d8e1ef;border-radius:5mm;background:#fbfcff;padding:4mm;text-align:center}.image-box img{max-width:100%;height:auto;display:block;margin:0 auto}.image-box .caption{font-size:8.3pt;color:#748095;margin-top:2mm}.full-img{height:118mm;object-fit:contain}.wide-img{width:100%;max-height:108mm;object-fit:contain}.stable-img{width:100%;max-height:92mm;object-fit:contain}.indirect-img{max-height:100mm;object-fit:contain}.api-img{max-height:95mm;object-fit:contain}
+table{border-collapse:collapse;width:100%}.std-table{font-size:9.4pt;border:1px solid #cbd5e1;border-radius:3mm;overflow:hidden}.std-table th{background:#173A63;color:white;padding:2.5mm;text-align:left;font-weight:800;border-right:1px solid rgba(255,255,255,.18)}.std-table td{padding:2.5mm;border-bottom:1px solid #e7edf5;border-right:1px solid #e7edf5;color:#46566b;vertical-align:top}.std-table tr:last-child td{border-bottom:0}.std-table .cat{background:#ddebf7;color:#0b1f3a;font-weight:800}.mini-table{font-size:8.8pt}.mini-table th,.mini-table td{padding:2.2mm}.tag{display:inline-block;border-radius:999px;padding:1mm 2.5mm;font-size:7.8pt;font-weight:900}.tag.b{background:#eaf1ff;color:#1557d6}.tag.h{background:#e7f7f4;color:#00695c}.tag.r{background:#f9e6e6;color:#8b1e1e}.tag.g{background:#e7f3ea;color:#19733E}.tag.y{background:#fff5df;color:#9a6a00}.num-badge{display:inline-flex;align-items:center;justify-content:center;width:7mm;height:7mm;border-radius:50%;background:#173A63;color:#fff;font-size:8.5pt;font-weight:900;margin-bottom:2mm}.process{display:grid;grid-template-columns:repeat(5,1fr);gap:3mm}.step{border:1px solid #dce3ef;border-radius:4mm;padding:4mm;background:#fff;min-height:46mm}.step h3{font-size:12.5pt}.step p{font-size:9pt;margin-top:2mm}.arrow-process{display:flex;align-items:center;gap:2mm;margin:3mm 0}.line{height:2px;background:#c9d1d9;flex:1}.matrix{display:grid;grid-template-columns:repeat(2,1fr);gap:5mm}.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm}.price-card{border:1px solid #dce3ef;border-radius:4mm;padding:4.5mm;background:#fff;min-height:70mm}.price-card.featured{border-color:#b6c9ff;background:#f8fbff;box-shadow:0 0 0 1px rgba(21,87,214,.12)}.price-card h3{font-size:14pt}.price{font-size:20pt;font-weight:900;color:#1557d6;margin:3mm 0}.price-card p{font-size:8.9pt}.spec{border-top:1px solid #e3e9f2;margin-top:3mm;padding-top:2mm}.spec div{display:flex;justify-content:space-between;gap:2mm;font-size:8.6pt;border-bottom:1px dashed #e3e9f2;padding:1.2mm 0;color:#59677b}.spec b{color:#102043}.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-top:4mm}.phase{border:1px solid #dce3ef;border-radius:5mm;background:#fff;padding:5mm;min-height:64mm}.phase .label{font-size:8pt;font-weight:900;color:white;background:#173A63;border-radius:999px;padding:1mm 2.4mm;display:inline-block;margin-bottom:2.5mm}.phase:nth-child(2) .label{background:#1f5f9f}.phase:nth-child(3) .label{background:#008375}.phase:nth-child(4) .label{background:#19733E}.quote{width:230mm;margin:14mm auto 8mm;border:1px solid #dce5f2;border-radius:6mm;padding:10mm 14mm;background:linear-gradient(135deg,#f8fbff,#f4fbf9);position:relative}.quote:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(var(--blue),var(--hana));border-radius:6mm 0 0 6mm}.quote p{font-size:17pt;line-height:1.55;font-weight:800;color:#12233b;letter-spacing:-.03em}.contact{display:inline-grid;grid-template-columns:28mm 90mm;gap:3mm;text-align:left;margin-top:8mm;border-top:1px solid #dce3ef;padding-top:6mm}.contact b{color:#1557d6}.contact span{color:#4d5b70}.closing-logos{display:flex;justify-content:center;align-items:center;gap:6mm;margin-top:13mm}.closing-logos img{height:8mm;width:auto}
+</style>
+</head>
+<body>
+
+<section class="page cover">
+  <div class="cover-grid">
+    <div>
+      <span class="eyebrow">Hana Bank × TranSight Strategic Proposal</span>
+      <h1 style="margin-top:7mm">스테이블코인 유통 규제준수를 위한<br/>TranSight 컴플라이언스 패키지 제안</h1>
+      <p class="subtitle">디지털자산 유통을 준비하는 1등 은행이 되기 위한 <br/>KYT 기반 온체인 AML과 트래블룰 채널 선제 확보 전략 제안</p>
+      <div class="chip-row">
+        <span class="chip b">KYT Supply Proposal</span><span class="chip h">TR PoC Proposal</span><span class="chip">Stablecoin Ready</span><span class="chip">Upbit Direct Rail</span>
+      </div>
+      <div class="cover-logos">
+        <img src="../materials/bonanza_Factory_logo.jpg" alt="Bonanza Factory" />
+        <span style="font-size:15pt;color:#8a95a6">×</span>
+        <img src="../materials/hanabank/hanabank-logo.png" alt="Hana Bank" />
+      </div>
+      <div class="cover-date">2026.06</div>
+    </div>
+
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">01</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Executive Summary</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head">
+    <span class="kicker">Executive Summary</span>
+    <h2>핵심 제안: KYT는 즉시 구축 및 고도화, 트래블룰은 PoC로 선점</h2>
+    <p>하나은행은 스테이블코인 유통을 준비하는 과정에서 계좌 기반 AML을 넘어, 디지털자산 입출금의 온체인 위험을 실시간으로 식별하고 거래소·금융기관 간 Travel Rule을 수행할 수 있는 운영 체계를 선제적으로 확보해야 합니다.</p>
+  </div>
+  <div class="exec-grid">
+    <div class="statement-card blue"><h3>TranSight KYT 공급 제안</h3><p class="big-line">입금 전·출금 전 단계에서 위험 지갑을 실시간 선별합니다.</p><p>고객의 외부 지갑 입금, 고객 요청 출금 주소, 내부 운영 지갑 이동, 외부 VASP 유입 가능성을 모두 검증하여 디지털자산 유통기관에 필요한 온체인 AML 체계를 구축합니다.</p></div>
+    <div class="statement-card hana"><h3>TTR PoC 제안</h3><p class="big-line">업비트·빗썸 등 거래소와의 Travel Rule 채널을 미리 확보합니다.</p><p>기존 TR 솔루션을 은행 내부망에서 직접 호출하기 어려운 현실을 고려해, 보난자팩토리의 전용선·VAN·전자금융보조업자 인프라를 활용한 금융기관형 TR 브릿지를 검증합니다.</p></div>
+  </div>
+  <div class="summary-strip">
+    <div class="strip-card"><b>KYT 전수검사</b><span>입출금 요청 전 위험도 판정</span></div>
+    <div class="strip-card"><b>RBA/CRA 연계</b><span>고객 위험 재평가 워크플로우</span></div>
+    <div class="strip-card"><b>STR 보고 준비</b><span>위험근거·자금흐름·증적 확보</span></div>
+    <div class="strip-card"><b>TR PoC</b><span>금융기관형 Travel Rule 구현 검증</span></div>
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">02</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Contents</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <span class="kicker">Agenda</span><h2>제안서 구성</h2>
+  <div class="contents">
+    <div class="content-card"><div class="num">01</div><h3>WHY NOW</h3><p>스테이블코인·디지털자산 유통에서 은행 AML 패러다임이 왜 바뀌는지 정리합니다.</p></div>
+    <div class="content-card"><div class="num">02</div><h3>KYT 아키텍처</h3><p>입금·출금·내부 계정 반영 전후의 KYT 모니터링 지점을 제시합니다.</p></div>
+    <div class="content-card"><div class="num">03</div><h3>TranSight 공급 범위</h3><p>API, Web, Batch, Risk Code, Evidence, STR 연계 산출물을 설명합니다.</p></div>
+    <div class="content-card"><div class="num">04</div><h3>가격 및 도입안</h3><p>하나은행 초기 운영에 적합한 KYT 플랜과 단계별 구축 로드맵을 제안합니다.</p></div>
+    <div class="content-card"><div class="num">05</div><h3>TTR PoC</h3><p>금융기관이 기존 TR 솔루션을 직접 쓰기 어려운 이유와 TTR 브릿지를 설명합니다.</p></div>
+    <div class="content-card"><div class="num">06</div><h3>결론</h3><p>하나은행이 디지털자산 유통 컴플라이언스 표준을 선점하는 실행안을 제시합니다.</p></div>
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">03</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Why Now</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head"><span class="kicker">Why Now</span><h2>은행의 AML은 계좌 기반에서 온체인 기반으로 확장됩니다</h2><p>가상자산이 제도권으로 편입되고 스테이블코인 유통이 현실화되면, 은행은 고객 신원 확인뿐 아니라 고객이 사용하는 지갑과 거래 상대방의 온체인 위험까지 확인해야 합니다.</p></div>
+  <div class="three-col">
+    <div class="card blue"><h3>규제 의무 강화</h3><ul><li>실명계정 운영지침상 고위험 고객 EDD 강화</li><li>FATF R.15/R.16 및 국내 특금법 체계 고려</li><li>디지털자산 유통기관의 내부통제 요구 확대</li></ul></div>
+    <div class="card red"><h3>금융범죄 리스크 증가</h3><ul><li>보이스피싱·해외 사기조직·마약자금의 가상자산 활용</li><li>트래블룰 우회 징검다리 수법 증가</li><li>FIU 미신고 VASP·DEX·개인지갑 경유 세탁 확대</li></ul></div>
+    <div class="card hana"><h3>스테이블코인 도래</h3><ul><li>은행이 디지털자산 유통기관이 되는 구조</li><li>KYC+KYT+TR 통합 AML 아키텍처 필요</li><li>STR 보고·사후 모니터링·RBA 재평가 체계 요구</li></ul></div>
+  </div>
+  <div class="note"><b>제안 방향</b> 하나은행은 “스테이블코인 출시 이후 대응”이 아니라, 출시 전 KYT 기반 온체인 AML 모니터링 체계와 거래소 TR 브릿지를 먼저 구축해 대한민국 금융기관의 디지털 자산 유통 컴플라이언스 표준을 선점하는 전략이 필요합니다.</div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">04</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Stablecoin Compliance</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head compact"><span class="kicker">Stablecoin Compliance Architecture</span><h2>KYC + KYT + TR 통합 컴플라이언스 설계</h2><p>정적 KYC와 계좌 기반 CRA만으로는 온체인 자금 흐름을 확인할 수 없습니다. 디지털자산 유통 구조에는 고객 신원, 지갑 위험, 거래 상대방, Travel Rule, 사후 모니터링이 하나의 흐름으로 연결되어야 합니다.</p></div>
+  <div class="two-col">
+    <div class="card soft">
+      <h3>통합 모델의 핵심 구성</h3>
+      <table class="std-table mini-table">
+        <tr><th>구성</th><th>하나은행 관점의 의미</th></tr>
+        <tr><td class="cat">KYC/CDD</td><td>고객 신원·실명·계좌 기반 기본 고객확인</td></tr>
+        <tr><td class="cat">EDD/RBA</td><td>고위험 고객 및 고위험 거래에 대한 심층 평가</td></tr>
+        <tr><td class="cat">KYT</td><td>입출금 지갑·TX·VASP·n-hop 위험을 온체인으로 검증</td></tr>
+        <tr><td class="cat">Travel Rule</td><td>거래소·금융기관 간 송수신자 정보 교환 및 감사증적 확보</td></tr>
+        <tr><td class="cat">STR 연계</td><td>위험근거·증거·자금흐름을 의심거래 보고 자료로 전환</td></tr>
+      </table>
+    </div>
+    <div class="card blue">
+      <h3>TranSight가 제공하는 차세대 보완 구조</h3>
+      <ul>
+        <li><b>동적 위험평가:</b> 고객이 사용하는 주소, TX, 상대방 VASP, 관련 범죄 라벨을 실시간 반영</li>
+        <li><b>온체인 증적화:</b> 단순 위험 점수가 아니라 Risk Code, 라벨 근거, Evidence, 거래 경로를 함께 반환</li>
+        <li><b>정책 연동:</b> 하나은행의 RBA/CRA/EDD 기준에 맞춰 차단, 보류, 심층검토, STR 후보화를 구분</li>
+        <li><b>Travel Rule 확장:</b> KYT에서 선별된 거래를 TR 채널과 연결하여 사전·사후 감사자료를 통합</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note" style="margin-top:5mm"><b>보난자팩토리의 제안 비전</b> 은행권 최초의 디지털 자산 시대 통합 컴플라이언스 모델 설계를 하나은행과 함께 만들어가겠습니다. KYC·KYT·Travel Rule·STR을 하나의 아키텍처로 연결하는 것은 하나은행이 대한민국 디지털 금융의 컴플라이언스 리더로 자리매김하는 핵심 기반이 됩니다.</div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">05</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">KYT Monitoring Points</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head compact"><span class="kicker">KYT First</span><h2>스테이블코인 유통기관의 핵심 통제점: 입금 전·출금 전 KYT</h2><p>하나은행이 디지털자산 유통기관이 되는 경우, 고객의 수탁 지갑·비수탁 지갑·외부 VASP 출금 주소가 모두 위험 통제의 대상이 됩니다.</p></div>
+  <div class="image-box"><img class="stable-img" src="../materials/stablecoin-kyt.jpg" alt="Stablecoin KYT architecture"/><div class="caption">디지털자산 유통기관의 입출금 KYT 모니터링 및 STR 보고 연계 인프라 구조</div></div>
+  <div class="summary-strip">
+    <div class="strip-card"><b>ⓐ 입금 전</b><span>외부 지갑 → 운영 지갑 유입 전 송신 지갑 위험도 검증</span></div>
+    <div class="strip-card"><b>계정 반영 전</b><span>내부 계정 반영 이전 이상거래·제재 주소 확인</span></div>
+    <div class="strip-card"><b>ⓑ 출금 전</b><span>운영 지갑 → 외부 수취지갑 출금 전 수취 지갑 검증</span></div>
+    <div class="strip-card"><b>STR 후보화</b><span>위험근거, 자금흐름, 고객·주소 정보를 보고 체계와 연계</span></div>
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">06</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">TranSight API & Web</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head"><span class="kicker">Solution Scope</span><h2>TranSight는 실시간 온체인 AML 모니터링과 Web 심층분석을 함께 제공합니다</h2><p>실시간 운영 통제에는 API가, 의심거래 심층 검토와 보고서 작성에는 Web이 사용됩니다. 두 영역의 결과를 하나의 감사증적으로 묶을 수 있습니다.</p></div>
+  <div class="two-col">
+    <div class="card blue"><h3>TranSight API</h3><div class="image-box" style="margin:3mm 0"><img class="api-img" src="../materials/api-structure.png" alt="API structure"/></div><ul><li>입출금 요청 건에 대해 실시간 위험 판별</li><li>대량 Batch Screening 지원</li><li>Risk Score, Risk Code, VASP Name, Evidence 반환</li><li>주소 해시 처리 등 개인정보 최소화 연동 가능</li></ul></div>
+    <div class="card hana"><h3>TranSight Web</h3><div class="image-box" style="margin:2mm 0 3mm"><img style="max-height:52mm;object-fit:contain" src="../materials/knpa/tx-map-2.png" alt="TranSight Transaction Map"/></div><ul><li>자금 흐름을 노드·엣지 기반 그래프로 시각화</li><li>VASP Identification으로 송수신처 특정</li><li>금융당국·내부심사·STR 검토용 리포트 작성 지원</li><li>하나은행 AML 담당자, 디지털자산 TF, 심사 담당자가 동일 화면에서 검토 가능</li></ul><div class="note"><b>운영 방식</b> API는 은행 시스템과 연동하고, Web은 심층 분석·사후 검토·교육·내부 보고 용도로 제공하는 구조를 권장합니다.</div></div>
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">07</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Risk Data & Methodology</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head"><span class="kicker">Technology</span><h2>한국형 범죄 및 제재대상 데이터 기반 KYT가 필요한 이유</h2><p>해외 솔루션은 글로벌 제재 리스트 중심으로 강점이 있으나, 국내 피싱·불법도박·성범죄·미신고 VASP·국내 수사기관 협력 데이터에는 구조적 공백이 발생할 수 있습니다.</p></div>
+  <div class="three-col">
+    <div class="card"><span class="num-badge">1</span><h3>HDCM<br/>Human-Driven Collection</h3><ul><li>다크웹·텔레그램·폐쇄 커뮤니티 직접 수집</li><li>범죄 증거 기반 라벨링</li><li>STR 보고 시 활용 가능한 Evidence 확보</li></ul></div>
+    <div class="card"><span class="num-badge">2</span><h3>ADCM<br/>AI-Driven Collection</h3><ul><li>웹·SNS·피싱 사이트 24시간 자동 수집</li><li>지갑 주소 패턴 자동 식별</li><li>신규 피싱·로맨스스캠 주소 즉시 반영</li></ul></div>
+    <div class="card"><span class="num-badge">3</span><h3>BDCM<br/>Blockchain-Driven</h3><ul><li>클러스터링 기반 연관 지갑 확장</li><li>VASP 핫월렛·콜드월렛 식별</li><li>자금 흐름 추적 및 믹서·브릿지 경유 탐지</li></ul></div>
+  </div>
+  <div class="summary-strip">
+    <div class="strip-card"><b>고위험 주소</b><span>3,000만+ 데이터 서비스 중</span></div>
+    <div class="strip-card"><b>VASP 식별</b><span>2억+ 거래소 주소 식별 정보</span></div>
+    <div class="strip-card"><b>국내 범죄 연관</b><span>400만+ 직접 수집 KYT 데이터</span></div>
+    <div class="strip-card"><b>FIU 미신고 VASP</b><span>1,600만+ 주소 DB 및 업데이트</span></div>
+  </div>
+  <div class="note" style="margin-top:5mm"><b>Asia No.1 KYT Solution</b> 보난자팩토리는 국내 유일, 아시아 최고 수준의 KYT 솔루션 및 데이터 인텔리전스를 인정받고 있으며, 국세청·경찰청·국정원 등 정부기관 가상자산 거래 제한 대상 DB의 표준이 되어가고 있습니다.</div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">08</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Indirect Laundering</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head compact"><span class="kicker">Advanced Risk</span><h2>징검다리 자금세탁은 1-hop 검사만으로 탐지하기 어렵습니다</h2><p>고객 개인지갑을 정상 주소처럼 통과시킨 뒤, 2-hop 이후 불법 시장·제재 주소·미신고 VASP로 이동하는 구조는 디지털자산 유통기관의 핵심 리스크입니다.</p></div>
+  <div class="two-col">
+    <div class="image-box"><img class="indirect-img" src="../materials/indirect-money-laundering.png" alt="Indirect laundering"/><div class="caption">트래블룰 우회형 징검다리 자금세탁 수법 도식</div></div>
+    <div class="card red"><h3>하나은행 관점의 위험</h3><ul><li>직접 수취지갑은 저위험으로 보이나 2-hop 이후 불법 서비스로 이동 가능</li><li>출금 이후 사후 모니터링이 없으면 고객 위험 재평가가 지연</li><li>STR 보고 시 자금 흐름 근거와 고객 계정 연계 증적이 부족해질 수 있음</li><li>스테이블코인 유통기관은 사전 차단뿐 아니라 사후 위험 전이 감시가 필요</li></ul><div class="note"><b>TranSight 대응</b> Deposit n-Hop Analysis와 Withdrawal n-Hop Analysis를 통해 직접 주소뿐 아니라 후속 자금 흐름을 모니터링하여 RBA 재평가와 STR 후보화에 활용합니다.</div>
+      <div class="note" style="margin-top:3mm;border-left-color:var(--blue)"><b>컴플라이언스 빌더로서의 역량</b> 거래소와 금융기관 모두 수탁형 지갑 시스템을 넘어, 연결된 비수탁 지갑(개인지갑)을 통한 규제 우회 리스크를 사전에 파악해야 합니다. 보난자팩토리는 새로운 디지털 자산 AML리스크를 예측하고 이에 대응하는 서비스를 설계·구축하는 <b>컴플라이언스 빌더</b>입니다.</div></div>
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">09</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">KYT Decisioning Model</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head"><span class="kicker">Decision Model</span><h2>하나은행 정책에 맞춘 KYT 판정·조치 체계</h2><p>TranSight 결과는 단순 조회가 아니라, 은행 내부 업무규칙에 따라 차단·보류·심층검토·정상처리로 분기할 수 있는 운영 정책으로 연결됩니다.</p></div>
+  <table class="std-table">
+    <tr><th>판정 단계</th><th>예시 조건</th><th>은행 조치</th><th>감사·보고 자료</th></tr>
+    <tr><td class="cat"><span class="tag.r">Block</span> 즉시 차단</td><td>제재 대상 지갑, 고위험 범죄 라벨, 미신고 VASP 직접 연계</td><td>입출금 중지, 고객 안내, 담당자 알림</td><td>Risk Code, 라벨 근거, TXID, 주소, Evidence 보존</td></tr>
+    <tr><td class="cat"><span class="tag.y">Hold</span> 보류 심사</td><td>n-hop 고위험 연계, 믹서·브릿지·DEX 경유 의심</td><td>수동 심사, EDD 검토, 고객 소명 요청</td><td>자금흐름 그래프, 중간 주소 목록, VASP 식별 결과</td></tr>
+    <tr><td class="cat"><span class="tag.b">Review</span> 모니터링</td><td>일반 위험 라벨, 반복 출금, 신규 지갑 패턴</td><td>고객 위험도 재평가, 기간별 사후 모니터링</td><td>RBA 변경 이력, 조회 로그, 분석 담당자 메모</td></tr>
+    <tr><td class="cat"><span class="tag.g">Pass</span> 정상 처리</td><td>위험 라벨 없음, 내부 정책 허용 범위</td><td>입출금 진행</td><td>조회 결과 및 정상 처리 기록 보관</td></tr>
+  </table>
+  <div class="note"><b>핵심</b> 하나은행은 KYT 결과를 AML 담당자의 판단 자료로만 쓰는 것이 아니라, 운영계 시스템의 실시간 통제·수동심사·사후 모니터링 정책으로 전환할 수 있습니다.</div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">10</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">STR & Audit Evidence</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head"><span class="kicker">Evidence Layer</span><h2>STR 보고와 내부감사를 위한 증적 구조</h2><p>스테이블코인 유통기관의 AML 체계는 탐지 자체보다, 왜 위험하다고 판단했는지 설명 가능한 증거를 남기는 것이 중요합니다.</p></div>
+  <div class="process">
+    <div class="step"><span class="num-badge">1</span><h3>탐지</h3><p>API가 주소·TX·VASP·Risk Code를 반환하고 정책 기준에 따라 차단/보류/검토로 분기합니다.</p></div>
+    <div class="step"><span class="num-badge">2</span><h3>심층분석</h3><p>Web에서 자금흐름 그래프, 클러스터링, n-hop 경로, Evidence를 확인합니다.</p></div>
+    <div class="step"><span class="num-badge">3</span><h3>고객/계정 연결</h3><p>은행 내부 고객 계정, 수탁·비수탁 지갑, 거래 요청 정보를 KYT 결과와 매핑합니다.</p></div>
+    <div class="step"><span class="num-badge">4</span><h3>STR 후보화</h3><p>의심거래 판단 사유, 관련 주소, 거래소, 시간, 금액, 위험근거를 구조화합니다.</p></div>
+    <div class="step"><span class="num-badge">5</span><h3>보고·감사</h3><p>보고서, 조회 이력, 담당자 검토 이력, 후속 조치 결과를 보존합니다.</p></div>
+  </div>
+  <div class="two-col" style="margin-top:6mm">
+    <div class="card blue"><h3>주요 산출물</h3><ul><li>주소·TXID 상세표</li><li>자금 흐름 그래프</li><li>VASP 식별 정보</li><li>Risk Code 및 라벨 근거</li><li>STR 검토용 요약 리포트</li></ul></div>
+    <div class="card hana"><h3>은행 내부 활용 장면</h3><ul><li>입출금 자동 통제 정책</li><li>고위험 고객 EDD</li><li>디지털자산 RA/CRA 재평가</li><li>감사·검사 대응 자료</li><li>금융당국 보고 및 사후 질의 대응</li></ul></div>
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">11</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Why Bonanza Factory</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head"><span class="kicker">Proven Expertise</span><h2>하나은행이 TranSight를 선택해야 하는 이유</h2><p>보난자팩토리는 은행-거래소 입출금 검증 인프라, KYT/AML 솔루션, 공공기관·VASP 레퍼런스를 동시에 보유한 국내 컴플라이언스 기술사입니다.</p></div>
+  <div class="four-col">
+    <div class="card"><h3>금융권 인프라 경험</h3><p>케이뱅크·카카오뱅크 등 제1금융권 은행과 거래소 간 원화 입출금 검증 솔루션을 공급하며 금융권 검사 환경을 경험했습니다.</p></div>
+    <div class="card"><h3>TranSafer 기반 처리역량</h3><p>원화 입출금 검증 시장에서 대규모 트랜잭션 처리와 은행 전용선 기반 운영 경험을 축적했습니다.</p></div>
+    <div class="card"><h3>정부·수사기관 레퍼런스</h3><p>경찰청, 국정원 등 기관과 가상자산 추적·KYT 관련 협력을 수행하며 한국형 범죄 데이터 기반 분석 역량을 고도화했습니다.</p></div>
+    <div class="card"><h3>국내 R&D·보안 체계</h3><p>국내 상주 R&D, ISMS 인증, 산학·국제 공동연구 기반으로 금융기관 전용 커스터마이징이 가능합니다.</p></div>
+  </div>
+  <div class="four-col" style="margin-top:5mm">
+    <div class="card hana"><h3>이미 준비된 파트너</h3><p>하나은행은 <b>업비트-하나은행 원화입출금(TranSafer)</b>를 보난자팩토리와 공동 개발하고, <b>전용선까지 구축</b>한 유일한 은행입니다. 금융권 망분리 환경·인프라·정보보호체계 호환 이슈를 이미 해결한 상태입니다.</p></div>
+    <div class="card blue"><h3>Be-Ready 최속 지원</h3><p>KYT도, 트래블룰도 금융권 망분리·보안·정보보호 인프라와의 호환이 핵심입니다. <b>보난자팩토리는 하나은행의 Be-Ready를 그 누구보다 빠르게 지원할 수 있는 유일한 파트너</b>입니다.</p></div>
+    <div class="card"><h3>업비트의 핵심 엔진</h3><p>보난자팩토리는 <b>업비트의 핵심 KYT 엔진이자 입출금 검증 엔진</b>을 운영하고 있습니다. 하나은행과 업비트를 연결하는 인프라의 중심에 이미 보난자팩토리가 있습니다.</p></div>
+    <div class="card"><h3>하나와 하나 되다</h3><p>TranSafer로 은행-거래소를 연결하고, TranSight로 온체인 위험을 통제하며, TTR로 Travel Rule까지 — <b>하나은행의 디지털자산 컴플라이언스 파트너는 보난자팩토리</b>입니다.</p></div>
+  </div>
+  <div class="summary-strip">
+    <div class="strip-card"><b>매출 220억</b><span>2025년 말 기준</span></div>
+    <div class="strip-card"><b>영업이익 87억</b><span>외감법인 핀테크 기업</span></div>
+    <div class="strip-card"><b>총자산 420억</b><span>안정적 운영 기반</span></div>
+    <div class="strip-card"><b>ISMS</b><span>금융권 수준 보안성</span></div>
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">12</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">KYT Commercial Proposal</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head compact"><span class="kicker">Supply Proposal</span><h2>KYT 공급 제안: Basic 또는 Compliance Pro 단계별 도입 권장</h2><p>하나은행의 스테이블코인 준비 단계에서는 단순 PoC가 아니라 실제 운영 전환을 고려한 API 호출량, 웹 계정, 심층 리포트 체계를 확보하는 것이 중요합니다. 모든 금액은 VAT 별도입니다.</p></div>
+  <div class="price-grid">
+    <div class="price-card"><span class="eyebrow">PoC</span><h3>Starter</h3><div class="price">월 300만</div><p>초기 검토·제한적 테스트</p><div class="spec"><div><b>API</b><span>월 15만 건</span></div><div><b>Web</b><span>1개</span></div><div><b>초과</b><span>30원/건</span></div><div><b>리포트</b><span>200만/건</span></div></div></div>
+    <div class="price-card"><span class="eyebrow">Pilot</span><h3>Basic</h3><div class="price">월 500만</div><p>파일럿·제한 운영</p><div class="spec"><div><b>API</b><span>월 30만 건</span></div><div><b>Web</b><span>2개</span></div><div><b>초과</b><span>20원/건</span></div><div><b>리포트</b><span>150만/건</span></div></div></div>
+    <div class="price-card featured"><span class="eyebrow">Recommended</span><h3>Compliance Pro</h3><div class="price">월 1,000만</div><p>실제 운영 전환·전수검사 권장</p><div class="spec"><div><b>API</b><span>월 80만 건</span></div><div><b>Web</b><span>5개</span></div><div><b>초과</b><span>10~15원/건</span></div><div><b>리포트</b><span>100만/건</span></div></div></div>
+    <div class="price-card"><span class="eyebrow">Scale</span><h3>Enterprise</h3><div class="price">월 2,500만</div><p>대량 실시간 모니터링</p><div class="spec"><div><b>API</b><span>무제한</span></div><div><b>Web</b><span>10개</span></div><div><b>리포트</b><span>월 2건 무료</span></div><div><b>추가</b><span>협의</span></div></div></div>
+  </div>
+  <div class="note"><b>하나은행 단계별 도입 권장안</b> 규제 준비 단계에서는 <b>Basic 또는 Compliance Pro</b>를 도입하여 내부 AML·컴플라이언스 팀의 KYT 역량을 강화하고, 디지털자산 규제준수 관련 교육 및 통합 모델 설계를 함께 진행합니다. 이후 실제 규제가 시행되고 VASP 라이선스를 취득하여 스테이블코인을 유통하는 시점에 <b>Enterprise Unlimited</b>로 전환하는 단계적 도입 구조를 권장합니다.</div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">13</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">KYT Implementation Roadmap</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head"><span class="kicker">KYT Roadmap</span><h2>4단계 도입 로드맵</h2><p>은행 내부 시스템에 무리하게 한 번에 통합하기보다, 먼저 API 판정·정책 기준·Web 분석·보고 체계를 검증한 뒤 운영계로 확장하는 방식을 제안합니다.</p></div>
+  <div class="roadmap">
+    <div class="phase"><span class="label">Phase 1</span><h3>Basic/Compliance Pro 도입</h3><p>내부 AML·컴플라이언스 팀 대상 KYT 교육, 정책·연동 설계, 디지털자산 규제준수 통합 모델 설계 착수</p></div>
+    <div class="phase"><span class="label">Phase 2</span><h3>API 샌드박스 연동</h3><p>주소·TX·Batch Screening 테스트, 응답 포맷 검증, 내부 AML/FDS 시스템 매핑</p></div>
+    <div class="phase"><span class="label">Phase 3</span><h3>Web 심층분석 운영</h3><p>AML 담당자 계정 제공, 자금흐름 검토, 리포트 생성, STR 후보화 업무 시나리오 실습</p></div>
+    <div class="phase"><span class="label">Phase 4</span><h3>Enterprise 전환</h3><p>VASP 라이선스 취득·스테이블코인 유통 시점에 Enterprise Unlimited 전환, 전수검사, 사후 n-hop 모니터링, 월간 리스크 리포트</p></div>
+  </div>
+  <table class="std-table" style="margin-top:7mm">
+    <tr><th>구분</th><th>기간</th><th>주요 산출물</th><th>하나은행 의사결정 포인트</th></tr>
+    <tr><td class="cat">초기 구축</td><td>2~4주</td><td>API 연동 명세, 정책 매핑표, 테스트 결과</td><td>운영 전환 가능성 판단</td></tr>
+    <tr><td class="cat">파일럿 운영</td><td>1~3개월</td><td>월간 조회량, 위험탐지 결과, 수동심사 사례</td><td>요금제·계정·정책 확정</td></tr>
+    <tr><td class="cat">정식 운영</td><td>상시</td><td>실시간 KYT 로그, Web 리포트, STR 후보 자료</td><td>스테이블코인 유통 AML 표준화</td></tr>
+  </table>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">14</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Travel Rule PoC</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head"><span class="kicker">TR PoC</span><h2>Travel Rule은 지금 PoC로 선점해야 합니다</h2><p>스테이블코인 유통이 본격화되면 하나은행은 거래소와 Travel Rule을 수행해야 합니다. 그러나 기존 TR 허브는 금융기관 내부망·보안·개인정보 환경에 그대로 적용하기 어렵습니다.</p></div>
+  <div class="matrix">
+    <div class="card red"><h3>현재 선택지의 한계</h3><table class="std-table mini-table"><tr><th>방식</th><th>은행 적용상 이슈</th></tr><tr><td class="cat">CODEVASP</td><td>외부 HTTPS API 직접 호출 필요 → 망분리 부담</td></tr><tr><td class="cat">VerifyVASP</td><td>Enclave Docker 설치·외부 통신·KYC DB 접근 이슈</td></tr><tr><td class="cat">Sumsub/Notabene</td><td>PII 국외이전·평문 JSON 처리·인터넷 통신 부담</td></tr><tr><td class="cat">자체 개발</td><td>프로토콜·거래소 연동·감사 체계 구축에 장기간 소요</td></tr></table></div>
+    <div class="card hana"><h3>TTR PoC의 목표</h3><ul><li>하나은행은 전용선/VPN 기반으로 TTR과만 통신</li><li>TTR이 CODEVASP, VerifyVASP, GTR 등 외부 TR 네트워크와 중계</li><li>KYT Atomic Gate를 먼저 수행한 뒤 필요 거래에 TR을 연결</li><li>업비트·빗썸 등 거래소와의 스테이블코인 TR 채널을 조기 확보</li><li>운영계 반영 전, 보안·감사·법무·개인정보 검토 포인트를 검증</li></ul></div>
+  </div>
+  <div class="note"><b>왜 보난자·하나은행·업비트만 가능한가</b> 현재 VerifyVASP·CODEVASP 등 기존 TR 솔루션은 은행 계정계나 내부망에 바로 연결하기 어려운 구조입니다. 보난자팩토리는 KYT와 패키지로 준비 중인 <b>금융기관형 트래블룰 브릿지(TTR)</b>를 통해 업비트-하나은행뿐 아니라 해외 VASP·타 금융기관으로도 확장 가능합니다. 이미 <b>실명계정 기반 원화입출금 중개 인프라(TranSafer)를 구축 완료</b>한 상태에서, 가장 효율적으로 Travel Rule을 수행할 수 있는 구조입니다. <b>KYT는 다른 은행도 도입할 수 있지만, 이 구조는 보난자팩토리·하나은행·업비트만 할 수 있습니다.</b></div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">15</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">TTR Bridge Architecture</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head"><span class="kicker">Financial-Grade TR Bridge</span><h2>TTR은 금융기관형 Travel Rule 브릿지입니다</h2><p>하나은행은 인터넷 기반 TR 허브를 직접 호출하지 않고, 보난자팩토리의 금융 전용 인프라를 통해 기존 TR 네트워크와 연결됩니다.</p></div>
+  <div class="card soft" style="padding:8mm">
+    <div style="display:grid;grid-template-columns:1fr 1.05fr 1fr;gap:8mm;align-items:center;text-align:center">
+      <div class="card hana"><h3>하나은행</h3><p>업무망 · KYC/AML 시스템<br/>전용선/VPN · 망분리 준수</p></div>
+      <div>
+        <div style="height:2px;background:linear-gradient(90deg,var(--hana),var(--blue));margin-bottom:5mm"></div>
+        <div class="card blue"><h3>TranSight TTR</h3><p>전자금융보조업자 · VAN 인프라 · ISMS<br/>KYT Atomic Gate + TR 중계</p></div>
+        <div style="height:2px;background:linear-gradient(90deg,var(--blue),var(--hana));margin-top:5mm"></div>
+      </div>
+      <div class="card"><h3>거래소·TR 네트워크</h3><p>CODEVASP · VerifyVASP · GTR<br/>업비트 · 빗썸 · 해외 VASP</p></div>
+    </div>
+  </div>
+  <div class="three-col" style="margin-top:6mm">
+    <div class="card"><h3>망분리 대응</h3><p>은행 내부 서버는 외부 인터넷 TR API를 직접 호출하지 않고 TTR 전용 채널만 사용합니다.</p></div>
+    <div class="card"><h3>프로토콜 변환</h3><p>TTR이 기존 거래소 TR 프로토콜과 은행 내부 연동 포맷 사이의 변환·중계를 담당합니다.</p></div>
+    <div class="card"><h3>감사증적 통합</h3><p>KYT 결과, TR 송수신 결과, PII Verification 결과를 하나의 로그로 통합합니다.</p></div>
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">16</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Direct Exchange Channel</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head"><span class="kicker">First Mover Advantage</span><h2>하나은행은 거래소와의 직접 TR 채널을 먼저 확보할 수 있습니다</h2><p>스테이블코인 유통에서 중요한 것은 단순히 토큰을 발행하는 것이 아니라, 은행·거래소·고객 사이의 AML/Travel Rule 흐름을 실제 운영 가능한 상태로 만드는 것입니다.</p></div>
+  <table class="std-table">
+    <tr><th>구분</th><th>하나은행 선점 효과</th><th>거래소 관점 이점</th><th>TranSight/TTR 역할</th></tr>
+    <tr><td class="cat">업비트 연결</td><td>기존 원화입출금 파트너십을 디지털자산 유통·TR로 확장</td><td>금융기관 TR 대응 채널 확보</td><td>VerifyVASP 구조와 은행망 사이의 브릿지 PoC</td></tr>
+    <tr><td class="cat">빗썸 연결</td><td>스테이블코인 유통 채널 다변화 및 시장 커버리지 확대</td><td>CODEVASP 기반 기존 구조를 유지하면서 금융기관 채널 추가</td><td>CODE 호환 방식의 TTR Adapter 제공</td></tr>
+    <tr><td class="cat">해외 VASP</td><td>글로벌 송금·유통 시나리오 사전 검증</td><td>국내 금융기관과의 규제 친화적 접점 확보</td><td>GTR/Sumsub/기타 허브 연계 검토</td></tr>
+  </table>
+  <div class="note"><b>전략 메시지</b> 하나은행이 지금 TTR PoC를 수행하면, 스테이블코인 법제와 시장 구조가 확정되는 시점에 뒤늦게 연동을 시작하는 경쟁 은행보다 12~18개월 빠르게 운영 준비를 완료할 수 있습니다.</div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">17</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">TTR PoC Scope</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head"><span class="kicker">PoC Plan</span><h2>TTR PoC 범위 및 검증 항목</h2><p>PoC는 본운영 계약이 아니라, 하나은행 보안·법무·개인정보·AML 담당자가 실제 운영 가능성을 검증하는 단계로 설계합니다.</p></div>
+  <div class="process">
+    <div class="step"><span class="num-badge">1</span><h3>시나리오 정의</h3><p>하나은행 ↔ 업비트/빗썸 송수신, 수탁/비수탁 지갑, 100만원 이상 송금 시나리오 정의</p></div>
+    <div class="step"><span class="num-badge">2</span><h3>KYT Gate</h3><p>TR 수행 전 송수신 지갑 위험도 확인 및 위험거래 차단/보류 기준 검증</p></div>
+    <div class="step"><span class="num-badge">3</span><h3>PII 매칭</h3><p>고객명·생년월일 등 계정주 확인 정보의 해시/암호화 기반 교환 방식 검토</p></div>
+    <div class="step"><span class="num-badge">4</span><h3>거래소 연계</h3><p>CODE/VV/GTR 등 거래소별 Adapter 방식, 응답 포맷, 오류 처리 방식 검증</p></div>
+    <div class="step"><span class="num-badge">5</span><h3>감사로그</h3><p>KYT 결과, TR 요청/응답, 담당자 조치, 예외 처리 로그를 감사 가능하게 보존</p></div>
+  </div>
+  <div class="two-col" style="margin-top:6mm">
+    <div class="card blue"><h3>PoC 산출물</h3><ul><li>연동 아키텍처 초안</li><li>API 요청/응답 샘플</li><li>위험거래 처리 시나리오</li><li>보안·개인정보 검토 체크리스트</li><li>거래소 연동 우선순위 및 운영전환 과제</li></ul></div>
+    <div class="card hana"><h3>권장 기간</h3><p class="big-line" style="font-size:18pt;margin:2mm 0">6~8주 PoC</p><p>하나은행 디지털자산 TF, AML/준법, 정보보호, IT 연동 담당자와 보난자팩토리 TTR/KYT 담당자가 공동 워킹그룹 형태로 진행합니다.</p></div>
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">18</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Security & Governance</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head"><span class="kicker">Governance</span><h2>금융기관 도입을 위한 보안·운영 원칙</h2><p>하나은행 도입안은 규제 대응뿐 아니라, 내부 보안감사와 운영 책임 소재를 설명할 수 있는 구조로 설계되어야 합니다.</p></div>
+  <div class="three-col">
+    <div class="card"><h3>데이터 최소화</h3><ul><li>주소·TX 중심 조회</li><li>필요 시 해시 처리 연동</li><li>PII는 TR PoC 범위에서 별도 통제</li></ul></div>
+    <div class="card"><h3>감사로그</h3><ul><li>요청/응답 이력</li><li>담당자 조치 이력</li><li>정책 버전 및 판정 근거 보존</li></ul></div>
+    <div class="card"><h3>망분리 대응</h3><ul><li>전용선/VPN 연동 검토</li><li>외부 HTTPS 직접 호출 최소화</li><li>DMZ 및 중계구간 분리 설계</li></ul></div>
+  </div>
+  <table class="std-table" style="margin-top:7mm">
+    <tr><th>검토 영역</th><th>KYT 공급 단계</th><th>TTR PoC 단계</th><th>운영전환 전 확인사항</th></tr>
+    <tr><td class="cat">정보보호</td><td>API 인증, IP 제한, 접근권한 관리</td><td>전용선/VPN, mTLS, 키 관리</td><td>은행 보안 심사 및 로그 보존 정책</td></tr>
+    <tr><td class="cat">개인정보</td><td>주소 중심 처리, PII 최소화</td><td>해시·암호화 기반 PII Verification</td><td>국외이전·위탁처리·보존기간 검토</td></tr>
+    <tr><td class="cat">운영관리</td><td>장애 대응, SLA, 월간 리포트</td><td>거래소 응답 지연·오류 처리</td><td>운영 매뉴얼 및 책임분계표</td></tr>
+  </table>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">19</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Next Step</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head"><span class="kicker">Execution Plan</span><h2>제안 실행안: KYT 계약 협의와 TTR PoC를 병행</h2><p>KYT는 하나은행이 실제 공급받아 내부 운영체계로 반영하고, TTR은 PoC로 보안·법무·거래소 연동 가능성을 검증하는 투트랙이 가장 현실적입니다.</p></div>
+  <div class="two-col">
+    <div class="card blue"><h3>Track A. KYT 공급</h3><ul><li>Compliance Pro 기준 견적·계약 협의</li><li>API 샌드박스 및 Web 계정 제공</li><li>입출금 정책 매핑 워크숍</li><li>Batch Screening·Risk Code 테스트</li><li>월간 운영 리포트 및 심층 리포트 체계 확정</li></ul></div>
+    <div class="card hana"><h3>Track B. TTR PoC</h3><ul><li>하나은행-거래소 TR 시나리오 정의</li><li>업비트/빗썸 우선 연계 구조 검토</li><li>전용선/VPN 기반 금융기관형 통신 구조 설계</li><li>KYT Atomic Gate + TR 처리 플로우 검증</li><li>운영전환 비용·일정·법무검토 사항 정리</li></ul></div>
+  </div>
+  <div class="roadmap" style="margin-top:7mm">
+    <div class="phase"><span class="label">Week 1</span><h3>Kick-off</h3><p>담당자 지정, 보안 요구사항 수집, 대상 시스템 확인</p></div>
+    <div class="phase"><span class="label">Week 2-3</span><h3>KYT Test</h3><p>주소·TX·Batch 샘플 검증, 정책 매핑</p></div>
+    <div class="phase"><span class="label">Week 4-6</span><h3>TTR PoC</h3><p>TR 요청/응답, PII 매칭, 거래소 Adapter 검토</p></div>
+    <div class="phase"><span class="label">Week 7-8</span><h3>Decision</h3><p>본운영 전환안, 가격안, 보안·법무 체크리스트 확정</p></div>
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">20</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Closing Message</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div class="section-head center" style="text-align:center;margin-top:12mm"><span class="kicker">Closing</span></div>
+  <div class="quote"><p>하나은행이 Finance On-Chain 시대 선두주자가 되기 위해, 누구보다 먼저 “운영 가능한 컴플라이언스 인프라”를 확보할 수 있도록, TranSight는 KYT와, 트래블룰로 하나은행의 완벽한 준비를 지원합니다.</p></div>
+  <div class="closing-logos"><img src="../materials/bonanza_Factory_logo.jpg"/><span style="font-size:15pt;color:#8a95a6">×</span><img src="../materials/hanabank/hanabank-logo.png"/></div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">21</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Thank You</div><div class="logos"><img src="../materials/bonanza_Factory_logo.jpg"/><img src="../materials/hanabank/hanabank-logo.png"/></div></div>
+  <div style="text-align:center;margin-top:35mm">
+    <h1 style="font-size:42pt;color:#0b1f3a">Thank You</h1>
+    <p style="font-size:14pt;color:#647085;margin-top:4mm">경청해 주셔서 감사합니다.</p>
+    <div class="contact">
+      <b>E-mail</b><span>contact@bonanza-factory.co.kr</span>
+      <b>Tel</b><span>02-2632-7774</span>
+      <b>Web</b><span>www.bonanza-factory.co.kr</span>
+      <b>Address</b><span>서울특별시 영등포구 양평로 12, 정오빌딩 6, 7층</span>
+    </div>
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">22</span></footer>
+</section>
+
+</body>
+</html>

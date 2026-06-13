@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>2026년 가상자산 분석 지원 용역 발표자료 - 보난자 컨소시엄</title><style>
+@font-face{font-family:NanumSquare_ac;src:url('../fonts/NanumSquare_acR.ttf') format('truetype');font-weight:400} @font-face{font-family:NanumSquare_ac;src:url('../fonts/NanumSquare_acB.ttf') format('truetype');font-weight:700} @font-face{font-family:NanumSquare_ac;src:url('../fonts/NanumSquare_acEB.ttf') format('truetype');font-weight:800}
+:root{--blue:#1f5f9f;--navy:#173a63;--dark:#0b1f3a;--pale:#ddebf7;--pale2:#eef4fa;--green:#19733e;--red:#8b1e1e;--line:#c9d1d9;--text:#172033;--muted:#68758a;--bg:#f1f4f8}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:NanumSquare_ac,NanumSquare,'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',Arial,sans-serif} @page{size:297mm 210mm;margin:0}
+.page{width:297mm;height:210mm;min-width:297mm;min-height:210mm;max-width:297mm;max-height:210mm;margin:0 auto 8mm;background:#fff;position:relative;overflow:hidden;padding:16mm 18mm 18mm;page-break-after:always;box-shadow:0 10px 24px rgba(20,40,80,.12)} @media print{*{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;color-adjust:exact!important}body{background:#fff;margin:0;padding:0}.page{margin:0;box-shadow:none;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}.page:last-child{page-break-after:auto}.page:before{-webkit-print-color-adjust:exact!important}.section-page,.section-break:before,.cover:before,.flow-card,.biz-card,.biz-card.blue,.thesis-card,.note-box,.warn,.good,.bottom-message,.hero-card,.risk-matrix div,.scope-grid div,.typology-grid div,.quality-grid div,.security-grid div,.outcome-grid div,.long-grid div,.diff-grid div,.pipeline span,.process-row span,.std-table th,.agenda-grid div,.license-card,.timeline div,.case-side div,.case-note,.closing-tags span{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}}
+.page:before{content:"";position:absolute;left:0;right:0;top:0;height:4mm;background:linear-gradient(90deg,var(--navy),var(--blue))}.page:after{content:"";position:absolute;left:18mm;right:18mm;top:14mm;border-top:1.5px solid var(--navy);opacity:.75}.page.cover:after,.page.section-page:after,.page.thank-you:after,.page.closing:after{display:none}
+h1,h2,h3,p{margin:0;word-break:keep-all} h1{font-size:36pt;letter-spacing:-.045em;line-height:1.15;color:var(--dark);font-weight:800} h2{font-size:27pt;letter-spacing:-.04em;line-height:1.18;color:var(--dark);font-weight:800} h3{font-size:14pt;letter-spacing:-.02em;color:var(--navy);font-weight:800} p{font-size:12.2pt;line-height:1.55;color:#4e5d72}.kicker,.eyebrow{display:block;font-size:9.8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:800;margin-bottom:3mm}.section-head{margin-top:4mm;margin-bottom:8mm}.section-head.compact{margin-bottom:6mm}.section-head p{margin-top:2mm;color:var(--muted)}
+.page-footer{position:absolute;left:18mm;right:18mm;bottom:8mm;height:8mm;border-top:1px solid var(--line);padding-top:2.5mm;display:flex;align-items:center;gap:8mm;color:#8b95a5;font-size:8.5pt}.footer-brand{display:flex;align-items:center;gap:3mm;width:88mm}.footer-brand img{max-height:5mm;max-width:35mm;object-fit:contain}.sep{display:block;width:1px;height:12px;background:#d4dbe5}.copyright{flex:1;text-align:center;font-style:italic}.page-no{font-weight:800;color:var(--navy);letter-spacing:.08em}
+.cover{padding-top:17mm}.cover:before{height:5mm}.cover-top{display:flex;justify-content:flex-end;margin-bottom:20mm}.doc-label{font-size:9pt;color:#778497;text-transform:uppercase;letter-spacing:.15em;border:1px solid #d6dde8;border-radius:30px;padding:2mm 5mm}.cover-wrap{display:grid;grid-template-columns:1.25fr .78fr;gap:18mm;align-items:center}.cover-sub{font-size:16pt;line-height:1.55;margin-top:8mm;color:#526276}.cover-chips{display:flex;gap:3mm;flex-wrap:wrap;margin-top:10mm}.cover-chips span{background:#f6f9fd;border:1px solid #d6e0ed;border-radius:99px;padding:2mm 4mm;font-weight:800;color:#34516e;font-size:10pt}.cover-logo-row{display:flex;align-items:center;gap:5mm;margin-top:15mm}.cover-logo-row img{height:8mm;width:auto;max-width:60mm}.cover-logo-row span{color:#9aa4b2;font-size:15pt}.cover-date{margin-top:5mm;color:#32445a;font-size:15pt;font-weight:800}.hero-card{border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:5mm;padding:7mm;background:linear-gradient(135deg,#fff,#f6faff);margin-bottom:5mm}.hero-card b{font-size:15pt;color:var(--navy)}.hero-card p{margin-top:3mm}.metric-row{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-bottom:4mm}.metric-row div{border:1px solid var(--line);border-radius:4mm;background:#fff;padding:5mm}.metric-row strong{display:block;font-size:24pt;color:var(--blue);letter-spacing:-.03em}.metric-row span{font-size:9.8pt;color:var(--muted);font-weight:700}
+.agenda-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm}.agenda-grid div{border:1px solid var(--line);border-radius:5mm;padding:6mm;background:#fbfcfe;min-height:43mm}.agenda-grid span{font-size:20pt;font-weight:900;color:#cbd7e7}.agenda-grid b{display:block;font-size:16pt;color:var(--navy);margin:1mm 0 3mm}.agenda-grid p{font-size:11pt}
+.section-page{background:linear-gradient(135deg,#ffffff 0%,#f0f6fc 100%)}.section-break{height:100%;display:flex;flex-direction:column;justify-content:center}.section-break span{font-size:42pt;color:#bdd3e9;font-weight:900}.section-break h2{font-size:37pt}.section-break p{margin-top:6mm;font-size:15pt;color:#526276;max-width:190mm}.section-break:before{content:"";position:absolute;right:20mm;bottom:22mm;width:70mm;height:70mm;border-radius:50%;background:rgba(31,95,159,.08)}
+.risk-matrix,.scope-grid,.typology-grid,.quality-grid,.security-grid,.outcome-grid,.long-grid,.diff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4.5mm}.risk-matrix div,.scope-grid div,.typology-grid div,.quality-grid div,.security-grid div,.outcome-grid div,.long-grid div,.diff-grid div{border:1px solid var(--line);background:#fff;border-radius:4mm;padding:4.2mm;min-height:39mm}.risk-matrix b,.scope-grid b,.typology-grid b,.quality-grid b,.security-grid b,.outcome-grid b,.long-grid b,.diff-grid b{display:block;font-size:13.2pt;color:var(--navy);margin-bottom:2mm}.risk-matrix p,.scope-grid p,.typology-grid p,.quality-grid p,.security-grid p,.outcome-grid p,.long-grid p,.diff-grid p{font-size:10.2pt;line-height:1.42}.risk-matrix em,.quality-grid em{display:block;margin-top:2mm;color:var(--green);font-size:9.4pt;font-style:normal;font-weight:800}.typology-grid span,.diff-grid span{font-size:9pt;font-weight:900;color:#fff;background:var(--blue);padding:1mm 2.4mm;border-radius:99px;display:inline-block;margin-bottom:3mm}
+.two-flow{display:grid;grid-template-columns:1fr 1fr;gap:8mm}.flow-card{border:1px solid var(--line);border-radius:5mm;padding:7mm;min-height:122mm;background:#fff}.flow-card.primary{border-color:#b9d0e8;background:#f7fbff}.flow-card.muted{background:#f7f8fa}.flow-card ol{margin:6mm 0;padding-left:6mm;font-size:13pt;line-height:1.8;color:#34445b}.flow-card p.warn,.flow-card p.good{border-radius:3mm;padding:4mm;font-weight:800;font-size:11pt}.warn{background:#f9e6e6;color:#7b1d1d}.good{background:#e7f3ea;color:#155f36}
+.thesis-layout{display:grid;grid-template-columns:1fr 20mm 1fr;align-items:center;gap:6mm;margin-top:8mm}.thesis-card{border:1px solid var(--line);border-radius:6mm;padding:8mm;text-align:center;min-height:105mm;background:#fff}.thesis-card img{height:10mm;width:auto;max-width:68mm;object-fit:contain;margin-bottom:9mm}.thesis-card b{display:block;font-size:17pt;color:var(--navy);margin:4mm 0}.thesis-card p{font-size:12pt}.plus{text-align:center;font-size:38pt;color:#9eb6d4;font-weight:300}.bottom-message{margin-top:8mm;background:#eef4fa;border-left:5px solid var(--blue);border-radius:4mm;padding:5mm;font-size:15pt;font-weight:800;color:var(--dark)}
+.company-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:8mm}.info-table table{border-collapse:collapse;width:100%;font-size:11.5pt}.info-table th{width:34%;background:var(--pale);color:var(--navy);padding:4mm;border:1px solid var(--line);text-align:left}.info-table td{padding:4mm;border:1px solid var(--line)}.history{border:1px solid var(--line);border-radius:5mm;padding:6mm;background:#fbfcff}.history ul,.biz-card ul,.image-copy ul{margin:4mm 0 0;padding-left:5mm;font-size:11.5pt;line-height:1.65;color:#455368}.business-grid{display:grid;grid-template-columns:1fr 1fr;gap:7mm}.biz-card{border:1px solid var(--line);border-radius:5mm;padding:7mm;min-height:120mm;background:#fff}.biz-card.blue{background:#f7fbff;border-color:#bad3ef}.biz-card b{display:block;font-size:15pt;color:var(--navy);margin:4mm 0}
+.pipeline{display:grid;grid-template-columns:repeat(5,1fr);gap:3mm}.pipeline div{border:1px solid var(--line);border-radius:4mm;padding:4mm;min-height:72mm;background:#fff;position:relative}.pipeline span{display:inline-flex;align-items:center;justify-content:center;width:8mm;height:8mm;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;margin-bottom:3mm}.pipeline b{display:block;color:var(--navy);font-size:12.5pt}.pipeline p{font-size:9.8pt;margin-top:2mm}.image-slot{border:2px dashed #9ca3af;background:#f3f4f6;border-radius:5mm;display:flex;align-items:center;justify-content:center;text-align:center;color:#6b7280;font-weight:800}.image-slot.small{height:35mm;margin-top:6mm}.image-slot.big{height:112mm}.image-slot small{font-weight:400;font-size:10pt}
+.std-table{border-collapse:collapse;width:100%;font-size:11.3pt;border:1px solid var(--line)}.std-table th{background:var(--navy);color:#fff;padding:3.2mm;text-align:left;border-right:1px solid rgba(255,255,255,.35)}.std-table td{padding:3.2mm;border:1px solid var(--line);vertical-align:top;line-height:1.45}.std-table tr:nth-child(even) td{background:#f8fafc}.std-table.small{font-size:10.3pt}.note-box{margin-top:5mm;border-left:4px solid var(--green);background:#f4fbf6;border-radius:3mm;padding:4mm 5mm;color:#30465c;font-size:11.2pt}.note-box b{color:var(--green)}
+.process-row{display:grid;grid-template-columns:repeat(5,1fr);gap:3.5mm}.process-row div{border:1px solid var(--line);border-radius:5mm;padding:4mm;min-height:100mm;background:#fff}.process-row span{display:block;color:#fff;background:var(--blue);font-size:9.2pt;font-weight:900;border-radius:99px;padding:1mm 2.2mm;margin-bottom:4mm;width:max-content}.process-row b{display:block;font-size:12.5pt;color:var(--navy);margin-bottom:3mm}.process-row p{font-size:9.8pt}.process-row em{display:block;margin-top:4mm;border-top:1px solid var(--line);padding-top:3mm;color:var(--green);font-style:normal;font-weight:800;font-size:9.5pt}.image-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:8mm}.image-copy{border:1px solid var(--line);border-radius:5mm;padding:7mm;background:#fbfcff}.license-layout{display:grid;grid-template-columns:repeat(4,1fr);gap:5mm}.license-card{border:1px solid var(--line);border-radius:5mm;padding:5mm;min-height:61mm;background:#fff}.license-card b{display:block;font-size:15pt;color:var(--navy);margin-bottom:3mm}.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:5mm}.timeline div{border:1px solid var(--line);border-top:6px solid var(--blue);border-radius:4mm;padding:5mm;min-height:95mm;background:#fff}.timeline div:nth-child(3){border-top-color:var(--green)}.timeline div:nth-child(4){border-top-color:var(--red)}.timeline span{display:block;font-size:10pt;color:var(--muted);font-weight:800;margin-bottom:5mm}.timeline b{font-size:14pt;color:var(--navy)}.timeline p{font-size:10.8pt;margin-top:4mm}.closing-wrap{text-align:center;max-width:230mm;margin:34mm auto 0}.closing-wrap h2{font-size:36pt}.closing-wrap p{font-size:15pt;line-height:1.65;margin-top:8mm}.closing-tags{display:flex;justify-content:center;gap:3mm;margin-top:10mm}.closing-tags span{border:1px solid var(--line);border-radius:99px;padding:2.2mm 5mm;background:#fff;color:var(--navy);font-weight:800}.thanks{text-align:center;margin-top:34mm}.thanks h1{font-size:48pt}.thanks p{font-size:14pt;margin-top:3mm;color:var(--muted)}.thanks-logos{display:flex;justify-content:center;align-items:center;gap:5mm;margin:15mm 0}.thanks-logos img{height:9mm;max-width:70mm}.thanks-logos span{color:#a1abb8;font-size:17pt}.contact{display:grid;grid-template-columns:24mm 95mm;gap:3mm 6mm;justify-content:center;text-align:left;border-top:1px solid var(--line);padding-top:7mm;font-size:11pt}.contact b{color:var(--blue)}.contact span{color:#3f4d60}
+
+
+/* --- user revision 2026-06-05 --- */
+.cover-wrap{grid-template-columns:1.42fr .58fr!important;gap:10mm!important;align-items:center!important;}
+.cover h1{white-space:nowrap!important;font-size:31.5pt!important;letter-spacing:-.055em!important;line-height:1.1!important;}
+.cover-sub{font-size:13pt!important;line-height:1.55!important;}
+.cover-right{transform:translateY(10mm);}
+.cover-right .hero-card{padding:5mm!important;}
+.cover-right .hero-card p{font-size:10.2pt!important;line-height:1.55!important;}
+.cover-right .metric-row{gap:3mm!important;margin-top:3mm!important;}
+.cover-right .metric-row div{padding:4mm!important;min-height:23mm!important;}
+.cover-right .metric-row strong{font-size:19pt!important;}
+.cover-right .metric-row span{font-size:8.8pt!important;}
+.cover-logo-row{margin-top:11mm!important;align-items:center!important;}
+.cover-logo-row img{height:auto!important;max-height:8mm!important;width:auto!important;object-fit:contain!important;}
+.cover-logo-row img:first-child{width:58mm!important;max-width:58mm!important;height:auto!important;max-height:none!important;}
+.footer-brand img{object-fit:contain!important;height:auto!important;}
+.std-table.experience-table{font-size:8.3pt!important;line-height:1.25!important;}
+.std-table.experience-table th{padding:2.2mm 2.4mm!important;}
+.std-table.experience-table td{padding:2.0mm 2.2mm!important;line-height:1.32!important;}
+.std-table.experience-table th:nth-child(1), .std-table.experience-table td:nth-child(1){width:19mm!important;}
+.std-table.experience-table th:nth-child(2), .std-table.experience-table td:nth-child(2){width:45mm!important;}
+.std-table.experience-table th:nth-child(3), .std-table.experience-table td:nth-child(3){width:88mm!important;}
+.case-grid{display:grid;grid-template-columns:1.5fr .6fr;gap:7mm;margin-top:4mm;}
+.case-main{border:1px solid var(--line);border-radius:5mm;background:#fff;padding:6mm 7mm;min-height:112mm;}
+.case-main h3{font-size:14pt;margin-bottom:4mm;color:var(--navy);}
+.case-main ol{margin:0;padding-left:0;list-style:none;display:grid;gap:3mm;}
+.case-main li{display:grid;grid-template-columns:42mm 1fr;gap:4mm;border-bottom:1px solid #e7edf5;padding:3mm 0;align-items:start;}
+.case-main li:last-child{border-bottom:0;}
+.case-main li b{font-size:11.2pt;color:var(--dark);}
+.case-main li span{font-size:10.4pt;line-height:1.55;color:#41506a;word-break:keep-all;}
+.case-side{display:grid;grid-template-columns:1fr;gap:3mm;}
+.case-side div{border:1px solid #cdd8e6;border-left:4px solid var(--blue);border-radius:4mm;background:#f8fbff;padding:4.5mm;min-height:24mm;}
+.case-side div:nth-child(2){border-left-color:var(--green);}
+.case-side div:nth-child(3){border-left-color:var(--red);}
+.case-side div span{display:block;font-size:8.8pt;color:var(--muted);font-weight:700;margin-bottom:1.8mm;}
+.case-side div b{font-size:12.2pt;line-height:1.35;color:var(--dark);}
+.case-note{margin-top:5mm;border-left:4px solid var(--green);background:#f2f8f4;border-radius:3mm;padding:4mm 5mm;font-size:10.6pt;line-height:1.6;color:#34445b;word-break:keep-all;}
+.case-note b{color:var(--green);margin-right:2mm;}
+.history ul li{line-height:1.45;}
+</style></head><body>
+<section class="page cover">
+<div class="cover-top"><div class="doc-label">Proposal Presentation Deck</div></div>
+<div class="cover-wrap">
+<div class="cover-left">
+<div class="eyebrow">2026 Virtual Asset Analysis Support Service</div>
+<h1>2026 가상자산 분석지원 용역사업 발표자료</h1>
+<p class="cover-sub">경찰청 수사국 사이버테러대응과 대상<br/>보난자팩토리 × 트라버스 공동수급체 제안</p>
+<div class="cover-chips"><span>TranSight KYT</span><span>On-chain Forensics</span><span>VASP Coordination</span><span>Evidence-grade Reporting</span></div>
+<div class="cover-logo-row"><img src="../materials/bonanza_Factory_logo.jpg"/><span>×</span><img src="../materials/traverse_logo.webp"/></div>
+<div class="cover-date">2026.06.09</div>
+</div>
+
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">01</div></footer></section><section class="page">
+<div class="section-head"><span class="kicker">Contents</span><h2>발표 구성</h2><p>문제 인식, 수행 역량, 분석 체계, 사업관리, 기대성과 순서로 구성했습니다.</p></div>
+<div class="agenda-grid">
+<div><span>01</span><b>제안 배경</b><p>가상자산 범죄 고도화와 경찰청 수사 실무의 어려움</p></div>
+<div><span>02</span><b>보난자 컨소시엄</b><p>보난자팩토리와 트라버스의 역할, 제품, 실적</p></div>
+<div><span>03</span><b>수행 전략</b><p>TranSight 공동개발 인력 직접 참여, One-Team 체계</p></div>
+<div><span>04</span><b>분석 방법론</b><p>트랜잭션 추적, 클러스터링, 믹서·브릿지·해킹형 대응</p></div>
+<div><span>05</span><b>운영·품질관리</b><p>접수, 트리아지, 보고, 브리핑, 법적 다툼 대응</p></div>
+<div><span>06</span><b>기대성과</b><p>사건 해결, 환수 골든타임, 분석 인프라화</p></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">02</div></footer></section><section class="page section-page">
+<div class="section-break"><span>01.</span><h2>왜 지금 경찰청에<br/>전문 분석지원 체계가 필요한가</h2><p>초국경 사이버테러범죄에 대응하기 위한 민관협력 가상자산 분석 지원 체계가 요구되고 있습니다.</p></div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">03</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Problem Statement</span><h2>가상자산 범죄는 “주소 조회” 수준을 넘어섰습니다</h2><p>수사 실무에서는 믹싱, 브릿지, DEX, 프라이빗 코인, NFT, ENS, 스마트컨트랙트 공격이 결합됩니다.</p></div>
+<div class="risk-matrix">
+<div><b>믹싱·텀블러</b><p>CoinJoin, Tornado Cash, Railgun 등 입출금 연결이 약화되는 서비스 경유</p><em>대응: 전후 구간 추적 + 타이밍·금액 상관관계</em></div>
+<div><b>크로스체인 브릿지</b><p>Lock/Mint 구조와 체인 전환 반복으로 자금 흐름 단절 효과 발생</p><em>대응: 브릿지 DB + 시간·금액 매핑</em></div>
+<div><b>프라이빗 코인</b><p>Monero 등 발신자·수신자·금액 은닉으로 온체인 직접 식별 제한</p><em>대응: 거래소 입출금 구간과 일반 체인 전후 흐름 분석</em></div>
+<div><b>스마트컨트랙트·NFT</b><p>DeFi 믹서, wash trading, 비상장 코인 발행 후 유동성 회수</p><em>대응: 컨트랙트 배포자·권한·반복거래 분석</em></div>
+<div><b>P2P·DEX·OTC</b><p>KYC 없는 DEX, 해외 OTC 브로커, 비규제 P2P 경유 증가</p><em>대응: 온체인 주소 특정 + 거래소 유입 경로 식별</em></div>
+<div><b>사이버테러·해킹형</b><p>핫월렛 침해, DeFi exploit, 악성 승인·피싱, 브릿지 세탁</p><em>대응: 공격 트랜잭션 구조와 자금 이동을 결합 분석</em></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">04</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Key Differentiator</span><h2>해외 솔루션 기반 분석 대행사와 보난자 컨소시엄의 차이</h2><p>국내 분석지원 업체 대부분은 Chainalysis, TRM Labs 등 해외 솔루션을 구매하여 분석 업무를 수행합니다. 보난자 컨소시엄은 근본적으로 다릅니다.</p></div>
+<div class="two-flow">
+<div class="flow-card muted"><h3>해외 솔루션 기반 분석 대행</h3><ol><li>Chainalysis, TRM 등 해외 KYT 툴 라이선스 구매</li><li>툴 제공 라벨·그래프 기반 조회 후 리포트 작성</li><li>신규 토큰·비표준 컨트랙트 등 예외 발생 시 해외 벤더 응답 대기</li><li>한국형 범죄 패턴(보이스피싱, 환전상, OTC 중개책 등) 데이터 부재</li></ol><p class="warn">한계: 분석 도구의 범위 내에서만 대응 가능하며, 알고리즘 개선이 불가능</p></div>
+<div class="flow-card primary"><h3>보난자 컨소시엄 (유일한 차별점)</h3><ol><li>TranSight를 직접 개발·운영한 인력이 분석지원에 참여</li><li>업비트 AML 모니터링을 통해 범죄자금 유통 흐름과 트렌드를 가장 먼저 파악</li><li>분석 사건에 필요한 알고리즘이 부족할 경우 자체 설계·개발하여 즉시 반영</li><li>고려대학교 정보보호대학원 협력기관으로서 최고 수준의 연구 역량 보유</li></ol><p class="good">유일한 팀: KYT 솔루션 개발 + 식별 데이터 구축 + 추적 알고리즘 설계 인력이 분석지원을 직접 수행하는 국내 유일의 팀</p></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">05</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Consortium Thesis</span><h2>보난자 컨소시엄의 제안 방향</h2><p>솔루션과 분석 인력을 분리하지 않고, 개발·운영·분석·수사지원 경험을 하나로 묶습니다.</p></div>
+<div class="thesis-layout">
+<div class="thesis-card"><img src="../materials/bonanza_Factory_logo.jpg"/><h3>보난자팩토리</h3><b>분석 솔루션 제공 및 고도화</b><p>TranSight 서비스 구현·운영, 공공기관·금융기관 공급, 기술지원과 커스터마이제이션 담당</p></div>
+<div class="plus">+</div>
+<div class="thesis-card"><img src="../materials/traverse_logo.webp"/><h3>트라버스</h3><b>전문 분석 인력 투입</b><p>범죄 데이터 수집, 추적 알고리즘, 온체인 포렌식 분석, 사건별 보고서 작성 담당</p></div>
+</div>
+<div class="bottom-message">결합 효과: “솔루션 없는 인력”과 “인력 없는 솔루션”의 한계를 동시에 보완합니다.</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"><span class="sep"></span><img src="../materials/traverse_logo.webp"/></img></img></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">06</div></footer></section><section class="page section-page">
+<div class="section-break"><span>02.</span><h2>보난자팩토리와 트라버스는<br/>무엇을 보유하고 있는가</h2><p>TranSafer, TranSight, 블록체인 인텔리전스 서비스를 기반으로 기관 실무와 연결된 역량을 축적했습니다.</p></div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">07</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Company Overview</span><h2>보난자팩토리: 금융·VASP 연계 레그테크 기반</h2><p>은행-거래소 입출금 검증 인프라와 TranSight KYT를 함께 운영하는 국내 레그테크 기업입니다.</p></div>
+<div class="company-grid">
+<div class="info-table"><table><tr><th>설립</th><td>2017년 1월</td></tr><tr><th>사업기간</th><td>9년 4개월</td></tr><tr><th>주요 솔루션</th><td>TranSafer, TranSight</td></tr><tr><th>조직</th><td>총 28명</td></tr><tr><th>인증·성과</th><td>ISMS, ISO9001/14001, INNOBIZ AA, 아기 유니콘</td></tr><tr><th>공공 자문</th><td><b>대표이사 경찰청 사기방지자문위원</b> (2023년~현재 활동 중)</td></tr></table></div>
+<div class="history"><h3>주요 연혁</h3><ul><li><b>2026</b> 국세청 「가상자산 탈세대응 거래추적 SW」 사업자 선정, 신한은행 실시간 가상자산 자금세탁 모니터링 솔루션 계약 체결, TranSight V3 업그레이드</li><li><b>2025</b> 보난자팩토리·트라버스 공동 「대한민국 가상자산 범죄 보고서」 발간 — FIU, 금융위, 금감원, 경찰청, 금융보안원 등 35개 국가기관·민간 업체 인용 및 내부 자료 활용</li><li><b>2025</b> TranSight V2 업그레이드 및 경찰청 시범 제공, MEXC·WEEX·DWFLabs 등 해외 VASP 계약, 누적 모니터링 6억 6천만 건 돌파</li><li><b>2024</b> 과기부·IITP 한미 공동 국책과제 「디지털자산 거래 추적 기술 개발」 수주, TranSafer·TranSight ISMS 인증 획득</li><li><b>2023</b> 두나무 대상 TranSight 계약 체결, AI 기반 고위험 주소 DB 및 거래분석 DB 관련 특허 등록</li><li><b>2020~2022</b> 두나무·케이뱅크·코인원·카카오뱅크 대상 TranSafer 제공 및 은행-VASP 연계 표준화 경험 축적</li></ul></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">08</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Core Business</span><h2>두 축: TranSafer와 TranSight</h2><p>원화 입출금 검증 인프라와 온체인 KYT 분석 역량이 결합되어 있습니다.</p></div>
+<div class="business-grid">
+<div class="biz-card"><h3>TranSafer</h3><b>실명계정 기반 원화입출금 중개·검증 솔루션</b><ul><li>업비트, 코인원 등 VASP와 케이뱅크·카카오뱅크 등 은행 간 대사 시스템 구축</li><li>전용선·고유 전문 기반의 금융기관 연계 경험</li><li>누적 입출금 검증액 990조원, 계좌 등록 기준 이용 고객 1,086만명</li><li><b>국내 유일하게 최대 가상자산거래소와 금융기관을 연계하는 자금세탁방지·검증 솔루션 운영</b></li></ul></div>
+<div class="biz-card blue"><h3>TranSight</h3><b>가상자산 AML 및 추적 솔루션</b><ul><li>국정원·경찰청·국방부 등 정부기관 공급</li><li>두나무, 웨이브릿지, MEXC, WEEX, DWF 등 국내외 VASP 제공</li><li><b>국세청 「가상자산 탈세대응 거래추적 SW」 정식 솔루션 계약 체결 (2026)</b></li><li>이상거래·위험거래 탐지 1,302만건, AML 검증 9억 348만건</li></ul><p style="margin-top:5mm;font-size:12.5pt;font-weight:800;color:#0b1f3a;line-height:1.45">국내 유일 자체 기술 및 데이터 기반으로 정부기관·가상자산거래소·금융기관에 가상자산 추적 및 실시간 분석 솔루션을 제공하며, 한국형 가상자산 범죄 특화 데이터의 압도적 커버리지를 보유하고 있습니다.</p></div>
+</div>
+<div class="note-box"><b>핵심 시사점</b> TranSafer를 통해 거래소 내부 운영 체계와 실시간 입출금 흐름을 이해하고 있기 때문에, 단순한 온체인 추적을 넘어 거래소와의 <b>실시간 자산 동결·차단 협력 요청 체계</b>를 구축할 수 있는 유일한 기업입니다. 이는 경찰청 수사에서 자산 도주 골든타임 확보의 핵심 기반이 됩니다.</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">09</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Traverse Overview</span><h2>트라버스: TranSight 공동개발 및 사건 기반 온체인 포렌식 자회사</h2><p>보난자팩토리와 TranSight를 공동 개발하고, 정부기관·민간기업의 가상자산 추적 분석 및 교육 업무를 수행합니다.</p></div>
+<div class="company-grid">
+<div class="info-table"><table><tr><th>설립</th><td>2024년 2월</td></tr><tr><th>사업기간</th><td>2년 3개월</td></tr><tr><th>대표</th><td>한태우</td></tr><tr><th>조직</th><td>총 8명</td></tr><tr><th>주요 서비스</th><td>블록체인 인텔리전스, SaferBlock</td></tr><tr><th>역할</th><td>TranSight 공동개발·분석 알고리즘·기관 분석지원</td></tr></table></div>
+<div class="history"><h3>주요 연혁</h3><ul><li><b>2026</b> 국세청 「가상자산 탈세대응 거래추적 SW」 사업자 선정, 신한은행 실시간 가상자산 자금세탁 모니터링 솔루션 계약 체결, TranSight V3 업그레이드</li><li><b>2025</b> 보난자팩토리·트라버스 공동 「대한민국 가상자산 범죄 보고서」 발간 — FIU, 금융위, 금감원, 경찰청, 금융보안원 등 35개 국가기관·민간 업체 인용 및 내부 자료 활용</li><li><b>2025</b> TranSight V2 업그레이드 및 경찰청 시범 제공, MEXC·WEEX·DWFLabs 등 해외 VASP 계약, 누적 모니터링 6억 6천만 건 돌파</li><li><b>2024</b> 과기부·IITP 한미 공동 국책과제 「디지털자산 거래 추적 기술 개발」 수주, TranSafer·TranSight ISMS 인증 획득</li><li><b>2023</b> 두나무 대상 TranSight 계약 체결, AI 기반 고위험 주소 DB 및 거래분석 DB 관련 특허 등록</li><li><b>2020~2022</b> 두나무·케이뱅크·코인원·카카오뱅크 대상 TranSafer 제공 및 은행-VASP 연계 표준화 경험 축적</li></ul></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">10</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">TranSight Positioning</span><h2>TranSight는 ‘서비스형 KYT’가 아니라 수사지원 인프라입니다</h2><p>경찰청이 필요로 하는 것은 분석 화면, 사건 보고서, 거래소 협조, 후속 검증까지 이어지는 체계입니다.</p></div>
+<div class="pipeline">
+<div><span>1</span><b>범죄 데이터 수집</b><p>마약·피싱·해킹·미신고 VASP 주소 및 거래 패턴 축적</p></div>
+<div><span>2</span><b>분석 알고리즘</b><p>클러스터링, 리스크 스코어링, 브릿지·스왑 이벤트 해석</p></div>
+<div><span>3</span><b>서비스 구현</b><p>TranSight 웹, API, 리포트, 그래프 시각화로 기관 사용 가능화</p></div>
+<div><span>4</span><b>수사 지원</b><p>보고서, 브리핑, 거래소 협조 요청 정보, 환수 가능성 검토</p></div>
+<div><span>5</span><b>공공 인프라화</b><p>피드백 반영, DB 고도화, 수사기관 자체 분석 역량 강화</p></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 14mm 1fr 14mm 1fr;align-items:center;gap:0;margin-top:5mm;height:38mm">
+<img src="../materials/knpa/tx-map-1.png" style="width:100%;height:36mm;object-fit:cover;border-radius:4mm;box-shadow:0 6px 18px rgba(15,30,60,.18);border:1px solid #d6dde8"/>
+<div style="text-align:center;font-size:22pt;color:#1f5f9f;font-weight:300">→</div>
+<img src="../materials/knpa/address-info(portrait).png" style="width:100%;height:36mm;object-fit:cover;border-radius:4mm;box-shadow:0 6px 18px rgba(15,30,60,.18);border:1px solid #d6dde8"/>
+<div style="text-align:center;font-size:22pt;color:#1f5f9f;font-weight:300">→</div>
+<img src="../materials/knpa/iaan-dashboard.png" style="width:100%;height:36mm;object-fit:cover;border-radius:4mm;box-shadow:0 6px 18px rgba(15,30,60,.18);border:1px solid #d6dde8"/>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">11</div></footer></section><section class="page section-page">
+<div class="section-break"><span>03.</span><h2>어떻게 수행할 것인가</h2><p>One-Team 전략으로 분석, 기술지원, 보고, 브리핑, 거래소 공조를 단일 체계로 운영합니다.</p></div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">12</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">One-Team Strategy</span><h2>공동개발 인력이 직접 참여하는 수행전략</h2><p>새로운 토큰, 비표준 컨트랙트, 신규 브릿지, 해외거래소 주소와 같은 예외 상황을 즉시 분석 로직에 반영합니다.</p></div>
+<table class="std-table"><thead><tr><th>전략</th><th>세부 전략</th><th>경찰청 기대효과</th></tr></thead><tbody>
+<tr><td><b>자체 개발 솔루션 기반</b></td><td>트랜잭션 그래프, 라벨링, 클러스터링, 멀티체인 추적, 리스크 스코어링 활용</td><td>한국 수사 실무에 맞춘 분석 방법론 보완</td></tr>
+<tr><td><b>개발 인력 직접 참여</b></td><td>데이터 파싱 오류, 비표준 컨트랙트, 신규 토큰·브릿지 이벤트 해석 지원</td><td>고난도 사건에서 대체 분석 경로 설계</td></tr>
+<tr><td><b>경찰청 실전 경험 기반 보고</b></td><td>보고서, 거래소 협조 요청 정보, 브리핑 자료를 수사관 언어로 제공</td><td>영장, 거래소 협조, 공판 대응까지 연결</td></tr>
+<tr><td><b>해외 VASP 공조 지원</b></td><td>해외거래소 정보요청·동결요청 검토를 위한 식별자료 정리</td><td>자산 도주 골든타임 확보 가능성 제고</td></tr>
+</tbody></table>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">13</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Service Scope</span><h2>사업 범위: 분석·증거화·브리핑·거래소 공조 지원</h2><p>단순 리포트 작성이 아니라 수사기관이 즉시 활용 가능한 산출물을 제공하는 것을 목표로 합니다.</p></div>
+<div class="scope-grid">
+<div><b>트랜잭션 분석</b><p>주소·TXID 기점 순방향·역방향 추적, 분할·합산·레이어링 식별</p></div>
+<div><b>주소 클러스터링</b><p>CIOH, 잔돈 주소, 시간·금액·상대방 패턴 기반 동일 주체 추정</p></div>
+<div><b>세탁 기법 분석</b><p>믹서, DEX, 스왑, 브릿지, NFT, ENS, OTC, P2P 경유 여부 정리</p></div>
+<div><b>프라이버시 구간 대응</b><p>추적 가능 구간과 불가 구간을 명확히 구분하고 후속 수사 방향 제시</p></div>
+<div><b>해킹형 사건 분석</b><p>공격 트랜잭션 구조, 취약점 악용 흐름, 탈취자금 이동경로 재구성</p></div>
+<div><b>보고서·파일·브리핑</b><p>한글 보고서, 그래프, 주석 가능 분석파일, 질의 대응, 방문 브리핑</p></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">14</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Investigation Experience</span><h2>경찰청 지원 성과 기반의 실전형 수행체계</h2><p>기존 협력 경험은 단순 레퍼런스가 아니라, 접수·분석·보고·브리핑·거래소 공조·환수 검토 방식에 직접 반영됩니다.</p></div>
+<table class="std-table"><thead><tr><th style="width:18%">수사 유형</th><th style="width:52%">주요 지원 사례 및 수행 내용</th><th style="width:30%">본 용역 반영 효과</th></tr></thead><tbody><tr><td><b>피싱·보이스피싱</b></td><td>USDT 기반 대출 사기, 500억대 캄보디아 연계 보이스피싱 사건에서 자금세탁 중개책 주소 추적, 해외거래소 유입 자금 식별, 공식 리포트 발부 및 해외 VASP 협조 중개</td><td>피해자금 최종 유입처와 협조 요청 대상을 빠르게 정리하여 수사 초기 골든타임 확보</td></tr><tr><td><b>마약자금</b></td><td>마약 판매자와 자금세탁 중개책 주소가 교차하는 사건에서 클러스터링, 자금세탁 경로 분석, 일부 북한 해킹 자금 접점 확인</td><td>딜러·중개책·세탁책 간 관계를 주소·통신 단서와 결합해 구조화</td></tr><tr><td><b>대규모 환전·불법송금</b></td><td>약 450억 원 규모 중국인 환전상 사건에서 빅데이터 분석과 라벨링 정보 활용, 동일 주체 간 거래 데이터 추출·정리 및 공식 분석 리포트 제공</td><td>대규모 거래 중 반복 패턴과 동일 주체 의심 거래를 빠르게 분리</td></tr><tr><td><b>본청 직접 지원</b></td><td>안보수사국·경제범죄수사과·사이버테러대응과에 TranSight 계정 제공, 실제 수사관 테스트 운영, 현장 피드백 반영, 해외거래소 고객정보 요청·응답 지원</td><td>이미 사용 경험이 있는 부서와 업무 연속성 확보, 착수 즉시 실무형 산출물 제공</td></tr><tr><td><b>교육·브리핑</b></td><td>경찰수사연수원 가상자산 통합 세미나 및 범죄자금추적·환수 과정 특강에서 거래소 기반 분석 기법, 협업 사례, 환수 실무 설명</td><td>보고서 제공을 넘어 수사관의 분석 이해도와 현장 활용도 향상</td></tr><tr><td><b>사이버테러·환수</b></td><td>국세청 자산 탈취·해외 자금세탁 사건에서 사이버테러대응과와 자금 추적, 동결 검토, 거래소 협력 중개, 환수 전략 수립 및 기술 대응 지원하여 환수 완료 기여</td><td>본 용역 발주부서의 고난도 사이버테러형 사건 대응과 직접 연결되는 실증 사례</td></tr></tbody></table>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">15</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Key Reference</span><h2>핵심 레퍼런스: 사이버테러대응과·국세청 탈취자금 환수 지원</h2><p>고난도 자산 탈취·해외 자금세탁 사건에서 분석 결과가 실제 동결·거래소 협력·환수 검토로 연결된 사례입니다.</p></div>
+<div class="case-grid">
+<div class="case-main">
+<h3>실전 지원 흐름</h3>
+<ol>
+<li><b>자금 흐름 재구성</b><span>탈취자금의 기점 주소와 주요 TXID를 기준으로 멀티홉 이동, 브릿지·스왑·거래소 유입 구간을 정리</span></li>
+<li><b>동결·보전 대상 식별</b><span>해외 VASP 또는 특정 거래소로 유입된 주소, 전송 시간, 금액, TXID를 협조 요청 가능한 형태로 구조화</span></li>
+<li><b>거래소 협력 중개</b><span>사이버테러대응과와 함께 해외거래소 고객정보 요청·응답 및 동결 검토에 필요한 핵심 정보를 정리</span></li>
+<li><b>환수 전략 수립·실행 지원</b><span>일반적 환수 방법이 존재하지 않는 상황에서, <b>거래소와의 실질적 협력관계를 기반으로 탈취 토큰의 재배포 및 재등록을 통해 안전하게 환수를 완료</b>시킨 사례. 추적 가능 구간과 기술적 한계를 구분하고, 후속 영장·국제공조·환수 가능성 판단에 필요한 설명자료 제공</span></li>
+</ol>
+</div>
+<div class="case-side">
+<div><span>담당 부서</span><b>경찰청 수사국<br/>사이버테러대응과</b></div>
+<div><span>사건 유형</span><b>국세청 자산 탈취<br/>해외 자금세탁</b></div>
+<div><span>핵심 차별점</span><b>토큰 재배포·재등록<br/>거래소 협력 환수</b></div>
+<div><span>용역 연결성</span><b>해킹형 사건 대응<br/>직접 실증 사례</b></div>
+</div>
+</div>
+<div class="case-note"><b>발표 메시지</b> 본 사례는 기존에 환수 방법이 없던 상황에서, 거래소와의 협력관계를 활용하여 토큰을 재배포·재등록하는 방식으로 안전한 환수를 달성한 사례입니다. 단순 분석을 넘어 실질적 환수 실행까지 연결할 수 있는 역량은 보난자 컨소시엄만의 차별점입니다.</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">16</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Process</span><h2>분석 요청 처리 프로세스</h2><p>의뢰 접수 즉시 트리아지하고, 완료 즉시 납품하는 건별 반복 운영 체계를 적용합니다.</p></div>
+<div class="process-row">
+<div><span>Step 1</span><b>의뢰 접수·보안 확인</b><p>주소·TXID·사건번호·분석 목적 접수, 자료관리대장 기록</p><em>접수확인 / 보안분류</em></div>
+<div><span>Step 2</span><b>초기 트리아지</b><p>체인·토큰·복잡도·세탁기법 유형, 긴급 동결 필요성 판단</p><em>난이도 / 예상 일정</em></div>
+<div><span>Step 3</span><b>온체인 분석 수행</b><p>추적, 클러스터링, 세탁기법, 컨트랙트·브릿지 로그 분석</p><em>자금 흐름도 / 주소 목록</em></div>
+<div><span>Step 4</span><b>보고서·품질검토</b><p>근거, 한계, 후속 수사 권고사항 포함 후 내부 검토</p><em>보고서 / 그래프 / 소요시간</em></div>
+<div><span>Step 5</span><b>납품·브리핑·후속지원</b><p>요청 수사관과 본청 담당자에게 제출, 질의·협조 요청 지원</p><em>Q&amp;A / 거래소 요청 초안</em></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">17</div></footer></section><section class="page section-page">
+<div class="section-break"><span>04.</span><h2>어떤 분석을 제공할 것인가</h2><p>일반 온체인 추적부터 브릿지·믹서·해킹형 사건까지 분석 가능 구간과 한계를 구분하여 제공합니다.</p></div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">18</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Analysis Methods</span><h2>분석 항목별 수행 방법과 산출물</h2><p>RFP 요구사항에 대응하여, 각 분석 항목별 구체적 수행 방법과 수사기관이 즉시 활용 가능한 산출물을 제공합니다.</p></div>
+<table class="std-table"><thead><tr><th style="width:16%">분석 항목</th><th style="width:50%">수행 방법</th><th style="width:34%">주요 산출물</th></tr></thead><tbody>
+<tr><td><b>트랜잭션 추적</b></td><td>기점 주소·TXID로부터 Forward/Backward Tracing 수행, Hop별 경로 분석, 분할·합산·레이어링 패턴 식별, 거래소·서비스 유입 주소를 TranSight 라벨 DB 및 자체 수집 데이터 기반으로 특정</td><td>자금 흐름도(트랜잭션 맵), TXID 목록, 블록번호·타임스탬프, 거래소 유입 주소 및 금액 정리표</td></tr>
+<tr><td><b>주소 클러스터링</b></td><td>CIOH(Common Input Ownership Heuristic), 체인지 주소 탐지, 시간·금액·상대방 패턴 분석, TranSight 라벨 DB 매칭, 동일 피의자 행위 패턴 기반 추정</td><td>동일 주체 추정 주소 목록, 클러스터별 자산 규모, 연결 서비스·거래소, 근거 설명</td></tr>
+<tr><td><b>믹싱·텀블러</b></td><td>CoinJoin, Tornado Cash, Railgun 등 경유 여부 식별, 입금 전·출금 후 구간 추적, 금액 패턴·시간 상관관계 분석, 추적 가능 구간과 불가 구간 명확 구분</td><td>믹서 이용 정황 분석서, 추적 가능·불가 구간 구분표, 후속 영장·공조 대상 제시</td></tr>
+<tr><td><b>스왑·브릿지</b></td><td>DEX 이벤트 로그(Swap, AddLiquidity 등) 해석, Bridge Lock/Mint 이벤트 매핑, 체인 간 시간·금액 상관관계로 자금 연속성 입증, 컨트랙트 주소 및 배포자 분석</td><td>체인 변환 경로 연속성 증빙, 컨트랙트 주소·서비스명, 수사 후속 방향 제시</td></tr>
+<tr><td><b>프라이빗 코인</b></td><td>Monero 등 은닉 구간을 단정하지 않고, 전후 일반 체인 흐름·거래소 입출금 구간을 분석하여 확인 가능 범위와 추정 범위를 투명하게 구분</td><td>기술적 한계 명시서, 거래소 KYC 확보·국제공조·동결요청 방향 제시, 후속 수사 권고사항</td></tr>
+</tbody></table>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">19</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Transaction Map Slot</span><h2>자금 흐름 그래프는 수사관 설명용으로 재구성합니다</h2><p>복잡한 온체인 경로를 영장·보고·브리핑에 사용할 수 있는 구조로 정리합니다.</p></div>
+<div class="image-layout">
+<div class="image-copy"><h3>그래프에 포함할 핵심 정보</h3><ul style="font-size:9.8pt;line-height:1.5"><li>기점 주소·TXID와 분석 범위</li><li>주요 Hop, 분할·합산·레이어링 구간</li><li><b>복수 지갑 주소, 동일 주체에 대한 클러스터링 정보</b> — UTXO/Account 기반 체인 여부에 따른 최적화된 복합 클러스터링</li><li><b>각 지갑 주소 식별 정보 추출 경로</b> (다크웹, 텔레그램, 시그널, 오픈웹 등)</li><li><b>디브릿징·디믹싱 알고리즘 사용 구간</b> 명시</li><li>거래소 식별 정보, 전송 시간, 입금주소, 운영 지갑 합산 TX 정보 등 <b>상세 문서화 후 활용 가능 형태로 제공</b></li><li><b>3억 개 이상</b>의 자체 수집 거래소·스왑·브릿지·스마트컨트랙트 등 자금세탁·현금화 주소 식별 정보 기반 패턴 분석</li><li>ERC-20, TRC-20, SPC 등 스마트컨트랙트·인터널 트랜잭션 노드/그래프 데이터 자체 수집·운영 → <b>개별 주소 전체 분석 1초 이내</b></li><li>IP주소, 포트번호, 접속위치정보, Tor 사용 정보 등 <b>수집 가능 영역·대상을 명확히 구분하여 제공</b></li><li>확정 정보와 추정 정보의 시각적 구분</li></ul></div>
+<img src="../materials/knpa/tx-map-2.png" style="width:100%;height:112mm;object-fit:contain;border-radius:5mm;box-shadow:0 8px 24px rgba(15,30,60,.16);border:1px solid #d6dde8;background:#f8fafc"/>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">20</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Advanced Typologies</span><h2>고도화된 세탁기법별 대응 프레임</h2><p>기술적으로 단정할 수 없는 구간은 한계를 명확히 표시하고, 가능한 후속 수사 경로를 제시합니다.</p></div>
+<div class="typology-grid">
+<div><span>01</span><b>ZK 믹서</b><p>입출금 직접 연결은 제한. 입금 전·출금 후 일반 체인 구간과 거래소 유입점 중심 분석.</p></div>
+<div><span>02</span><b>브릿지</b><p>Lock/Mint 이벤트, 컨트랙트 주소, 시간·금액 상관관계로 체인 간 흐름 연결.</p></div>
+<div><span>03</span><b>프라이빗 코인</b><p>XMR 구간 자체 단정 대신 양 끝의 교환·입출금 지점 및 거래소 KYC 확보 가능성 제시.</p></div>
+<div><span>04</span><b>NFT Wash Trading</b><p>반복 상대방, 가격 급변, 연결 주소 클러스터링으로 위장 거래 정황을 정량화.</p></div>
+<div><span>05</span><b>ENS·도메인</b><p>도메인 역조회, 등록 트랜잭션, EOA 주소 연결성을 통해 실체 단서 확보.</p></div>
+<div><span>06</span><b>OTC·P2P</b><p>브로커리지 패턴, 반복 상대방, 거래소 입금 내역으로 추가 협조 요청 범위 특정.</p></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">21</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Cyber Terror / Exploit</span><h2>사이버테러·해킹형 사건 분석 역량</h2><p>단순 자금 흐름만이 아니라 공격 트랜잭션 구조와 자금 이동 경로를 함께 분석합니다.</p></div>
+<table class="std-table small"><thead><tr><th>유형</th><th>분석 관점</th><th>본 용역 적용 포인트</th></tr></thead><tbody>
+<tr><td>CEX 핫월렛 침해</td><td>비인가 출금 TX, 핫월렛·수신지·중간세탁 주소 클러스터링</td><td>초기 유출 경로와 후속 이동 경로 구조화</td></tr>
+<tr><td>DeFi 재진입 공격</td><td>컨트랙트 호출 순서, 가격 왜곡, 공격자·반환 지갑 흐름</td><td>탈취자금 이동 및 회수 가능성 분석</td></tr>
+<tr><td>반올림·정밀도 취약점</td><td>반복 호출, 미세 스왑, 유동성·invariant 계산 왜곡</td><td>공격 트랜잭션의 기술적 의미까지 보고서화</td></tr>
+<tr><td>프로토콜 회계 로직 악용</td><td>플래시론, 차입·상환, 상태값 갱신과 담보·부채 불일치</td><td>취약점과 권한 오남용을 구분하고 후속 수사 방향 제시</td></tr>
+<tr><td>크로스체인 세탁</td><td>Bridge Lock/Mint, DEX 로그, 시간·금액 상관관계</td><td>해외거래소·브릿지·DEX 경유 후 최종 귀속지 식별</td></tr>
+</tbody></table>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">22</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Evidence &amp; Legal Defensibility</span><h2>증거 품질과 법적 다툼 대응</h2><p>분석 결과가 수사와 공판에서 활용되려면 무결성, 투명성, 재현 가능성이 확보되어야 합니다.</p></div>
+<div class="quality-grid">
+<div><b>데이터 무결성</b><p>대상 주소·TXID, 블록 높이, 조회 시점, 주요 블록 해시, 데이터 출처 기록</p><em>조작 가능성 방어</em></div>
+<div><b>방법론 투명성</b><p>클러스터링 기준, 라벨 근거, 추정·확정 정보 구분, 분석 제한 사유 명시</p><em>분석 방법 불명확 주장 대응</em></div>
+<div><b>재현 가능성</b><p>주요 경로, TXID 목록, 컨트랙트 주소, 이벤트 로그, 그래프 생성 기준 보존</p><em>동일 데이터 기반 재검증</em></div>
+<div><b>전문가 설명</b><p>수사관 브리핑, 기술 설명 자료, 법정 쟁점 Q&amp;A 정리</p><em>검사·법원 이해도 향상</em></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">23</div></footer></section><section class="page section-page">
+<div class="section-break"><span>05.</span><h2>어떻게 운영하고 관리할 것인가</h2><p>사업기간 동안 분석 크레딧, 전담 인력, 수시 대응, 보안관리 체계를 투명하게 운영합니다.</p></div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">24</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Analysis Credit Model</span><h2>분석지원 제공 기준: 100 Unit Pool</h2><p>사건 난이도와 투입 분석시간을 함께 관리하여 단순 사건과 고난도 사건의 차이를 합리적으로 반영합니다.</p></div>
+<table class="std-table"><thead><tr><th>구분</th><th>사건 유형</th><th>예상 투입시간</th><th>Unit 기준</th></tr></thead><tbody>
+<tr><td>일반 분석</td><td>단일 체인 또는 단순 거래소 유입 경로 중심 주소·TXID 분석</td><td>5~10시간</td><td>1 Unit</td></tr>
+<tr><td>심층 분석</td><td>다수 주소 클러스터링, DEX·스왑·브릿지, 복수 거래소 식별</td><td>15~25시간</td><td>3 Unit</td></tr>
+<tr><td>고난도 분석</td><td>믹서, 프라이빗 코인, 해킹, DeFi exploit, 국제공조 필요 사건</td><td>35~50시간 이상</td><td>5 Unit 이상</td></tr>
+<tr><td>긴급 대응</td><td>자산 도주 우려로 거래소 협조·동결 검토가 필요한 사건</td><td>초기 24~48시간 집중</td><td>난이도별 가산</td></tr>
+</tbody></table>
+<div class="note-box"><b>운영 방식</b> 월별 또는 수시 보고 시 사건별 투입시간, 난이도, 산출물, 잔여 분석 가능량을 투명하게 공유합니다.</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">25</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">TranSight License</span><h2>사업기간 중 최대 4개 TranSight 계정 제공</h2><p>경찰청 내부 담당자가 분석 결과를 직접 검토하고, 동일한 분석 화면을 기반으로 질의·보완할 수 있도록 지원합니다.</p></div>
+<div class="license-layout">
+<div class="license-card"><b>제공 대상</b><p>경찰청 수사국 사이버테러대응과 및 경찰청이 지정하는 관련 담당자</p></div>
+<div class="license-card"><b>제공 규모</b><p>사업기간 중 최대 4개 TranSight 계정 제공</p></div>
+<div class="license-card"><b>계정 가치</b><p>계정당 연 6천만 원 상당의 라이선스 가치 기준</p></div>
+<div class="license-card"><b>제공 목적</b><p>분석 결과 자체 검토, 심층 쟁점 확인, 추가 질의 대응, 내부 보고 지원</p></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 12mm 1fr 12mm 1fr 12mm 1fr;align-items:center;gap:0;margin-top:5mm">
+<div style="text-align:center;border:2px solid #173a63;border-radius:5mm;padding:4mm;background:#f7fbff;min-height:42mm;display:flex;flex-direction:column;align-items:center;justify-content:center"><img src="../materials/knpa/knpa-logo.webp" style="height:14mm;margin-bottom:3mm;object-fit:contain"/><b style="font-size:10pt;color:#0b1f3a">경찰청</b><p style="font-size:8.5pt;color:#68758a;margin-top:1mm">분석 지원 요청</p></div>
+<div style="text-align:center;font-size:20pt;color:#1f5f9f;font-weight:300">→</div>
+<div style="text-align:center;border:2px solid #1f5f9f;border-radius:5mm;padding:4mm;background:#eef4fa;min-height:42mm;display:flex;flex-direction:column;align-items:center;justify-content:center"><b style="font-size:11pt;color:#173a63;margin-bottom:2mm">보난자 컨소시엄</b><img src="../materials/knpa/tx-map-2.png" style="height:16mm;margin-bottom:2mm;object-fit:contain;border-radius:2mm;box-shadow:0 2px 6px rgba(0,0,0,.12)"/><b style="font-size:10pt;color:#0b1f3a">TranSight 기반 분석</b><p style="font-size:8.5pt;color:#68758a;margin-top:1mm">추적·클러스터링·리포트</p></div>
+<div style="text-align:center;font-size:20pt;color:#1f5f9f;font-weight:300">→</div>
+<div style="text-align:center;border:2px solid #19733e;border-radius:5mm;padding:4mm;background:#f4fbf6;min-height:42mm;display:flex;flex-direction:column;align-items:center;justify-content:center"><img src="../materials/knpa/report-pages/ts-report-1.png" style="height:16mm;margin-bottom:3mm;object-fit:contain;border-radius:2mm;box-shadow:0 2px 6px rgba(0,0,0,.12)"/><b style="font-size:10pt;color:#0b1f3a">분석 리포트 납품</b><p style="font-size:8.5pt;color:#68758a;margin-top:1mm">보고서·그래프·상세표</p></div>
+<div style="text-align:center;font-size:20pt;color:#1f5f9f;font-weight:300">→</div>
+<div style="text-align:center;border:2px solid #173a63;border-radius:5mm;padding:4mm;background:#f7fbff;min-height:42mm;display:flex;flex-direction:column;align-items:center;justify-content:center"><img src="../materials/knpa/knpa-logo.webp" style="height:10mm;margin-bottom:2mm;object-fit:contain"/><img src="../materials/knpa/tx-map-2.png" style="height:14mm;margin-bottom:2mm;object-fit:contain;border-radius:2mm;box-shadow:0 2px 6px rgba(0,0,0,.12)"/><b style="font-size:10pt;color:#0b1f3a">경찰청 TranSight</b><p style="font-size:8.5pt;color:#68758a;margin-top:1mm">심층 검토·추가 분석</p></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">26</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Organization</span><h2>수행조직 및 역할 분담</h2><p>트라버스 분석 인력과 보난자팩토리 기술지원 인력이 함께 참여합니다.</p></div>
+<table class="std-table small" style="font-size:0.82em;"><thead><tr><th>역할</th><th>성명</th><th>소속·직위</th><th>주요 담당 업무</th></tr></thead><tbody>
+<tr><td>총괄 PM</td><td>한태우</td><td>트라버스 / 대표</td><td>국내 가상자산 거래소 커뮤니케이션 및 전체 프로젝트 관리, 정보통신기획평가원 국책과제 사업 총괄</td></tr>
+<tr><td>책임연구원<br/><span style="font-size:0.8em;color:#888;">(수석 분석가)</span></td><td>정도현</td><td>트라버스 / 과장</td><td>가상자산 범죄 자금흐름 분석 총괄, 주요 사건 추적·검증. 경찰청 사이버테러대응과 국세청 자산탈취 추적·환수 지원.<br/>국수본·경기북부·충남·서울 강남경찰서 수사지원. Lazarus 해킹자금 추적, 다중 네트워크 분석 및 추적 알고리즘 개발.</td></tr>
+<tr><td>선임연구원</td><td>이금강</td><td>트라버스 / 과장</td><td>범죄 연관 주소 식별, 자금세탁 패턴 분석, 수사지원 자료 작성. 빅데이터분석기사·ADsP·정보처리기사 보유.<br/>믹싱 AI 알고리즘 개발. 고려대 수학과.</td></tr>
+<tr><td>연구원</td><td>이승주</td><td>트라버스 / 대리</td><td>온체인 데이터 수집·정제, 거래내역 분석, 주소 클러스터링 지원. 마약·보이스피싱·Lazarus 해킹 분석 지원.</td></tr>
+<tr><td>대체 PM</td><td>KIM<br/>MINJAE</td><td>트라버스 / 이사</td><td>글로벌 커뮤니케이션 및 분석 프로젝트 관리, 총괄 PM 부재 시 즉시 대무.</td></tr>
+<tr><td>기술지원 PM</td><td>정규환</td><td>보난자팩토리 / 이사</td><td>TranSight 기술지원 총괄.</td></tr>
+<tr><td>고도화 기획</td><td>신민재</td><td>보난자팩토리 / 대리</td><td>TranSight 고도화 및 커스터마이제이션 기획. 분석 실무 발견 신규 기법 즉시 반영.</td></tr>
+<tr><td>기술지원<br/>(백엔드)</td><td>이상진</td><td>보난자팩토리 / 부장</td><td>TranSight 고도화 백엔드 개발. 미지원 항목 발견 시 크롤링 로직 즉시 보완.</td></tr>
+<tr><td>기술지원<br/>(백엔드)</td><td>이한주</td><td>보난자팩토리 / 과장</td><td>TranSight 고도화 백엔드 개발.</td></tr>
+</tbody></table>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">27</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Schedule</span><h2>사업 추진일정 계획</h2><p>착수 2주 내 운영 체계를 확정하고, 계약 종료일까지 분석 의뢰 건별 Step 1~5 사이클을 반복합니다.</p></div>
+<table class="std-table small" style="text-align: center; margin-top: 10px;">
+<colgroup>
+    <col style="width: 25%;">
+    <col style="width: 55%;">
+    <col style="width: 20%;">
+</colgroup>
+<thead><tr><th>단계</th><th>세부 내용</th><th>기간</th></tr></thead><tbody>
+<tr><td><b>착수 단계 ①:</b><br/>PM 지정·연락체계 수립</td><td style="text-align: left;">담당 수사관 및 본청 담당자 연락처 확보, 의뢰 접수 채널 일원화, 대체 PM 체계 수립</td><td>계약 후 ~2주</td></tr>
+<tr><td><b>착수 단계 ②:</b><br/>의뢰 접수 프로세스·<br/>보안 체계 수립</td><td style="text-align: left;">분석 의뢰서 양식 확정, 보안 준수사항 교육 실시, 자료관리대장 양식 확정·준비</td><td>계약 후 ~2주</td></tr>
+<tr><td><b>수시 대응 구간:</b><br/>건별 분석 사이클</td><td style="text-align: left;">의뢰 접수 → 트리아지 → 온체인 분석 → 보고서 작성 → 납품·브리핑 반복</td><td>계약일 ~<br/>2026.12.20.</td></tr>
+<tr><td><b>종료 단계 ①:</b><br/>최종 결과보고서 제출</td><td style="text-align: left;">전체 분석 결과를 종합한 사업 종료 보고서 제출 (수행 건수, 유형별 분석 결과, 주요 성과)</td><td>~2026.12.20.</td></tr>
+<tr><td><b>종료 단계 ②:</b><br/>보안 처리</td><td style="text-align: left;">참여 인력 PC 내 분석 파일 전체 삭제, 자료관리대장 최종 정리 후 경찰청 제출</td><td>~2026.12.20.</td></tr>
+</tbody></table>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">28</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Security Management</span><h2>공공기관 용역에 맞춘 보안관리 원칙</h2><p>수사자료의 민감성을 전제로 접수, 분석, 납품, 종료 처리 전 과정에서 보안 기준을 적용합니다.</p></div>
+<div class="security-grid">
+<div><b>자료관리대장</b><p>의뢰자료, 분석파일, 산출물, 전달일시, 담당자를 기록하여 관리</p></div>
+<div><b>접근권한 최소화</b><p>참여 인력 기준으로 접근 범위를 제한하고, 분석 목적 외 사용 금지</p></div>
+<div><b>민감정보 마스킹</b><p>발표·보고용 자료는 주소, TXID, 사건번호, 계정정보를 필요한 범위로 마스킹</p></div>
+<div><b>종료 후 보안 처리</b><p>참여 인력 PC 내 분석 파일 삭제 및 최종 자료관리대장 제출</p></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">29</div></footer></section><section class="page section-page">
+<div class="section-break"><span>06.</span><h2>경찰청이 확보하게 될 결과</h2><p>분석 보고서 이상의 가치 - 사건 해결, 자산 보전, 증거화, 내부 역량 축적을 함께 제공합니다.</p></div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">30</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Expected Outcomes</span><h2>직접적 수사 지원 효과</h2></div>
+<div class="outcome-grid">
+<div><b>고난도 사건 해결 가능성 제고</b><p>믹싱·브릿지·프라이빗 코인·스마트컨트랙트 등 복합 경로 재구성</p></div>
+<div><b>자산 동결·환수 골든타임 확보</b><p>거래소명, 주소, 전송시간, TXID를 정리하여 신속한 협조 요청 지원</p></div>
+<div><b>증거 품질 및 법정 방어력 강화</b><p>TXID, 블록번호, 타임스탬프, 라벨 근거, 분석 한계 명시</p></div>
+<div><b>수사관 업무부담 경감</b><p>수작업 자금흐름 정리, 거래소 식별, 그래프 작성, 보고서 작성 시간 절감</p></div>
+<div><b>현장 활용도 향상</b><p>본청 보고, 영장 신청, 거래소 협조 요청, 검찰 송치자료에 맞는 구조 제공</p></div>
+<div><b>해킹·사이버테러 대응력 강화</b><p>공격 트랜잭션 구조와 탈취자금 이동경로를 함께 보고서화</p></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">31</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Deliverables — 분석결과보고서</span><h2>산출물 ①: 분석결과보고서 — 사건 개요부터 후속 권고까지</h2><p>사건 개요, 분석 대상, 자금 흐름, 클러스터링 결과, 거래소 식별 정보, 후속 수사 권고사항을 포함합니다. 수사보고, 본청 보고, 검찰 송치, 공판 설명에 직접 활용됩니다.</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:6mm;margin-top:2mm">
+<img src="../materials/knpa/report-pages/ts-report-1.png" style="width:100%;height:auto;max-height:118mm;object-fit:contain;border-radius:4mm;box-shadow:0 6px 18px rgba(15,30,60,.16);border:1px solid #d6dde8"/>
+<img src="../materials/knpa/report-pages/ts-report-2.png" style="width:100%;height:auto;max-height:118mm;object-fit:contain;border-radius:4mm;box-shadow:0 6px 18px rgba(15,30,60,.16);border:1px solid #d6dde8"/>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">32</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Deliverables — 자금 흐름 그래프·클러스터링</span><h2>산출물 ②: 자금 흐름 그래프 및 클러스터링 결과</h2><p>주소·TXID·거래소·브릿지·스왑·믹서 경유 경로를 시각화하고, 동일 주체 추정 주소 목록·근거·잔액·연결 서비스를 포함합니다. 브리핑, 영장 첨부, 피의자 지배 주소 범위 특정에 활용됩니다.</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:6mm;margin-top:2mm">
+<img src="../materials/knpa/report-pages/ts-report-3.png" style="width:100%;height:auto;max-height:118mm;object-fit:contain;border-radius:4mm;box-shadow:0 6px 18px rgba(15,30,60,.16);border:1px solid #d6dde8"/>
+<img src="../materials/knpa/report-pages/ts-report-4.png" style="width:100%;height:auto;max-height:118mm;object-fit:contain;border-radius:4mm;box-shadow:0 6px 18px rgba(15,30,60,.16);border:1px solid #d6dde8"/>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">33</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Deliverables — TXID·주소 상세표</span><h2>산출물 ③: TXID·주소 상세표 및 거래소 협조 요청 정보</h2><p>블록번호·타임스탬프·수수료·입출금 주소·라벨·금액·자산 종류를 포함하며, 거래소 협조 요청·영장 대상 특정에 직접 활용됩니다.</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:6mm;margin-top:2mm">
+<img src="../materials/knpa/report-pages/ts-report-5.png" style="width:100%;height:auto;max-height:118mm;object-fit:contain;border-radius:4mm;box-shadow:0 6px 18px rgba(15,30,60,.16);border:1px solid #d6dde8"/>
+<img src="../materials/knpa/report-pages/ts-report-6.png" style="width:100%;height:auto;max-height:118mm;object-fit:contain;border-radius:4mm;box-shadow:0 6px 18px rgba(15,30,60,.16);border:1px solid #d6dde8"/>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">34</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Deliverables — 브리핑·Q&amp;A</span><h2>산출물 ④: 브리핑 자료 및 법적 다툼 대비</h2><p>분석 방법론·쟁점·한계·피고측 반박 예상 포인트를 정리하여 수사관·검사 대상 설명 및 공판 대비에 활용됩니다.</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:6mm;margin-top:2mm">
+<img src="../materials/knpa/report-pages/ts-report-7.png" style="width:100%;height:auto;max-height:118mm;object-fit:contain;border-radius:4mm;box-shadow:0 6px 18px rgba(15,30,60,.16);border:1px solid #d6dde8"/>
+<img src="../materials/knpa/report-pages/ts-report-8.png" style="width:100%;height:auto;max-height:118mm;object-fit:contain;border-radius:4mm;box-shadow:0 6px 18px rgba(15,30,60,.16);border:1px solid #d6dde8"/>
+</div>
+<div class="note-box" style="margin-top:4mm"><b>핵심 차별점</b> 단순 그래프 캡처가 아닌, 거래소별 입금주소·운영 지갑 합산 TX·전송 시간·수량 등을 상세 문서화하여 수사기관이 즉시 활용할 수 있는 증거 수준의 산출물입니다.</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">35</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">IAAN Protocol — Global VASP Partnership</span><h2>해외 거래소 직접 공조 네트워크: IAAN 프로토콜</h2><p>분석 지원 업무 중 해외 거래소와의 정보 요청·동결·환수 협력이 필요한 경우, IAAN 프로토콜을 통해 직접 연결된 파트너 거래소와 즉시 공조할 수 있습니다.</p></div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8mm;margin:12mm 10mm 0;align-items:center">
+<div style="text-align:center;border:1px solid #d6dde8;border-radius:6mm;padding:8mm;background:#fff;box-shadow:0 6px 18px rgba(15,30,60,.1);min-height:80mm;display:flex;flex-direction:column;align-items:center;justify-content:center"><img src="../materials/knpa/MEXC_logo.png" style="max-width:55mm;max-height:22mm;object-fit:contain;margin-bottom:6mm"/><b style="font-size:14pt;color:#0b1f3a">MEXC</b><p style="font-size:10pt;color:#68758a;margin-top:2mm">글로벌 Top 10 거래소<br/>직접 공조 파트너</p></div>
+<div style="text-align:center;border:1px solid #d6dde8;border-radius:6mm;padding:8mm;background:#fff;box-shadow:0 6px 18px rgba(15,30,60,.1);min-height:80mm;display:flex;flex-direction:column;align-items:center;justify-content:center"><img src="../materials/knpa/bybit-logo.jpg" style="max-width:55mm;max-height:22mm;object-fit:contain;margin-bottom:6mm"/><b style="font-size:14pt;color:#0b1f3a">Bybit</b><p style="font-size:10pt;color:#68758a;margin-top:2mm">글로벌 Top 3 거래소<br/>직접 공조 파트너</p></div>
+<div style="text-align:center;border:1px solid #d6dde8;border-radius:6mm;padding:8mm;background:#fff;box-shadow:0 6px 18px rgba(15,30,60,.1);min-height:80mm;display:flex;flex-direction:column;align-items:center;justify-content:center"><img src="../materials/knpa/week-logo.png" style="max-width:55mm;max-height:22mm;object-fit:contain;margin-bottom:6mm"/><b style="font-size:14pt;color:#0b1f3a">WEEX</b><p style="font-size:10pt;color:#68758a;margin-top:2mm">아시아 주요 거래소<br/>직접 공조 파트너</p></div>
+<div style="text-align:center;border:1px solid #d6dde8;border-radius:6mm;padding:8mm;background:#fff;box-shadow:0 6px 18px rgba(15,30,60,.1);min-height:80mm;display:flex;flex-direction:column;align-items:center;justify-content:center"><img src="../materials/knpa/DWF-Labs-Logo.png" style="max-width:55mm;max-height:22mm;object-fit:contain;margin-bottom:6mm"/><b style="font-size:14pt;color:#0b1f3a">DWF Labs</b><p style="font-size:10pt;color:#68758a;margin-top:2mm">글로벌 마켓메이커<br/>직접 공조 파트너</p></div>
+</div>
+<div class="bottom-message" style="margin-top:8mm">IAAN 프로토콜을 통해 해외 거래소 고객정보 요청·계정 동결·자산 보전 협력을 수사기관 대신 직접 중개할 수 있으며, 이는 자산 도주 골든타임 확보의 핵심 인프라입니다.</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">32-3</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Long-term Impact</span><h2>중장기 역량 강화 효과</h2><p>본 용역은 단건 분석 납품이 아니라 경찰청의 가상자산 범죄 대응 인프라를 고도화하는 기반 사업입니다.</p></div>
+<div class="long-grid">
+<div><b>외산 솔루션 의존도 완화</b><p>국내 수사환경에 맞는 분석 방법론과 보고서 양식 축적</p></div>
+<div><b>최신 범죄유형 대응체계 축적</b><p>신규 브릿지, 신규 토큰, 신규 세탁 패턴, 해외거래소 주소 라벨 반영</p></div>
+<div><b>수사기관 내부 이해도 향상</b><p>브리핑과 교육형 설명을 통해 영장·공조·압수보전 판단 역량 강화</p></div>
+<div><b>국제공조 기반 강화</b><p>영문 요약, 해외 VASP 질의사항, 거래소 협조 요청 핵심정보 구조화</p></div>
+<div><b>재사용 가능한 분석 자산 축적</b><p>사건별 주소 라벨, 세탁 패턴, 컨트랙트·브릿지 정보, 보고서 템플릿 축적</p></div>
+<div><b>국가 단위 분석 인프라화</b><p>수사지원, 솔루션 운영, 공공기관 제공 경험을 기반으로 지속 가능한 협력 구조 마련</p></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">33</div></footer></section><section class="page">
+<div class="section-head compact"><span class="kicker">Why Bonanza Consortium</span><h2>본 제안의 핵심 차별성</h2></div>
+<div class="diff-grid">
+<div><span>01</span><b>공동개발 기반 자체 KYT 역량</b><p>TranSight는 보난자팩토리와 트라버스가 공동 개발·운영해 온 자체 분석·KYT 서비스입니다.</p></div>
+<div><span>02</span><b>핵심 개발·분석 인력 직접 투입</b><p>범죄 데이터 수집과 추적 알고리즘 설계 인력이 분석지원에 참여합니다.</p></div>
+<div><span>03</span><b>경찰청 실전 공조 및 교육 레퍼런스</b><p>본청·일선 경찰관서 지원, 경찰수사연수원 강의 경험을 보유합니다.</p></div>
+<div><span>04</span><b>해외 VASP 공조 연계</b><p>분석 결과를 정보요청·동결요청 검토용 자료로 연결합니다.</p></div>
+<div><span>05</span><b>분석 한계의 투명한 제시</b><p>모네로, ZK 믹서, 비표준 체인 등은 가능한 구간과 불가 구간을 구분합니다.</p></div>
+<div><span>06</span><b>지속적 파트너십 및 인프라화</b><p>계정 제공, 교육, 현장 피드백 반영, DB 고도화와 연결합니다.</p></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">34</div></footer></section><section class="page closing">
+<div class="closing-wrap">
+<span class="kicker">Closing Message</span>
+<h2>보난자 컨소시엄은 경찰청의<br/>가상자산 범죄 대응 인프라 파트너가 되겠습니다</h2>
+<p>TranSight의 자체 기술, 트라버스의 온체인 포렌식 분석 역량, 보난자팩토리의 기관용 서비스 운영 경험을 결합하여 분석·보고·브리핑·거래소 공조까지 수사의 전 과정을 지원하겠습니다.</p>
+<div class="closing-tags"><span>자체 개발</span><span>실전 분석</span><span>증거화</span><span>공조 지원</span><span>인프라화</span></div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"/><span class="sep"></span><img src="../materials/traverse_logo.webp"/></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">35</div></footer></section><section class="page thank-you">
+<div class="thanks">
+<h1>Thank You</h1>
+<p>경청해 주셔서 감사합니다.</p>
+<div class="thanks-logos"><img src="../materials/bonanza_Factory_logo.jpg"/><span>×</span><img src="../materials/traverse_logo.webp"/></div>
+<div class="contact-info" style="margin-top: 40px; display: flex; justify-content: space-between; font-size: 0.9rem; color: #555; text-align: left; border-top: 1px solid #e0e0e0; padding-top: 20px; line-height: 1.6; max-width: 1000px; margin-left: auto; margin-right: auto;">
+    <div style="flex: 1;">
+        <strong style="color:#000; font-size:1.1rem; display:block; margin-bottom:8px;">보난자팩토리</strong>
+        <b>Email</b> contact@bonanza-factory.co.kr<br/>
+        <b>Tel</b> 02-2632-7774<br/>
+        <b>Web</b> www.bonanza-factory.co.kr<br/>
+        <b>Address</b> 서울특별시 영등포구 양평로 12, 정오빌딩 6, 7층
+    </div>
+    <div style="flex: 1; padding-left: 20px;">
+        <strong style="color:#000; font-size:1.1rem; display:block; margin-bottom:8px;">트라버스</strong>
+        <b>Email</b> contact@traverse.kr<br/>
+        <b>Tel</b> 010-5403-9150<br/>
+        <b>Web</b> www.traverse.kr<br/>
+        <b>Address</b> 서울특별시 영등포구 양평로 12, 정오빌딩 6층
+    </div>
+</div>
+</div>
+<footer class="page-footer"><div class="footer-brand"><img src="../materials/bonanza_Factory_logo.jpg"><span class="sep"></span><img src="../materials/transight-logo-dark.jpg"><span class="sep"></span><img src="../materials/traverse_logo.webp"/></img></img></div><div class="copyright">© 2026 Bonanza Factory. Copyright reserved by Bonanza Factory.</div><div class="page-no">36</div></footer></section>
+</body></html>

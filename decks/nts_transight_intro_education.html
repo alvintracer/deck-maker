@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>국세청 가상자산 탈세대응 거래추적 솔루션 도입</title>
+<style>
+@font-face{font-family:'NanumSquare_ac';src:url('../fonts/NanumSquare_acL.ttf') format('truetype');font-weight:300;font-style:normal}
+@font-face{font-family:'NanumSquare_ac';src:url('../fonts/NanumSquare_acR.ttf') format('truetype');font-weight:400;font-style:normal}
+@font-face{font-family:'NanumSquare_ac';src:url('../fonts/NanumSquare_acB.ttf') format('truetype');font-weight:700;font-style:normal}
+@font-face{font-family:'NanumSquare_ac';src:url('../fonts/NanumSquare_acEB.ttf') format('truetype');font-weight:800;font-style:normal}
+@font-face{font-family:'Pretendard';src:url('../fonts/PretendardVariable.ttf') format('truetype');font-weight:100 900;font-style:normal}
+:root{
+  --accent:#103b6e;
+  --accent-dark:#081e3a;
+  --blue:#1557d6;
+  --blue2:#1f5f9f;
+  --navy:#173A63;
+  --navy2:#0B1F3A;
+  --soft:#eef4fa;
+  --soft2:#f7f9fc;
+  --line:#cbd5e1;
+  --ink:#142033;
+  --muted:#647085;
+  --red:#9a1f1f;
+  --green:#19733E;
+  --gold:#b98a16;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#e9eef5;color:var(--ink);font-family:'NanumSquare_ac','NanumSquare','Pretendard','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',Arial,sans-serif;}
+@page{size:297mm 210mm;margin:0}
+.page{width:297mm;height:210mm;margin:0 auto 8mm;background:#fff;position:relative;overflow:hidden;padding:14mm 17mm 17mm;page-break-after:always;box-shadow:0 10px 32px rgba(15,30,60,.12)}
+@media print{*{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;color-adjust:exact!important}body{background:#fff;margin:0;padding:0}.page{margin:0;box-shadow:none;page-break-after:always;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}.page:last-child{page-break-after:auto}.page:before,.card,.card.blue,.card.accent,.card.red,.card.soft,.note,.std-table th,.num-badge,.tag,.hero-card,.strip-card,.content-card,.statement-card,.phase .label,.chip{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}}
+.page:before{content:"";position:absolute;left:0;top:0;width:100%;height:4mm;background:linear-gradient(90deg,var(--blue) 0 55%,var(--accent) 55% 100%)}
+h1,h2,h3,p,li,td,th{word-break:keep-all} h1,h2,h3,p{margin:0} ul{margin:0;padding-left:18px}
+h1{font-size:35pt;line-height:1.08;letter-spacing:-.045em;color:#0b1f3a} h2{font-size:24pt;line-height:1.18;letter-spacing:-.035em;color:#102043} h3{font-size:14pt;line-height:1.35;color:#102043;letter-spacing:-.02em} p,li{font-size:10.4pt;line-height:1.6;color:#4d5b70}.small{font-size:9pt;color:#657085;line-height:1.55}.tiny{font-size:7.8pt;color:#7a8596;line-height:1.4}.strong{font-weight:800;color:#0b1f3a}.blue{color:var(--blue)}.accent{color:var(--accent)}
+.header{height:12mm;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d7deea;padding-bottom:3mm;margin-bottom:8mm}.header .title{font-size:8.5pt;color:#647085;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.header .logos{display:flex;align-items:center;gap:4mm}.header .logos img.l-nts { height: 6mm !important; margin-top: 1mm; width: auto !important; }.header .logos img.l-bonanza { height: 4.5mm !important; margin-top: 1mm; width: auto !important; }
+.footer{position:absolute;left:17mm;right:17mm;bottom:7mm;height:8mm;border-top:1px solid #d7deea;padding-top:2.5mm;display:flex;align-items:center;gap:3mm;color:#8a95a6;font-size:8pt}.footer .copy{flex:1;text-align:left}.footer .page-no{font-weight:900;color:#102043}.footer img{max-height:5mm;width:auto}.sep{height:11px;width:1px;background:#cbd4e2}
+.kicker{display:block;font-size:8.8pt;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:var(--blue);margin-bottom:3mm}.section-head{margin-bottom:7mm}.section-head p{margin-top:2mm;color:#5f6f84;font-size:10.6pt}.eyebrow{font-size:8.3pt;font-weight:900;color:var(--accent);letter-spacing:.13em;text-transform:uppercase}.chip-row{display:flex;gap:2.5mm;flex-wrap:wrap;margin-top:6mm}.chip{border:1px solid #ccd7e6;background:#f8fbff;border-radius:999px;padding:1.8mm 4mm;font-size:9pt;font-weight:800;color:#28415f}.chip.h{background:#eef9f7;color:var(--accent-dark);border-color:#bfe3dd}.chip.b{background:#eaf1ff;color:#1557d6;border-color:#c6d6ff}.chip.r{background:#fff2f2;color:#9a1f1f;border-color:#f0c6c6}
+.cover{padding-top:34mm}.cover:after{content:"";position:absolute;right:-25mm;top:8mm;width:115mm;height:115mm;background:radial-gradient(circle,rgba(21,87,214,.12),transparent 67%);border-radius:50%}.cover-grid{display:grid;grid-template-columns:1fr;gap:14mm;align-items:center;position:relative;z-index:1}.cover h1{font-size:34pt;line-height:1.3}.subtitle{font-size:14.4pt;line-height:1.55;color:#536174;max-width:165mm;margin-top:7mm}.cover-logos{display:flex;align-items:center;gap:6mm;margin-top:16mm; flex-wrap: wrap;}.cover-logos img{height:9mm;width:auto}.cover-date{margin-top:14mm;font-size:17pt;font-weight:900;color:#3f4a5f;letter-spacing:.04em}.hero-card{border:1px solid #dbe4f0;border-radius:6mm;background:linear-gradient(135deg,#f8fbff,#fff);padding:7mm;box-shadow:0 8px 24px rgba(20,55,120,.08)}.hero-card .metric{padding:4.2mm 0;border-bottom:1px solid #e4ebf4}.hero-card .metric:last-child{border-bottom:0}.metric b{display:block;font-size:22pt;color:var(--blue);letter-spacing:-.03em}.metric:nth-child(2) b{color:var(--accent)}.metric:nth-child(3) b{color:var(--gold)}.metric span{display:block;font-size:9.5pt;color:#5f6b7c;margin-top:1mm}
+.contents{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:12mm}.content-card{border:1px solid #dce3ef;background:#fff;border-radius:4mm;padding:5mm;min-height:35mm}.content-card .num{font-size:18pt;font-weight:900;color:#d0d8e6}.content-card h3{margin-top:2mm}.content-card p{margin-top:2mm;font-size:9.5pt}.exec-grid{display:grid;grid-template-columns:1fr 1fr;gap:7mm}.statement-card{border:1px solid #dce3ef;border-radius:5mm;padding:7mm;background:#fff;position:relative;min-height:64mm}.statement-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px}.statement-card.blue:before{background:var(--blue)}.statement-card.accent:before{background:var(--accent)}.big-line{font-size:17pt;font-weight:900;line-height:1.28;color:#102043;margin:4mm 0;letter-spacing:-.035em}.summary-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin-top:7mm}.strip-card{border:1px solid #dce3ef;background:#fbfcff;border-radius:3mm;padding:4mm}.strip-card b{display:block;font-size:11.5pt;color:#102043;margin-bottom:1.2mm}.strip-card span{font-size:9pt;color:#637185;line-height:1.4}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:7mm}.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm}.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm}.card{border:1px solid #dce3ef;background:#fff;border-radius:4mm;padding:5mm}.card.soft{background:#f7f9fc}.card.blue{border-color:#bdd0ff;background:#f8fbff}.card.accent{border-color:#bfe3dd;background:#f4fbf9}.card.red{border-color:#efc8c8;background:#fff7f7}.card h3{margin-bottom:2mm}.card p,.card li{font-size:9.7pt}.note{border-left:4px solid var(--accent);background:#f4fbf9;border-radius:2mm;padding:4mm 5mm;margin-top:5mm;font-size:10pt;line-height:1.6;color:#405267}.note b{color:#102043}.image-box{border:1px solid #d8e1ef;border-radius:5mm;background:#fbfcff;padding:4mm;text-align:center}.image-box img{max-width:100%;height:auto;display:block;margin:0 auto}.image-box .caption{font-size:8.3pt;color:#748095;margin-top:2mm}.full-img{height:118mm;object-fit:contain}.wide-img{width:100%;max-height:108mm;object-fit:contain}.api-img{max-height:95mm;object-fit:contain}
+table{border-collapse:collapse;width:100%}.std-table{font-size:9.4pt;border:1px solid #cbd5e1;border-radius:3mm;overflow:hidden}.std-table th{background:#173A63;color:white;padding:2.5mm;text-align:left;font-weight:800;border-right:1px solid rgba(255,255,255,.18)}.std-table td{padding:2.5mm;border-bottom:1px solid #e7edf5;border-right:1px solid #e7edf5;color:#46566b;vertical-align:top}.std-table tr:last-child td{border-bottom:0}.std-table .cat{background:#ddebf7;color:#0b1f3a;font-weight:800}.mini-table{font-size:8.8pt}.mini-table th,.mini-table td{padding:2.2mm}.tag{display:inline-block;border-radius:999px;padding:1mm 2.5mm;font-size:7.8pt;font-weight:900}.tag.b{background:#eaf1ff;color:#1557d6}.tag.h{background:#e7f7f4;color:#00695c}.tag.r{background:#f9e6e6;color:#8b1e1e}.tag.g{background:#e7f3ea;color:#19733E}.tag.y{background:#fff5df;color:#9a6a00}.num-badge{display:inline-flex;align-items:center;justify-content:center;width:7mm;height:7mm;border-radius:50%;background:#173A63;color:#fff;font-size:8.5pt;font-weight:900;margin-bottom:2mm}.process{display:grid;grid-template-columns:repeat(5,1fr);gap:3mm}.step{border:1px solid #dce3ef;border-radius:4mm;padding:4mm;background:#fff;min-height:46mm}.step h3{font-size:12.5pt}.step p{font-size:9pt;margin-top:2mm}.arrow-process{display:flex;align-items:center;gap:2mm;margin:3mm 0}.line{height:2px;background:#c9d1d9;flex:1}.matrix{display:grid;grid-template-columns:repeat(2,1fr);gap:5mm}.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm}.price-card{border:1px solid #dce3ef;border-radius:4mm;padding:4.5mm;background:#fff;min-height:70mm}.price-card.featured{border-color:#b6c9ff;background:#f8fbff;box-shadow:0 0 0 1px rgba(21,87,214,.12)}.price-card h3{font-size:14pt}.price{font-size:20pt;font-weight:900;color:#1557d6;margin:3mm 0}.price-card p{font-size:8.9pt}.spec{border-top:1px solid #e3e9f2;margin-top:3mm;padding-top:2mm}.spec div{display:flex;justify-content:space-between;gap:2mm;font-size:8.6pt;border-bottom:1px dashed #e3e9f2;padding:1.2mm 0;color:#59677b}.spec b{color:#102043}.roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:4mm}.phase{border:1px solid #dce3ef;border-radius:5mm;background:#fff;padding:5mm;min-height:64mm}.phase .label{font-size:8pt;font-weight:900;color:white;background:#173A63;border-radius:999px;padding:1mm 2.4mm;display:inline-block;margin-bottom:2.5mm}.phase:nth-child(2) .label{background:#1f5f9f}.phase:nth-child(3) .label{background:#008375}.quote{width:230mm;margin:14mm auto 8mm;border:1px solid #dce5f2;border-radius:6mm;padding:10mm 14mm;background:linear-gradient(135deg,#f8fbff,#f4fbf9);position:relative}.quote:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(var(--blue),var(--accent));border-radius:6mm 0 0 6mm}.quote p{font-size:17pt;line-height:1.55;font-weight:800;color:#12233b;letter-spacing:-.03em}.contact{display:inline-grid;grid-template-columns:28mm 90mm;gap:3mm;text-align:left;margin-top:8mm;border-top:1px solid #dce3ef;padding-top:6mm}.contact b{color:#1557d6}.contact span{color:#4d5b70}.closing-logos{display:flex;justify-content:center;align-items:center;gap:6mm;margin-top:13mm}.closing-logos img{height:8mm;width:auto}
+</style>
+</head>
+<body>
+
+<section class="page cover">
+  <div class="cover-grid">
+    <div>
+      <span class="eyebrow">National Tax Service × TranSight</span>
+      <h1 style="margin-top:7mm">국세청 가상자산 탈세대응<br/>거래추적 솔루션 도입</h1>
+      <p class="subtitle">TranSight Web 핵심 기능 소개 및 조사관 실무 역량 강화 교육 계획</p>
+      <div class="chip-row">
+        <span class="chip b">TranSight Web</span><span class="chip h">Auto-Tracing</span><span class="chip">IAAN Protocol</span><span class="chip">Education Plan</span>
+      </div>
+      <div class="cover-logos">
+        <img src="../materials/nts/nts-logo.svg" alt="NTS" style="height:17mm" />
+        <span style="font-size:15pt;color:#8a95a6">×</span>
+        <img src="../materials/bonanza_Factory_logo.jpg" alt="Bonanza Factory" style="height:6.5mm" />
+      </div>
+      <div class="cover-date">2026.06</div>
+    </div>
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">01</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Data & Methodology</div><div class="logos"><img src="../materials/nts/nts-logo.svg" class="l-nts"/><img src="../materials/bonanza_Factory_logo.jpg" class="l-bonanza"/></div></div>
+  <div class="section-head">
+    <span class="kicker">Why TranSight?</span>
+    <h2>국세청 조사를 위한 한국형 범죄 및 압도적 데이터 커버리지</h2>
+    <p>TranSight는 대한민국 내 탈세, 피싱, 미신고 VASP 등 범죄 데이터에 특화되어 있으며, 3가지 다각적 수집(HDCM, ADCM, BDCM)을 통해 글로벌 솔루션의 데이터 공백을 메웁니다.</p>
+  </div>
+  
+  <div class="three-col">
+    <div class="card"><span class="num-badge">1</span><h3>HDCM<br/>Human-Driven Collection</h3><ul><li>다크웹·텔레그램·폐쇄 커뮤니티 직접 수집</li><li>범죄 증거 기반 라벨링</li><li>자료 요구 및 과세 근거로 활용 가능한 Evidence 확보</li></ul></div>
+    <div class="card"><span class="num-badge">2</span><h3>ADCM<br/>AI-Driven Collection</h3><ul><li>웹·SNS·피싱 사이트 24시간 자동 수집</li><li>지갑 주소 패턴 자동 식별</li><li>신규 피싱·로맨스스캠·불법도박 주소 즉시 반영</li></ul></div>
+    <div class="card"><span class="num-badge">3</span><h3>BDCM<br/>Blockchain-Driven</h3><ul><li>클러스터링 기반 연관 지갑 확장</li><li>VASP 핫월렛·콜드월렛 및 Deposit 주소 식별</li><li>자금 흐름 추적 및 믹서·브릿지 경유 탐지</li></ul></div>
+  </div>
+  
+  <div class="summary-strip" style="margin-top:8mm">
+    <div class="strip-card"><b>서비스 주소 커버리지</b><span>3억 개 이상의 거래소/스왑/브릿지 주소</span></div>
+    <div class="strip-card"><b>범죄 연관 인텔리전스</b><span>3,200만 개+ 고위험, 범죄 지갑 주소</span></div>
+    <div class="strip-card"><b>국내 범죄 특화</b><span>한국형 범죄 특화 데이터 압도적 우위</span></div>
+    <div class="strip-card"><b>공공/금융 표준</b><span>국내 유일 35개 기관/민간 활용 (2025)</span></div>
+  </div>
+  
+  <div class="note" style="margin-top:5mm"><b>Compliance Builder, Bonanza Factory</b> 국내 유일 자체 기술 및 데이터 기반으로 정부기관(FIU, 경찰청 등), 가상자산거래소, 금융기관에 가상자산 추적 및 실시간 분석 솔루션을 제공 중입니다.</div>
+  
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">01</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Core Feature 1</div><div class="logos"><img src="../materials/nts/nts-logo.svg" class="l-nts"/><img src="../materials/bonanza_Factory_logo.jpg" class="l-bonanza"/></div></div>
+  <div class="section-head compact">
+    <span class="kicker">Tracking & Tracing</span>
+    <h2>Transaction Map 기반 자동 추적 (Auto-Tracing)</h2>
+    <p>복잡한 자금 세탁 및 탈세 경로를 Transaction Map을 통해 시각적으로 전후방 추적하며, 크로스체인 브릿징과 디믹싱을 완벽히 지원합니다.</p>
+  </div>
+  
+  <div class="exec-grid" style="margin-top:6mm">
+    <div class="statement-card accent">
+      <h3>Auto-Tracing 기술</h3>
+      <p class="big-line">원클릭으로 자금의 출처와 종착지를 식별합니다.</p>
+      <ul>
+        <li style="margin-top:2mm;margin-bottom:1mm"><b>De-bridging (디브릿징)</b>: 이더리움에서 폴리곤, 트론 등으로 네트워크를 넘나드는 체인 간 자금 이동을 연속적으로 추적</li>
+        <li style="margin-top:1mm;margin-bottom:1mm"><b>De-mixing (디믹싱)</b>: Tornado Cash 등 자금 세탁 목적의 믹싱 프로토콜 우회 흐름 식별</li>
+        <li style="margin-top:1mm"><b>Clustering (클러스터링)</b>: 동일 주체가 소유한 복수 지갑 주소를 하나로 묶어 포괄적 분석 제공</li>
+      </ul>
+    </div>
+    
+    <div class="statement-card blue">
+      <h3>광범위한 지원 네트워크 및 토큰</h3>
+      <p class="big-line">14개 이상의 주요 메인넷과 수만 개의 스마트 컨트랙트 내역을 지원합니다.</p>
+      <div style="font-size:10pt; line-height:1.6; color:#4d5b70; margin-top:2mm; background:#f4fbf9; padding:4mm; border-radius:3mm;">
+        <b>Supported Chains:</b> Bitcoin, Ethereum, Tron, XRP, Solana, Binance Smart Chain, Avalanche, Arbitrum, Optimism, Polygon, Base, Linea, Fantom, Ronin 등<br/><br/>
+        <b>Deep Insight:</b> 메인넷 코인뿐만 아니라 ERC-20 계열 토큰 전송, Internal Transaction, Event Log 레벨까지 국세청 조사에 필요한 모든 온체인 Evidence를 제공합니다.
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">02</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">TranSight Interface</div><div class="logos"><img src="../materials/nts/nts-logo.svg" class="l-nts"/><img src="../materials/bonanza_Factory_logo.jpg" class="l-bonanza"/></div></div>
+  <div class="section-head compact" style="margin-bottom:3mm">
+    <span class="kicker">Auto-Tracing UI</span>
+    <h2>직관적인 Transaction Map 인터페이스</h2>
+  </div>
+  <div class="image-box" style="padding:0; border:1px solid #dce3ef; border-radius:3mm; overflow:hidden; background:#f8fbff;">
+    <img src="../materials/knpa/tx-map-2.png" style="width:100%; max-height:120mm; object-fit:cover; display:block" />
+  </div>
+  <div class="note" style="margin-top:4mm">
+    <b>실제 분석 화면:</b> 복잡한 크로스체인 이동과 믹서 우회 경로를 시각적 노드로 연결하여 조사관이 직관적으로 흐름을 파악할 수 있도록 돕습니다.
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">03</span></footer>
+</section>
+
+
+<section class="page">
+  <div class="header"><div class="title">Core Feature 2</div><div class="logos"><img src="../materials/nts/nts-logo.svg" class="l-nts"/><img src="../materials/bonanza_Factory_logo.jpg" class="l-bonanza"/></div></div>
+  <div class="section-head compact">
+    <span class="kicker">Global Cooperation</span>
+    <h2>IAAN 프로토콜 기반 거래소 동결 및 협조 요청</h2>
+    <p>탈세 목적의 가상자산이 종착지인 가상자산거래소(CEX)에 도달했을 때, 신속한 자산 동결 조치와 인적 사항 확보를 위한 전용 프로토콜을 제공합니다.</p>
+  </div>
+  
+  <div class="card blue" style="margin-top: 8mm; padding: 7mm;">
+    <h3 style="font-size:16pt;color:#1557d6;margin-bottom:3mm">IAAN Protocol</h3>
+    <p style="font-size:11.5pt; line-height: 1.6; margin-top: 2mm;">
+      수사기관 및 과세 당국이 해외 주요 가상자산거래소와 직접 소통하고 공조할 수 있는 직결 채널입니다. TranSight 상에서 자금의 최종 도달 지점을 식별한 즉시 협조 요청을 진행합니다.
+    </p>
+    
+    <div style="display:flex;gap:4mm;margin-top:6mm">
+      <div style="flex:1;background:#fff;border:1px solid #c6d6ff;border-radius:3mm;padding:5mm;text-align:center">
+        <b style="font-size:16pt;color:#1557d6">72시간</b>
+        <p style="font-size:9.5pt;color:#4d5b70;margin-top:2mm;font-weight:800">무조건 임시 동결</p>
+      </div>
+      <div style="flex:1;background:#fff;border:1px solid #c6d6ff;border-radius:3mm;padding:5mm;text-align:center">
+        <b style="font-size:16pt;color:#173A63">정식 동결</b>
+        <p style="font-size:9.5pt;color:#4d5b70;margin-top:2mm;font-weight:800">법적 근거 기반 연장</p>
+      </div>
+      <div style="flex:1;background:#fff;border:1px solid #c6d6ff;border-radius:3mm;padding:5mm;text-align:center">
+        <b style="font-size:16pt;color:#008375">KYC / KYT</b>
+        <p style="font-size:9.5pt;color:#4d5b70;margin-top:2mm;font-weight:800">정보 및 거래내역 요청</p>
+      </div>
+    </div>
+    
+    <div style="margin-top:7mm; border-top:1px dashed #c6d6ff; padding-top:6mm;">
+      <b style="font-size:10pt;color:#102043;display:block;margin-bottom:3mm">Direct Connection Partners</b>
+      <div style="display:flex;align-items:center;gap:6mm;background:#fff;padding:4mm 6mm;border-radius:3mm;border:1px solid #dce3ef">
+        <img src="../materials/knpa/MEXC_logo.png" style="height:7mm;object-fit:contain"/>
+        <img src="../materials/knpa/bybit-logo.jpg" style="height:7mm;object-fit:contain"/>
+        <img src="../materials/knpa/week-logo.png" style="height:7mm;object-fit:contain"/>
+        <img src="../materials/knpa/DWF-Labs-Logo.png" style="height:7mm;object-fit:contain"/>
+        <span style="font-size:9pt;color:#637185;margin-left:auto">기존 MLAT 대비 압도적인 신속성 (최대 72h 내 조치 완료)</span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">04</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">TranSight Interface</div><div class="logos"><img src="../materials/nts/nts-logo.svg" class="l-nts"/><img src="../materials/bonanza_Factory_logo.jpg" class="l-bonanza"/></div></div>
+  <div class="section-head compact" style="margin-bottom:3mm">
+    <span class="kicker">IAAN Dashboard</span>
+    <h2>글로벌 거래소 실시간 공조 인터페이스</h2>
+  </div>
+  <div class="image-box" style="padding:0; border:1px solid #dce3ef; border-radius:3mm; overflow:hidden; background:#f8fbff;">
+    <img src="../materials/knpa/iaan-dashboard.png" style="width:100%; max-height:120mm; object-fit:cover; display:block" />
+  </div>
+  <div class="note" style="margin-top:4mm">
+    <b>협조 요청 화면:</b> 타겟 지갑의 최종 도달 거래소가 확인되면, 해당 인터페이스를 통해 72시간 동결 및 KYC 정보 제공을 즉각적으로 요청합니다.
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">05</span></footer>
+</section>
+
+
+<section class="page">
+  <div class="header"><div class="title">Education Strategy</div><div class="logos"><img src="../materials/nts/nts-logo.svg" class="l-nts"/><img src="../materials/bonanza_Factory_logo.jpg" class="l-bonanza"/></div></div>
+  <div class="section-head compact">
+    <span class="kicker">NTS Education Plan</span>
+    <h2>국세청 조사관 대상 교육 운영 철학 및 3대 역량 목표</h2>
+    <p>단순한 도구 구매를 넘어, 국세청 조사관이 TranSight Web을 활용하여 가상자산 탈세대응 업무를 "독립적으로 수행"할 수 있도록 3단계 실무 교육을 지원합니다.</p>
+  </div>
+  
+  <div class="three-col" style="margin-top:6mm">
+    <div class="card"><span class="num-badge" style="background:var(--blue)">1</span><h3>분석 역량</h3><p>온체인 데이터 기반 주소 추적, 클러스터링, 믹서 디믹싱, OSINT 오프체인 데이터 통합 분석 기능을 활용해 스스로 조사 가설을 세울 수 있는 역량 확보</p></div>
+    <div class="card"><span class="num-badge" style="background:var(--accent)">2</span><h3>증거 구성 역량</h3><p>분석 결과를 그래프와 보고서로 체계화하여, 세무조사 및 과세 심리 단계에서 적법하게 활용 가능한 증거 패키지로 구성하는 역량 확보</p></div>
+    <div class="card"><span class="num-badge" style="background:var(--navy)">3</span><h3>역외 협조 역량</h3><p>해외 VASP에 대한 동결 및 정보 제공 요청 구간을 식별하고, IAAN 프로토콜 기반의 신속한 글로벌 협조 요청 흐름을 이해하는 역량 확보</p></div>
+  </div>
+  
+  <div class="roadmap" style="margin-top: 10mm; grid-template-columns: repeat(3, 1fr);">
+    <div class="phase"><span class="label" style="background:#5c7ca6">초급 과정</span><h3 style="margin-top:2mm">"사용한다"</h3><p>TranSight 접속, 검색, Transaction Map 기본 사용, 리스크 태그 확인 및 기본 보고서 출력 방법 숙지</p></div>
+    <div class="phase"><span class="label" style="background:#1f5f9f">중급 과정</span><h3 style="margin-top:2mm">"구조를 해석한다"</h3><p>On-ramp/Off-ramp 식별, DEX Swap, 브릿징, 거래소(CEX) 입출금 구조 등 웹3 기반 경제활동 해석 훈련</p></div>
+    <div class="phase"><span class="label" style="background:#173A63">고급 과정</span><h3 style="margin-top:2mm">"사건으로 판단한다"</h3><p>실제 유사 케이스 바탕으로 분석 가설 설정, 자금흐름표, 과세 이벤트 후보표 작성, 거래소 자료 요청서 작성 실습</p></div>
+  </div>
+
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">06</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Education Curriculum</div><div class="logos"><img src="../materials/nts/nts-logo.svg" class="l-nts"/><img src="../materials/bonanza_Factory_logo.jpg" class="l-bonanza"/></div></div>
+  <div class="section-head compact">
+    <span class="kicker">Case-Based Learning</span>
+    <h2>중급 및 고급 교육 과정 핵심 케이스 소개</h2>
+    <p>세무조사 질문을 온체인 Evidence와 거래소 자료 요청 항목으로 변환하는 실전형 케이스 스터디를 진행합니다.</p>
+  </div>
+  
+  <div class="exec-grid" style="margin-top:6mm">
+    <div class="statement-card accent">
+      <h3>[중급] Web3 경제활동 추적과 해석</h3>
+      <ul style="margin-top:3mm">
+        <li style="margin-bottom:3mm"><b>On-ramp / Off-ramp 및 CEX 입출금 구조:</b><br/>거래소 핫월렛(Hot Wallet)과 입금(Deposit) 주소 구조 분석, 단순 출금액과 실제 손익의 차이 구분.</li>
+        <li style="margin-bottom:3mm"><b>DEX Swap 및 코인 간 교환:</b><br/>단순 전송(Transfer)과 Swap의 차이, 처분 후보 도출 및 외부 가격 산정.</li>
+        <li style="margin-bottom:3mm"><b>Airdrop / Claim / Reward 수령:</b><br/>LayerZero 등 보상형 에어드랍 토큰 수령과 이후 처분 여부 확인.</li>
+        <li><b>국내외 CEX 연계 아비트라지:</b><br/>업비트 등 국내 원화마켓 상장 시점의 유입 및 매도 차익 확인.</li>
+      </ul>
+    </div>
+    
+    <div class="statement-card blue">
+      <h3>[고급] 사건형 케이스 스터디 및 산출물</h3>
+      <ul style="margin-top:3mm">
+        <li style="margin-bottom:3mm"><b>Case Intake & Timeline 재구성:</b><br/>분석 가설 설정 및 지갑 단위 경제활동 타임라인(Inflow/Outflow) 복원.</li>
+        <li style="margin-bottom:3mm"><b>DeFi / RWA 심화 해석:</b><br/>DeFi 원금과 수익 분리, RWA 자산의 온체인 이전 및 오프체인 권리 분리 확인.</li>
+        <li style="margin-bottom:3mm"><b>과세 이벤트 후보표 작성:</b><br/>에어드랍, NFT 매매, DeFi 이자 등 경제적 이익 유형별 온체인 증거 정리.</li>
+        <li><b>세무조사 산출물 최종 작성:</b><br/>자금흐름표, 자료 요청서 작성 및 'Limitation Memo(한계 고지)' 작성법 훈련.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">07</span></footer>
+</section>
+
+
+<section class="page">
+  <div class="header"><div class="title">Advanced Cases Discussion</div><div class="logos"><img src="../materials/nts/nts-logo.svg" class="l-nts"/><img src="../materials/bonanza_Factory_logo.jpg" class="l-bonanza"/></div></div>
+  <div class="section-head compact">
+    <span class="kicker">Customization</span>
+    <h2>[고급 과정] 맞춤형 실전 케이스 선정 논의</h2>
+    <p>실제 세무조사 환경과 가장 유사한 고급 훈련을 위해, 국세청 실무진의 수요에 맞는 케이스를 선정하여 맞춤형 교육을 제공하고자 합니다. 아래 후보 중 가장 필요한 케이스에 대해 의견을 구합니다.</p>
+  </div>
+  
+  <div style="margin-top:6mm">
+    <table class="std-table">
+      <thead>
+        <tr>
+          <th style="width:25%">케이스 테마</th>
+          <th style="width:35%">주요 훈련 내용</th>
+          <th style="width:40%">조사관 역량 강화 포인트</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cat">1. Polymarket 대형 손익<br/><span class="tiny">@blackhuman5 사례</span></td>
+          <td>하나의 지갑에서 마켓 PnL, 정산, 브릿지 흐름 파악</td>
+          <td>정산액과 실제 손익의 차이 분석, 자금의 과잉 귀속 오류 방지 훈련</td>
+        </tr>
+        <tr>
+          <td class="cat">2. 원화상장 아비트라지<br/><span class="tiny">업비트 상장 사례</span></td>
+          <td>국내 거래소 접점 식별 및 외부 유입 자금 매도 차익 확인</td>
+          <td>해외 거래소 → 국내 거래소 흐름 파악 및 거래소 자료 요청서 작성 실전</td>
+        </tr>
+        <tr>
+          <td class="cat">3. GMX v2 / PerpDEX<br/><span class="tiny">탈중앙화 파생상품</span></td>
+          <td>단순 입출금(Transfer)과 실제 DeFi 손익의 분리 계산</td>
+          <td>파생상품 거래의 증거금, 청산, 실현 손익 등 온체인 증거 확보</td>
+        </tr>
+        <tr>
+          <td class="cat">4. RWA / STO 추적<br/><span class="tiny">Ondo 파이낸스 사례</span></td>
+          <td>토큰화된 현실 자산의 온체인 이동 및 소유권 변경 식별</td>
+          <td>온체인 데이터와 오프체인 권리 관계의 분리 해석 및 연계 조사</td>
+        </tr>
+        <tr>
+          <td class="cat">5. Vault 및 유동성 풀<br/><span class="tiny">Pharos Vault / BTC-USDC</span></td>
+          <td>LP 토큰, Vault Share, 리워드 수령 및 출금 구조 구분</td>
+          <td>복잡한 이자 농사(Yield Farming) 구조에서의 과세 이익 도출</td>
+        </tr>
+        <tr>
+          <td class="cat">6. Token Sale / ICO<br/><span class="tiny">Legion Token 사례</span></td>
+          <td>Allocation, Vesting(락업), Claim에 따른 자금 흐름 식별</td>
+          <td>토큰 수령 원인 분석 및 배포/청구 시점에 따른 자산 귀속 시기 판단</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="note" style="margin-top:6mm">
+    <b>맞춤형 커리큘럼 구성 제안</b><br/>위 케이스 외에도 현재 조사 중이시거나 과거에 겪었던 난제 케이스 유형이 있다면, 해당 유형을 고급 과정의 메인 케이스로 각색하여 국세청 전용 교육 모듈로 개발해 드릴 수 있습니다.
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">08</span></footer>
+</section>
+
+<section class="page">
+  <div class="header"><div class="title">Thank You</div><div class="logos"><img src="../materials/nts/nts-logo.svg" class="l-nts"/><img src="../materials/bonanza_Factory_logo.jpg" class="l-bonanza"/></div></div>
+  <div class="quote" style="margin-top:15mm">
+    <p>TranSight와 함께<br/>국세청의 스마트하고 강력한<br/>가상자산 세무조사 및 과세 인프라를 완성합니다.</p>
+  </div>
+  <div style="text-align:center;margin-top:15mm">
+    <h1 style="font-size:42pt;color:#0b1f3a">Thank You</h1>
+    <p style="font-size:14pt;color:#647085;margin-top:4mm">경청해 주셔서 감사합니다.</p>
+    <div class="contact" style="justify-content:center">
+      <b>E-mail</b><span>contact@bonanza-factory.co.kr</span>
+      <b>Tel</b><span>02-2632-7774</span>
+      <b>Web</b><span>www.bonanza-factory.co.kr</span>
+      <b>Address</b><span>서울특별시 영등포구 양평로 12, 정오빌딩 6, 7층</span>
+    </div>
+  </div>
+  <footer class="footer"><img src="../materials/bonanza_Factory_logo.jpg"/><span class="sep"></span><span class="copy">Copyright ⓒ 2026 Bonanza Factory. All rights reserved.</span><span class="page-no">09</span></footer>
+</section>
+
+</body>
+</html>
