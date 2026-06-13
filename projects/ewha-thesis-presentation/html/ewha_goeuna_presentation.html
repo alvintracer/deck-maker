@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>고은아 학위논문 발표자료 — 지구과학 관련 재해 교육 프로그램에서 나타난 중학생의 추론 특성</title>
+<style>
+@font-face{font-family:NanumSquare_ac;src:url('../fonts/NanumSquare_acR.ttf') format('truetype');font-weight:400}
+@font-face{font-family:NanumSquare_ac;src:url('../fonts/NanumSquare_acB.ttf') format('truetype');font-weight:700}
+@font-face{font-family:NanumSquare_ac;src:url('../fonts/NanumSquare_acEB.ttf') format('truetype');font-weight:800}
+@font-face{font-family:Pretendard;src:url('../fonts/PretendardVariable.ttf') format('truetype');font-weight:100 900}
+:root{--ewha:#00663F;--ewha-deep:#00462c;--ewha-soft:#eef7f2;--mint:#dbeee6;--paper:#eef2f0;--ink:#14211b;--muted:#607169;--line:#d7e3dd;--gold:#c89f42;--navy:#15392a;--soft-gray:#f7faf8}
+
+/* ===== GLOBAL PRINT COLOR FORCE ===== */
+*{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;color-adjust:exact !important}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#eef2f0;font-family:"NanumSquare_ac","NanumSquare",Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif;color:#14211b;word-break:keep-all}
+body{counter-reset:page}
+@page{size:297mm 210mm;margin:0}
+
+/* ===== PAGE CONTAINER ===== */
+.page{width:297mm;height:210mm;min-width:297mm;min-height:210mm;max-width:297mm;max-height:210mm;margin:0 auto 8mm;background:#fff;position:relative;overflow:hidden;padding:31mm 16mm 16mm 16mm;box-shadow:0 12px 30px rgba(15,55,35,.10);page-break-after:always;page-break-inside:avoid}
+.page:before{content:"";position:absolute;left:0;top:0;width:100%;height:3.2mm;background:linear-gradient(90deg,#00663F,#45a06e)}
+
+/* ===== SIDE LABEL ===== */
+.side-label{position:absolute;left:16mm;right:16mm;top:7mm;height:19mm;border-bottom:1px solid #d7e3dd;display:flex;gap:5mm;align-items:flex-end;padding-bottom:3.4mm;white-space:normal;overflow:hidden}
+.side-label .roman{font-size:16pt;font-weight:800;color:#00462c}
+.side-label .alpha{font-size:14pt;font-weight:700;color:#304e40}
+.side-label .num{font-size:10.5pt;color:#5d7068;overflow:hidden;line-height:1.22;max-width:140mm;display:block}
+.side-label:after{content:"";position:absolute;bottom:-1px;left:0;width:38mm;height:2px;background:#c89f42}
+
+/* ===== HEADER / FOOTER ===== */
+header{height:9mm;display:flex;align-items:flex-start;justify-content:flex-end;margin-bottom:4mm}
+header img{height:8mm;width:auto;object-fit:contain}
+footer{position:absolute;left:16mm;right:16mm;bottom:6mm;height:8mm;display:flex;align-items:center;gap:8mm;border-top:1px solid #d7e3dd;padding-top:2.2mm;color:#728078;font-size:8.2pt}
+.foot-brand{display:flex;align-items:center;gap:2mm;min-width:47mm}
+.foot-brand img{height:4.8mm;width:auto}
+.foot-title{flex:1;text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.pg:after{counter-increment:page;content:counter(page, decimal-leading-zero);font-weight:800;color:#00462c;letter-spacing:.08em}
+
+/* ===== TYPOGRAPHY ===== */
+h1,h2,h3,p,ul{margin:0}
+h1{font-size:32pt;line-height:1.15;letter-spacing:-.055em;color:#10251c}
+h2{font-size:20pt;line-height:1.2;letter-spacing:-.04em;margin-bottom:3.5mm;color:#12261d}
+h3{font-size:13pt;color:#00462c;margin-bottom:2mm;font-weight:800}
+.eyebrow{font-size:9.6pt;font-weight:800;color:#00663F;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4mm}
+
+/* ===== COVER ===== */
+.cover{padding:0 18mm 18mm 18mm;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.cover .wordmark{position:absolute;right:18mm;top:16mm;height:18mm}
+.cover .seal-bg{position:absolute;right:-12mm;bottom:-16mm;width:135mm;opacity:.05}
+.cover-sub{font-size:15pt;line-height:1.5;color:#355246;margin-top:6mm;font-weight:700}
+.cover-type{font-size:12pt;font-weight:700;color:#c89f42;letter-spacing:.08em;margin-top:8mm;padding:2.5mm 6mm;border:1.5px solid #c89f42;border-radius:3mm;display:inline-block;background:#fffdf8}
+
+/* ===== AGENDA ===== */
+.agenda{display:grid;grid-template-columns:repeat(5,1fr);gap:4mm;margin-top:5mm;flex:1}
+.agenda div{border:1px solid #d7e3dd;border-radius:5mm;padding:5.5mm;background:linear-gradient(180deg,#fff,#f9fcfa);display:flex;flex-direction:column}
+.agenda b{display:block;font-size:21pt;color:#00663F;margin-bottom:3mm}
+.agenda strong{display:block;font-size:15pt;letter-spacing:-.03em;margin-bottom:3mm}
+.agenda span{font-size:11pt;line-height:1.6;color:#58695f;flex:1}
+
+/* ===== LISTS ===== */
+.bullet-list{padding-left:6mm;margin-top:1.5mm;max-width:260mm}
+.bullet-list li{font-size:15pt;line-height:1.52;margin:2.2mm 0;color:#263931}
+.bullet-list li::marker{color:#00663F;font-size:.9em}
+.bullet-list.tight li{font-size:14pt;line-height:1.40;margin:1.6mm 0}
+.bullet-list.spacious li{font-size:16pt;line-height:1.54;margin:2.8mm 0}
+.hl{background:linear-gradient(180deg,transparent 58%,rgba(0,102,63,.13) 58%);padding:0 1.5px;border-radius:1px}
+
+/* ===== DATA TABLE ===== */
+.data-table{width:100%;border-collapse:collapse;border-spacing:0;font-size:12.5pt;line-height:1.32;table-layout:fixed}
+.data-table th{background:#00462c;color:#fff;text-align:left;padding:2.2mm 3mm;font-weight:800;vertical-align:top;border:1px solid #00462c}
+.data-table td{padding:1.8mm 3mm;border:1px solid #d7e3dd;vertical-align:top;color:#26372f}
+.data-table tr:nth-child(even) td{background:#fbfdfc}
+.data-table td:first-child{font-weight:700;background:#f1f8f4;color:#143c29}
+.data-table.dense{font-size:11pt;line-height:1.26}
+.data-table.dense th{padding:1.8mm 2.2mm}
+.data-table.dense td{padding:1.3mm 2mm}
+.data-table.compact{font-size:10.5pt;line-height:1.22}
+.data-table.compact th{padding:1.5mm 2mm}
+.data-table.compact td{padding:1.1mm 1.6mm}
+.data-table.info{font-size:13.5pt;line-height:1.34}
+.data-table.info th{padding:2.5mm 3mm}
+.data-table.info td{padding:2mm 3mm}
+.table-note{margin-top:2mm;font-size:9.5pt;color:#607169;font-style:italic;padding-left:2mm}
+
+/* ===== NOTE BOX ===== */
+.note-box{margin-top:3.5mm;border-left:4px solid #c89f42;background:#fffdf8;border-radius:0 3mm 3mm 0;padding:3mm 5mm;font-size:14pt;line-height:1.46;color:#35463e}
+.note-box b{color:#00462c}
+.note-box.green{border-left-color:#00663F;background:#eef7f2}
+
+/* ===== FIGURE BOX ===== */
+.figure-box{border:1px solid #d7e3dd;border-radius:4mm;background:#f7faf8;display:flex;align-items:center;justify-content:center;padding:4mm;margin-top:3mm}
+.figure-box img{max-width:100%;max-height:100%;object-fit:contain}
+.figure-caption{font-size:9.5pt;color:#607169;text-align:center;margin-top:2mm}
+
+/* ===== GRID LAYOUTS ===== */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
+
+/* ===== CARD ===== */
+.card{border:1px solid #d7e3dd;border-radius:4mm;padding:4.5mm;background:#fff}
+.card h3{margin-bottom:1.5mm}
+.card p,.card li{font-size:13pt;line-height:1.44;color:#35463e}
+.card ul{padding-left:4.5mm;margin:1mm 0}
+.card.green{background:#eef7f2;border-color:#b5d8c4}
+.card.gold{background:#fffdf8;border-color:#e8d9ab}
+
+/* ===== RESULT BOX ===== */
+.result-box{border:1px solid #d7e3dd;border-left:4px solid #00663F;border-radius:0 4mm 4mm 0;padding:4mm 6mm;margin-bottom:3.5mm;background:#fbfdfc}
+.result-box p{font-size:15pt;line-height:1.48;color:#1e3228}
+
+/* ===== CLOSING ===== */
+.closing .thanks{height:142mm;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.thanks img{width:34mm;margin-bottom:9mm}
+.thanks h1{font-size:40pt;color:#00663F}
+
+/* ============================================================
+   PRINT / PDF EXPORT  —  Chrome "Save as PDF"
+   ============================================================ */
+@media print{
+  html,body{background:#fff !important}
+  .page{margin:0 !important;box-shadow:none !important;page-break-after:always !important;page-break-inside:avoid !important;overflow:hidden !important}
+  .page:last-child{page-break-after:auto !important}
+
+  /* Force top gradient bar */
+  .page:before{background:linear-gradient(90deg,#00663F,#45a06e) !important;height:3.2mm !important}
+
+  /* Side-label gold underline */
+  .side-label:after{background:#c89f42 !important}
+
+  /* Tables — force backgrounds */
+  .data-table th{background:#00462c !important;color:#fff !important;border-color:#00462c !important}
+  .data-table td{border-color:#d7e3dd !important}
+  .data-table td:first-child{background:#f1f8f4 !important;color:#143c29 !important}
+  .data-table tr:nth-child(even) td{background:#fbfdfc !important}
+
+  /* Note boxes */
+  .note-box{background:#fffdf8 !important;border-left:4px solid #c89f42 !important}
+  .note-box.green{background:#eef7f2 !important;border-left-color:#00663F !important}
+
+  /* Cards */
+  .card{background:#fff !important;border:1px solid #d7e3dd !important}
+  .card.green{background:#eef7f2 !important;border-color:#b5d8c4 !important}
+  .card.gold{background:#fffdf8 !important;border-color:#e8d9ab !important}
+
+  /* Result boxes */
+  .result-box{background:#fbfdfc !important;border-left:4px solid #00663F !important}
+
+  /* Figure boxes */
+  .figure-box{background:#f7faf8 !important;border:1px solid #d7e3dd !important}
+
+  /* Highlight spans */
+  .hl{background:linear-gradient(180deg,transparent 58%,rgba(0,102,63,.13) 58%) !important}
+
+  /* Agenda cards */
+  .agenda div{background:linear-gradient(180deg,#fff,#f9fcfa) !important;border:1px solid #d7e3dd !important}
+
+  /* Cover type badge */
+  .cover-type{background:#fffdf8 !important;border:1.5px solid #c89f42 !important}
+
+  /* Grid layouts — prevent Chrome from collapsing grids */
+  .two-col{display:grid !important;grid-template-columns:1fr 1fr !important}
+  .three-col{display:grid !important;grid-template-columns:repeat(3,1fr) !important}
+  .agenda{display:grid !important;grid-template-columns:repeat(5,1fr) !important}
+
+  /* Footer */
+  footer{border-top:1px solid #d7e3dd !important}
+  .pg:after{color:#00462c !important}
+
+  /* Images — prevent breaking */
+  img{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<!-- =============== SLIDE 1: COVER =============== -->
+<section class="page cover">
+<img alt="Ewha" class="wordmark" src="../assets/ewha-rect-logo.jpg"/>
+<img alt="" class="seal-bg" src="../assets/ewha-square-logo.png"/>
+<div class="eyebrow">Master's Thesis Presentation</div>
+<h1>지구과학 관련 재해 교육 프로그램에서 나타난<br/>중학생의 추론 특성</h1>
+<p class="cover-sub">이화여자대학교 대학원 과학교육학과 · 212SIG01 고은아</p>
+<div class="cover-type">석사 학위 논문 발표 자료</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">Title</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 2: CONTENTS =============== -->
+<section class="page" style="display:flex;flex-direction:column;">
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>발표 목차</h2>
+<div class="agenda">
+<div><b>Ⅰ</b><strong>서론</strong><span>연구의 필요성,<br/>연구 목적과 연구 문제</span></div>
+<div><b>Ⅱ</b><strong>선행 연구</strong><span>자연재해 교육,<br/>과학교육에서의 추론,<br/>자연재해 교육과 추론</span></div>
+<div><b>Ⅲ</b><strong>연구 방법</strong><span>연구 배경과 절차,<br/>참여자, 프로그램,<br/>자료 수집 및 분석</span></div>
+<div><b>Ⅳ</b><strong>연구 결과</strong><span>유형별 추론 특징,<br/>추론 흐름,<br/>학생 변화, 교육적 의미</span></div>
+<div><b>Ⅴ</b><strong>결론 및 제언</strong><span>결론,<br/>교육적 제언,<br/>후속 연구</span></div>
+</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">Contents</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 3: 연구 개요 =============== -->
+<section class="page">
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>연구 개요</h2>
+<div class="result-box"><p><b>연구 목적:</b> 지구과학 관련 재해 교육 프로그램에서 나타난 중학생의 추론 특성 분석</p></div>
+<div class="result-box"><p><b>연구 방법:</b> 폭염, 지진, 태풍, 미세먼지, 황사, 산사태, 대설을 주제로 한 총 8차시의 자연재해 서바이벌 프로그램을 개발·적용, 중학생 9명 대상으로 사전 검사지와 활동지 자료를 수집하여 질적으로 분석</p></div>
+<h3 style="margin-top:5mm">연구 결과</h3>
+<ul class="bullet-list spacious">
+<li>자연재해 교육 프로그램 전반에서 학생들의 추론은 <b>직관적 반응 → 단서 탐색 → 설명 구성 → 대응 선택 → 정당화</b>의 흐름으로 조직되었다.</li>
+<li>학생들의 추론은 <b>자연재해 유형에 따라 서로 다른 특징</b>을 보였다.</li>
+<li>프로그램 적용 이후 학생들의 <b>자연재해 이해와 판단 근거가 발전</b>하였다.</li>
+<li>자연재해 교육이 대응 수칙을 익히게 하는 교육에 머무르지 않고, <b>추론 형성 중심 교육</b>으로 기능할 수 있다.</li>
+</ul>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">연구 개요</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 4: Ⅰ-A 자연재해 교육의 필요성 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅰ. 서론</div><div class="alpha">A. 연구의 필요성</div><div class="num">자연재해 교육의 필요성</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>자연재해 교육의 필요성</h2>
+<ul class="bullet-list spacious">
+<li><span class="hl">재난 위험 경감 교육(Disaster Risk Reduction Education)</span>은 자연재해로 인한 인명 피해와 사회적 손실을 줄이기 위한 핵심 수단으로 이해되며, 학교는 이러한 교육이 체계적으로 이루어져야 할 중심 공간으로 강조되고 있다(UNESCO, 2012; UNESCO, 2024).</li>
+<li>학교 기반 재난교육 프로그램을 검토한 연구들은 재난교육이 학생들의 재난 관련 지식, 대비 행동, 생존 기술 향상에 <span class="hl">긍정적인 효과</span>를 보일 수 있다고 보고하였으며, 교육의 효과가 일회적 훈련이나 정보 전달에 머무를 경우 <span class="hl">실제 판단과 실천으로 이어지기 어렵다</span>는 점도 함께 지적하였다(Seddighi et al., 2022; Johnson et al., 2014).</li>
+<li>오늘날 자연재해는 기후변화, 도시화, 정보환경 변화와 맞물려 더욱 복합적인 양상으로 나타나고 있으므로, 학교 교육은 학생을 수동적 보호 대상이 아니라 <b>재난을 이해하고 대응할 수 있는 학습 주체</b>로 세울 필요가 있다(UNESCO, 2024; Seddighi et al., 2022; Tyas et al., 2025).</li>
+</ul>
+<div class="note-box green" style="margin-top:auto"><b>핵심:</b> 학교 기반 재난교육은 일회적 훈련을 넘어, 학생이 스스로 판단하고 실천할 수 있는 역량 중심 교육이어야 한다.</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">자연재해 교육의 필요성</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 5: Ⅰ-A 과학교육·지구과학 필요성 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅰ. 서론</div><div class="alpha">A. 연구의 필요성</div><div class="num">과학교육∙지구과학에서 자연재해 교육의 필요성</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>과학교육∙지구과학에서 자연재해 교육의 필요성</h2>
+<ul class="bullet-list">
+<li>과학교육에서 학생은 단순히 교사가 제시한 지식을 수용하는 존재가 아니라, <span class="hl">현상을 해석하고 설명을 구성하며, 그 설명의 타당성을 검토하고 정당화하는 존재</span>로 이해된다(Osborne &amp; Patterson, 2011; Reiser et al., 2012).</li>
+<li>이러한 논의는 자연재해 교육에서도 적용될 수 있는데, 학생이 자연재해를 접할 때 <span class="hl">무엇이 위험의 신호인지, 어떤 조건에서 위험이 커지는지</span>, 그리고 어떤 대응이 더 적절한지를 함께 판단해야 하기 때문이다(National Research Council, 2012; Reiser et al., 2012).</li>
+<li>지구과학에서는 현재의 지형, 지층, 대기 현상, 자료와 지도, 모형 등을 통해 과거와 미래의 과정, 보이지 않는 구조, 잠재적 위험을 추론해야 하는 경우가 많으며, 따라서 지구과학 영역에서 <b>귀추적 추론</b>이 특히 중요하다(Engelhardt &amp; Zimmermann, 1988; 오필석과 김찬종, 2005).</li>
+<li>지구과학 관련 재해는 <span class="hl">학생의 삶의 맥락과 밀접하게 맞닿아</span> 있으면서도, 지구과학적 설명과 자료 해석, 위험 판단을 함께 요구한다는 점에서 교육적 가치가 높다(Pant et al., 2024; 한신 외, 2019; Sun et al., 2024).</li>
+</ul>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">과학교육·지구과학에서 자연재해 교육의 필요성</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 6: Ⅰ-A 중학생 대상 교육의 중요성 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅰ. 서론</div><div class="alpha">A. 연구의 필요성</div><div class="num">중학생 대상 지구과학 관련 재해 교육의 중요성</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>중학생 대상 지구과학 관련 재해 교육의 중요성</h2>
+<ul class="bullet-list spacious">
+<li>청소년기는 아동기에 비해 <span class="hl">복합적인 설명과 근거 제시, 자기조절, 의사결정이 가능해지는 시기</span>인 동시에, 여전히 감각적 경험과 생활 경험의 인상이 강하게 작동하는 시기이다(Keating, 2011).</li>
+<li>따라서 <span class="hl">단순한 수칙 암기보다 상황을 해석하고 근거를 들어 판단하는 학습 경험</span>이 주어질 때 교육적 효과가 더 크게 나타날 가능성이 있다(Keating, 2011; Reiser et al., 2012; Sampson &amp; Clark, 2008; Sandoval &amp; Millwood, 2005).</li>
+<li>중학생의 학교 안전 교육 실태를 조사한 연구는 학생들에게서 <b>지식과 실천 사이의 간극</b>이 존재할 수 있음을 보여 주었다(이효철과 김정환, 2021).</li>
+<li>중학생 대상 자연재해 교육은 재난 관련 지식의 양을 확인하기보다, 학생들의 이해 방식과 대응 생각, <b>판단 근거가 어떻게 형성되고 변화하는지</b>를 탐색하는 방향으로 진행되어야 한다(이효철과 김정환, 2021; 전상희, 2022).</li>
+</ul>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">중학생 대상 교육의 중요성</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 7: Ⅰ-A 본 연구의 필요성 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅰ. 서론</div><div class="alpha">A. 연구의 필요성</div><div class="num">본 연구의 필요성</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>본 연구의 필요성</h2>
+<ul class="bullet-list spacious">
+<li>지구과학적 현상의 특성을 반영한 <span class="hl">추론 중심 탐구 수업 모형</span>, 귀추법에 대한 이론적 고찰, 중학생의 귀추 전략 활용, 공간적 추론 연구 등이 축적되어 왔다(이규호와 권병두, 2010; 김영민, 2019; 오필석과 김찬종, 2005; 송동혁과 맹승호, 2019; 정용재와 송진웅, 2006; 맹승호 외, 2007).</li>
+<li>국내에서 지구과학 관련 재해 교육을 다룬 프로그램 연구가 점차 늘고 있다(송동혁과 맹승호, 2019; 이현동 외, 2016).</li>
+<li>이러한 연구는 주로 프로그램 개발이나 효과 검증에 초점을 두고 있어, 학생들의 <b>실제 추론 과정과 재난 유형별 사고 구조를 심층적으로 드러내는 데에는 한계</b>가 있다.</li>
+<li>자연재해 교육 맥락에서 이러한 설명, 논증, 추론이 <span class="hl">실제 대응 선택과 어떤 방식으로 연결되는지</span>, 그리고 그 과정이 실제 생활 속 위험 판단으로 어떻게 확장되는지를 분석하는 연구가 필요하다.</li>
+</ul>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">본 연구의 필요성</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 8: Ⅰ-B 연구 목적과 연구 문제 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅰ. 서론</div><div class="alpha">B. 연구 목적과 연구 문제</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>B. 연구 목적과 연구 문제</h2>
+<div class="result-box" style="margin-top:4mm"><p><b>연구 목적:</b> 지구과학 관련 재해 교육 프로그램에서 나타나는 중학생의 추론 특성을 분석하는 것이다.</p></div>
+<h3 style="margin-top:7mm">연구 문제</h3>
+<ul class="bullet-list spacious" style="margin-top:3mm">
+<li><b>첫째,</b> 자연재해 교육 프로그램에서 자연재해 유형별로 나타나는 학생들의 추론 과정의 특징은 무엇인가?</li>
+<li><b>둘째,</b> 자연재해 교육 프로그램에서 나타나는 학생들의 추론 과정은 어떠한 흐름을 보이는가?</li>
+<li><b>셋째,</b> 자연재해 교육 프로그램 적용 이후 학생들의 자연재해 이해, 판단 근거는 어떻게 변화하는가?</li>
+<li><b>넷째,</b> 자연재해 교육 프로그램은 어떠한 교육적 의미를 가지는가?</li>
+</ul>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">연구 목적과 연구 문제</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 9: Ⅱ-A 자연재해 교육 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅱ. 선행 연구</div><div class="alpha">A. 자연재해 교육</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>자연재해 교육</h2>
+<ul class="bullet-list">
+<li>급격한 기후변화와 무분별한 도시화로 인해 현대의 자연재해는 발생 빈도가 증가했을 뿐 아니라 <span class="hl">복합적이며 예측 불가능한 형태</span>로 전개되고 있다(IPCC, 2023; Alexander, 2016).</li>
+<li>현대의 자연재해 교육은 단순히 수칙을 암기하는 수동적인 안전 훈련이 아니다(Hoffmann &amp; Muttarak, 2017; Bell et al., 2024).</li>
+<li>진정한 자연재해 교육은 학습자가 자신이 속한 지역사회의 복합적인 위험 요소를 스스로 식별하고, 재해 현상을 과학적 논리로 이해하여 합리적인 의사결정을 내리도록 돕는 <b>능동적 역량 강화 과정</b>이다(Zeidler, 2014).</li>
+<li>재해 상황을 <span class="hl">지구과학적 인과 관계로 해석하는 안목</span>을 기르고, 불확실성 속에서도 증거에 기반하여 실천적 대응 방안을 도출할 수 있는 <b>과학적 소양(scientific literacy)</b>을 함양해야 할 교육적 필요성이 있다(오필석과 김찬종, 2005; 이명제, 2014).</li>
+<li>현재 한국 중학교 교육과정에서는 <span class="hl">'학교 안전 교육 7대 표준안'</span>에 따라 재난 안전 교육을 시행하고 있으며, 태풍, 홍수, 지진, 해일, 대설, 한파, 폭염, 낙뢰, 황사, 미세먼지 등을 다루고 있다.</li>
+</ul>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">자연재해 교육</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 10: Ⅱ-B 과학교육에서의 추론 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅱ. 선행 연구</div><div class="alpha">B. 과학교육에서의 추론</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>과학교육에서의 추론</h2>
+<ul class="bullet-list">
+<li><span class="hl">과학적 추론(Scientific Reasoning)</span>은 자연 현상에 내재된 불확실성을 통제하고, 관찰된 데이터와 추상적인 이론 간의 간극을 연결하며, 새로운 가설을 생성 및 평가하는 총체적이고 역동적인 인식론적 실천이다(Lawson, 2005; Zimmerman, 2007; Kelly, 2008).</li>
+<li>미국의 <span class="hl">차세대 과학교육 표준(NGSS)</span>을 비롯한 국내외 과학교육과정은 학습자가 현상을 모사하는 모델을 개발하며, 증거에 기반하여 논증하고, 인과적 원리를 추론하는 능력을 미래 세대의 핵심 역량으로 제시하고 있다(NGSS Lead States, 2013; Zeidler, 2014).</li>
+<li>과학교육적 맥락에서 추론이 지니는 독특한 성격은 철저히 <b>'맥락 의존적(context-dependent)'</b>이며 <b>'문제 해결 지향적(problem-solving oriented)'</b>이라는 점에 있다(Osborne, 2014).</li>
+<li>학습자의 내적 추론 과정은 주로 <b>설명(Explanation)</b>, <b>논증(Argumentation)</b>, <b>정당화(Justification)</b>라는 세 가지 실천 단계를 통해 교실 내에서 표출되고 사회적으로 구성된다(Osborne &amp; Patterson, 2011; 강석진 외, 2014).</li>
+</ul>
+<div class="note-box green" style="margin-top:auto"><b>핵심 개념:</b> 과학적 추론은 설명, 논증, 정당화의 세 실천 단계로 구성되며, 맥락 의존적이고 문제 해결 지향적이다.</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">과학교육에서의 추론</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 11: Ⅱ-C 자연재해 교육과 추론 + 본 연구의 위치 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅱ. 선행 연구</div><div class="alpha">C. 자연재해 교육과 추론</div><div class="num">본 연구의 위치</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>자연재해 교육과 추론 — 본 연구의 위치</h2>
+<ul class="bullet-list">
+<li>자연재해 상황은 고도의 불확실성과 파편화된 정보만이 주어지는 극단적인 <span class="hl">'비구조화된 문제' 환경</span>이다(Jonassen, 1997; Links et al., 2018).</li>
+<li>자연재해에 대처하는 과정은 배후의 원인과 메커니즘을 역추적하는 전형적인 <span class="hl">'귀추적 추론'</span>의 과정과 구조적으로 유사하다(Magnani, 2001).</li>
+<li>자연재해의 성격에 따라 학습자의 추론 구조가 달라진다 — 재해의 <span class="hl">'시간적 점진성'과 '감각적 지각성'</span>에 따라 극명하게 갈라진다(송동혁과 맹승호, 2019).</li>
+<li>기존의 학교 안전 교육은 본질적으로 전혀 다른 발생 메커니즘을 지닌 재해들을 '재난'이라는 하나의 범주로 묶어 획일적인 교육 방식으로 접근해 온 한계가 있다(정희수와 송창근, 2022; Kelman, 2020).</li>
+<li>지금까지 수행된 대부분의 선행 연구들은 리커트 척도 기반의 객관식 설문지를 통해 정량적으로 측정하는 <b>결과 중심의 양적 연구</b>에 집중하고 있었다(Johnson et al., 2014; Seddighi et al., 2022).</li>
+<li>학생들이 복잡한 재해 상황 속에서 어떠한 인지적 과정을 거치고, 최종적인 생존 및 대응 판단의 논리를 어떻게 구축하여 정당화해 나가는지 <b>그 사고의 과정을 집중 추적하는 연구</b>가 필요하다(Seddighi et al., 2022).</li>
+</ul>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">자연재해 교육과 추론 — 본 연구의 위치</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 12: Ⅲ-A 연구 배경과 절차 + [그림Ⅲ-A-1] =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅲ. 연구 방법</div><div class="alpha">A. 연구 배경과 절차</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>연구 배경과 절차</h2>
+<ul class="bullet-list" style="margin-bottom:4mm">
+<li>본 연구는 참여자의 경험과 의미 형성 과정을 맥락 속에서 읽어내는 <b>질적 사례 연구</b>의 성격에 부합한다(Creswell, 2013; Stake, 1995).</li>
+<li>자연재해에 대한 지식의 양이나 단편적 태도 변화가 아니라, 학생들의 사고와 판단이 프로그램 과정에서 어떻게 형성되고 변화하는지에 주목하였다.</li>
+<li>학생들의 자연재해 인식과 대응 역량을 고정된 개인 특성으로 보기보다, 프로그램의 맥락과 상호작용, 활동 과정을 통해 형성되고 변화하는 것으로 이해한다(Stake, 1995; Merriam, 1998).</li>
+</ul>
+<div class="figure-box" style="height:46mm"><img src="../assets/[그림Ⅲ-A-1].jpg" alt="[그림Ⅲ-A-1] 연구 절차"/></div>
+<p class="figure-caption">[그림Ⅲ-A-1] 연구 절차</p>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">연구 배경과 절차</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 13: Ⅲ-B 연구 참여자 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅲ. 연구 방법</div><div class="alpha">B. 연구 참여자</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>연구 참여자</h2>
+<div class="two-col">
+<div>
+<h3>〈표Ⅲ-B-1〉 연구 참여자 정보</h3>
+<table class="data-table info">
+<tr><th style="width:35%">구분</th><th>내용</th></tr>
+<tr><td>학교급</td><td>중학교</td></tr>
+<tr><td>학년</td><td>1학년 5명, 2학년 3명, 3학년 1명</td></tr>
+<tr><td>참여 인원</td><td>9명</td></tr>
+<tr><td>성별 분포</td><td>남학생 7명, 여학생 2명</td></tr>
+<tr><td>참여 기간</td><td>2022.05.07 ~ 08.13</td></tr>
+<tr><td>분석 자료</td><td>사전 검사지, 활동지</td></tr>
+<tr><td>익명 처리</td><td>참여자 기호화 (A~I)</td></tr>
+</table>
+</div>
+<div>
+<h3>〈표Ⅲ-B-2〉 연구 참여자 특성</h3>
+<table class="data-table">
+<tr><th>학생</th><th>성별</th><th>선지식</th><th>참여도</th><th>소통력</th></tr>
+<tr><td>A</td><td>남</td><td>중</td><td>중</td><td>중</td></tr>
+<tr><td>B</td><td>남</td><td>최상</td><td>상</td><td>상</td></tr>
+<tr><td>C</td><td>남</td><td>중</td><td>중</td><td>하</td></tr>
+<tr><td>D</td><td>남</td><td>중</td><td>상</td><td>상</td></tr>
+<tr><td>E</td><td>남</td><td>상</td><td>상</td><td>상</td></tr>
+<tr><td>F</td><td>여</td><td>중</td><td>최상</td><td>상</td></tr>
+<tr><td>G</td><td>남</td><td>최상</td><td>최상</td><td>상</td></tr>
+<tr><td>H</td><td>여</td><td>상</td><td>상</td><td>상</td></tr>
+<tr><td>I</td><td>남</td><td>중</td><td>중</td><td>하</td></tr>
+</table>
+<p class="table-note">*교사가 상대적 수준을 고려하여 최상/상/중/하로 부여</p>
+<p class="table-note" style="margin-top:1.5mm;font-style:normal;color:#35463e;font-size:9pt">연구 맥락을 이해하기 위한 보조 정보로, 분석의 핵심 증거보다는 학생 응답의 기본 배경을 파악하는 참고 정보로 활용</p>
+</div>
+</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">연구 참여자</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 14: Ⅲ-C 프로그램 개발 방향 + [그림Ⅲ-C-1] =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅲ. 연구 방법</div><div class="alpha">C. 프로그램 개발 및 구성</div><div class="num">1. 프로그램 개발의 방향</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>프로그램 개발의 방향</h2>
+<ul class="bullet-list" style="margin-bottom:3mm">
+<li>자연재해에 대한 단순한 지식 전달을 넘어서, 학생들의 인식 변화와 대응 판단 과정을 촉진할 수 있도록 구성하였다.</li>
+<li>폭염, 지진, 태풍, 미세먼지, 황사, 산사태, 대설을 포함한 여러 유형의 자연재해를 포함하도록 구성하였다.</li>
+<li>자연재해 유형에 따라 발생 원인과 징후, 피해 양상, 대응 방식이 서로 다르다는 점을 학생들이 비교하며 이해할 수 있도록 하기 위한 것이다.</li>
+</ul>
+<div class="figure-box" style="height:40mm"><img src="../assets/[그림Ⅲ-C-1].jpg" alt="[그림Ⅲ-C-1] 프로그램 기본 흐름"/></div>
+<p class="figure-caption">[그림Ⅲ-C-1] 자연재해 교육 프로그램의 기본 흐름</p>
+<table class="data-table dense" style="margin-top:3mm">
+<tr><th>프로그램 단계</th><th>주요 내용</th></tr>
+<tr><td>사전 검사지</td><td>재난의 정의, 인식, 사전 지식, 경험, 감정, 현재 대응 행동 서술</td></tr>
+<tr><td>초기 대응 선택 (활동지 1)</td><td>재난 영상 시청 후 대응 선택과 근거를 서술</td></tr>
+<tr><td>자연재해 지식 습득</td><td>교사 강의: 재난 정의, 과학적 원리, 측정·예보, 피해, 대비·대응</td></tr>
+<tr><td>최종 대응 선택 (활동지 2)</td><td>재난 영상 재시청 후 최종 대응 선택과 근거 서술</td></tr>
+<tr><td>상황별 대응 행동 (활동지 3)</td><td>새로운 상황 지문에서 대응 선택과 근거 서술</td></tr>
+</table>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">프로그램 개발의 방향</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 15: Ⅲ-C 차시별 프로그램 + 사전검사지/활동지 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅲ. 연구 방법</div><div class="alpha">C. 프로그램 개발 및 구성</div><div class="num">2. 차시별 프로그램 / 3. 사전 검사지·활동지</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>차시별 프로그램 구성 및 사전 검사지·활동지</h2>
+<div class="two-col">
+<div>
+<h3>〈표Ⅲ-C-2〉 차시별 주요 활동</h3>
+<table class="data-table dense">
+<tr><th>차시</th><th>주제</th><th>내용</th></tr>
+<tr><td>1</td><td>OT</td><td>자기소개, 프로그램 소개, 사전 검사</td></tr>
+<tr><td>2</td><td>폭염</td><td>교재, PPT, 검사지, 활동지 1·2·3</td></tr>
+<tr><td>3</td><td>지진</td><td>교재, PPT, 검사지, 활동지 1·2·3</td></tr>
+<tr><td>4</td><td>태풍</td><td>교재, PPT, 검사지, 활동지 1·2·3</td></tr>
+<tr><td>5</td><td>미세먼지</td><td>교재, PPT, 검사지, 활동지 1·2·3</td></tr>
+<tr><td>6</td><td>황사</td><td>교재, PPT, 검사지, 활동지 1·2·3</td></tr>
+<tr><td>7</td><td>산사태</td><td>교재, PPT, 검사지, 활동지 1·2·3</td></tr>
+<tr><td>8</td><td>대설</td><td>교재, PPT, 검사지, 활동지 1·2·3</td></tr>
+</table>
+<p style="margin-top:3mm;font-size:15pt;font-weight:700;color:var(--ink)">총 8차시, 40시간으로 구성</p>
+</div>
+<div>
+<h3>〈표Ⅲ-C-3〉 사전 검사지·활동지 구성</h3>
+<table class="data-table dense">
+<tr><th>자료</th><th>목적</th><th>분석 가능 요소</th></tr>
+<tr><td>사전검사지</td><td>초기 인식·선이해 파악</td><td>인식, 감정, 오개념, 경험</td></tr>
+<tr><td>활동지 1</td><td>초기 대응 선택</td><td>위험 단서, 정보 해석, 판단</td></tr>
+<tr><td>활동지 2</td><td>최종 대응 선택</td><td>추론 과정의 변화</td></tr>
+<tr><td>활동지 3</td><td>새로운 상황 대응</td><td>새 상황에서의 추론 변화</td></tr>
+<tr><td>통합 분석</td><td>변화 과정 추적</td><td>인식 변화, 판단 근거 변화</td></tr>
+</table>
+</div>
+</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">차시별 프로그램 / 사전 검사지·활동지</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 16: Ⅲ-D 자료 수집 및 분석 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅲ. 연구 방법</div><div class="alpha">D. 자료 수집 및 분석</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>자료 수집 및 분석</h2>
+<ul class="bullet-list">
+<li>사전 검사지, 차시별 활동지 1·2·3을 반복적으로 읽으면서 의미 단위를 추출하고 연구 문제에 따라 재구성하였다.</li>
+<li><b>1단계:</b> 전체 자료를 반복적으로 읽으며 개방적으로 파악 — 감각적 반응, 상식적 판단, 원인 설명, 위험 요소 식별, 공간적 단서 활용, 행동 선택, 정당화 등 초기 분석 단위 형성</li>
+<li><b>2단계:</b> 의미 단위를 범주화하고 비교 — 유형별 추론 특징 비교 + 공통 흐름 분석</li>
+<li><b>3단계:</b> 프로그램 전후 변화와 교육적 의미 해석 — 사전 검사지와 활동지를 대조</li>
+<li>학생 응답을 옳고 그름으로 평가하지 않고, 어떤 수준의 설명과 근거가 드러나는가를 중심으로 해석하였다.</li>
+</ul>
+<div class="note-box" style="margin-top:4mm">
+<b>타당도 확보 방안:</b><br/>
+① 자료 교차 검증 — 사전 검사지와 차시별 활동지를 함께 검토<br/>
+② 반복적 비교 분석 — 학생별, 재해 유형별, 프로그램 전후 반복 대조<br/>
+③ 맥락 중심 해석 — 재해 유형의 특성, 차시 질문 구조 속에서 이해<br/>
+④ 범주 점검·정교화 — 초기 의미 단위를 반복 검토하며 수정<br/>
+⑤ 사례 제시를 통한 타당성 확보 — 실제 자료를 함께 제시하여 해석 근거 공개
+</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">자료 수집 및 분석</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 17: Ⅳ 연구 결과 개요 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>연구 결과의 구성</h2>
+<div class="two-col" style="margin-top:5mm">
+<div class="card green" style="min-height:52mm"><h3>A. 자연재해 유형별 추론 과정의 특징</h3><p>폭염, 지진, 태풍, 미세먼지, 황사, 산사태, 대설에서 나타난 추론 특징</p><p style="margin-top:2mm;font-size:10pt;color:var(--ewha)">+ 유형별 비교: 생활 경험, 가시성, 결과 장면 vs 전조 징후, 대응 선택, 종합 가설</p></div>
+<div class="card green" style="min-height:52mm"><h3>B. 프로그램에서 나타난 추론 과정의 흐름</h3><p>직관적 반응 → 단서 탐색 → 설명 구성 → 대응 선택 → 정당화</p><p style="margin-top:2mm;font-size:10pt;color:var(--ewha)">+ 기존 과학교육 추론과의 비교</p></div>
+</div>
+<div class="two-col" style="margin-top:5mm">
+<div class="card gold" style="min-height:52mm"><h3>C. 프로그램에서 나타난 학생의 변화</h3><p>1. 자연재해 이해의 변화</p><p>2. 판단 근거의 변화</p></div>
+<div class="card gold" style="min-height:52mm"><h3>D. 프로그램의 교육적 의미</h3><p>1. 추론 형성 중심 교육<br/>2. 재난 유형별 추론 구조 차이<br/>3. 대응 역량 형성<br/>4. 지구과학 교육에서의 의미</p></div>
+</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">연구 결과의 구성</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 18: Ⅳ-A 추론 과정 흐름 + [그림Ⅳ-A-1] =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 유형별 추론 특징</div><div class="num">추론 과정의 흐름</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>자연재해 교육 프로그램에서 나타난 추론 과정의 흐름</h2>
+<div class="figure-box" style="height:30mm;margin-bottom:4mm"><img src="../assets/[그림Ⅳ-A-1].png" alt="[그림Ⅳ-A-1] 추론 과정의 흐름"/></div>
+<p class="figure-caption">[그림Ⅳ-A-1] 자연재해 교육 프로그램에서 나타난 추론 과정의 흐름</p>
+<div class="three-col" style="margin-top:4mm">
+<div class="card green"><h3>① 직관적 반응</h3><p>재난 장면을 처음 접했을 때 드러내는 감정적·감각적 반응</p></div>
+<div class="card green"><h3>② 단서 탐색</h3><p>장면 속에서 위험을 판단하게 하는 핵심 요소를 찾아내는 단계</p></div>
+<div class="card green"><h3>③ 설명 구성</h3><p>단서를 바탕으로 재난이 왜 위험한지, 어떤 조건에서 심화되는지 말하는 단계</p></div>
+</div>
+<div class="two-col" style="margin-top:4mm">
+<div class="card"><h3>④ 대응 선택</h3><p>설명을 바탕으로 실제로 어떤 행동이 적절한지를 판단하는 단계</p></div>
+<div class="card"><h3>⑤ 정당화</h3><p>선택한 대응이 왜 필요한지를 구체적 근거와 연결하여 설명하는 단계</p></div>
+</div>
+<div class="note-box green" style="margin-top:3mm"><b>참고:</b> 이러한 추론의 흐름은 모든 재난에서 공통적으로 나타났지만, 실제로 어떤 단서에 주목하고 어떤 방식으로 설명과 대응을 구성하는지는 자연재해의 유형에 따라 차이를 보였다.</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">추론 과정의 흐름</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 19: Ⅳ-A 폭염 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 유형별 추론</div><div class="num">폭염 프로그램</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>폭염 프로그램에서 나타난 추론 특징</h2>
+<ul class="bullet-list" style="margin-bottom:3mm">
+<li>학생들은 처음에는 "많이 더운 날", "힘든 날" 정도로 받아들였으나, 지식 습득 이후에는 열사병, 탈수, 노출 시간, 차량 내부 위험, 기상 경보와 연결된 재난으로 해석하기 시작하였다.</li>
+</ul>
+<table class="data-table dense">
+<tr><th style="width:22%">추론 변화 범주</th><th style="width:26%">초기 특징</th><th style="width:30%">지식 습득 후 특징</th><th>두드러진 추론 단계</th></tr>
+<tr><td>생활 경험 기반 추론</td><td>더위, 불편, 피곤함, 그늘·집으로 피함 등 생활 체감 중심</td><td>생활 경험을 바탕으로 폭염 상황을 해석하고 대응의 출발점으로 삼음</td><td>직관적 반응</td></tr>
+<tr><td>신체 증상 해석 추론</td><td>덥고 힘들다는 막연한 감각 중심</td><td>울렁거림, 숨참, 얼굴 붉어짐, 탈수, 열사병 가능성을 통해 위험 해석</td><td>단서 탐색, 설명 구성</td></tr>
+<tr><td>기상 정보 활용 추론</td><td>현재의 더위에 대한 즉각 반응 중심</td><td>날씨 확인, 폭염주의보·경보 확인, 외출 전 판단 포함</td><td>단서 탐색, 대응 선택</td></tr>
+<tr><td>예방 행동 정당화 추론</td><td>물 마시기, 쉬기, 그늘 찾기 행동 제시</td><td>체온 조절, 탈수 예방, 열사병 방지와 연결하여 이유 설명</td><td>대응 선택, 정당화</td></tr>
+</table>
+<div class="note-box"><b>핵심:</b> 이미 가지고 있던 생활 경험을 출발점으로 삼아 분석적·구조적 판단으로 바꾸어 가는 과정이 핵심이었다.</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">폭염 추론 특징</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 20: Ⅳ-A 지진 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 유형별 추론</div><div class="num">지진 프로그램</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>지진 프로그램에서 나타난 추론 특징</h2>
+<ul class="bullet-list" style="margin-bottom:3mm">
+<li>사전 검사지에서 학생들은 지진을 교육과정에서 서술된 언어로 정의하였고, 대표 수칙을 먼저 떠올렸다. 지식 습득 후에는 낙하물, 창문, 여진, 엘리베이터 안 등 구체적 조건을 고려하며 대응을 재구성하였다.</li>
+</ul>
+<table class="data-table dense">
+<tr><th style="width:22%">추론 변화 범주</th><th style="width:26%">초기 특징</th><th style="width:30%">지식 습득 후 특징</th><th>두드러진 추론 단계</th></tr>
+<tr><td>암기된 대응 회상형 추론</td><td>책상 밑, 머리 보호, 실외 대피 등 수칙 회상</td><td>익숙한 수칙을 실제 상황에 맞게 재구성</td><td>직관적 반응, 대응 선택</td></tr>
+<tr><td>공간 위험 식별 추론</td><td>흔들림 자체에 주목</td><td>천장, 창문, 낙하물, 공터, 계단 등 공간 요소 구체적 식별</td><td>단서 탐색</td></tr>
+<tr><td>조건 기반 우선순위 판단 추론</td><td>단일 행동이나 일반 순서 중심</td><td>흔들림 중·후, 여진, 엘리베이터 안 등 조건에 따라 순서 구성</td><td>설명 구성, 대응 선택</td></tr>
+<tr><td>행동 정당화 추론</td><td>기본 대응의 반복</td><td>낙하물, 갇힘, 추락, 출구 차단 등 구체적 위험과 연결해 설명</td><td>정당화</td></tr>
+</table>
+<div class="note-box"><b>핵심:</b> 단순한 수칙 암기가 아니라, 익숙한 대응을 실제 상황 판단과 정당화의 수준으로 끌어올리는 역할을 하였다.</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">지진 추론 특징</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 21: Ⅳ-A 태풍 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 유형별 추론</div><div class="num">태풍 프로그램</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>태풍 프로그램에서 나타난 추론 특징</h2>
+<ul class="bullet-list" style="margin-bottom:3mm">
+<li>학생들은 처음에는 강한 바람과 비 장면에 반응하였으나, 프로그램이 진행되면서 태풍을 침수, 해일, 감전, 고립, 사전 대비가 함께 얽힌 <b>복합 재난</b>으로 이해하게 되었다.</li>
+</ul>
+<table class="data-table dense">
+<tr><th style="width:22%">추론 변화 범주</th><th style="width:26%">초기 특징</th><th style="width:30%">지식 습득 후 특징</th><th>두드러진 추론 단계</th></tr>
+<tr><td>장면 반응 추론</td><td>강풍과 비의 장면에 대한 무서움·놀라움 중심</td><td>장면을 공간 판단과 위험 해석의 출발점으로 활용</td><td>직관적 반응</td></tr>
+<tr><td>침수·해일 해석 추론</td><td>강풍 중심 태풍 이해</td><td>물의 이동, 해일, 침수를 핵심 위험으로 재구성</td><td>단서 탐색, 설명 구성</td></tr>
+<tr><td>사전 대비 중심 추론</td><td>발생 후 피하는 대응 중심</td><td>연락망, 식량, 식수, 손전등, 차량 위치 등 준비 포함</td><td>설명 구성, 대응 선택</td></tr>
+<tr><td>행동 정당화 추론</td><td>일반적 회피 대응</td><td>휩쓸림, 감전, 침수 위험을 근거로 행동 설명</td><td>정당화</td></tr>
+</table>
+<div class="note-box"><b>핵심:</b> 강풍이라는 일차원적 인식을 넘어 물의 위협, 생활 위협, 사전 대비·우선순위 판단까지 포함하는 복합적 구조로 추론이 발전하였다.</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">태풍 추론 특징</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 22: Ⅳ-A 미세먼지 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 유형별 추론</div><div class="num">미세먼지 프로그램</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>미세먼지 프로그램에서 나타난 추론 특징</h2>
+<ul class="bullet-list" style="margin-bottom:3mm">
+<li>미세먼지 프로그램에서 학생들의 추론은 시야 변화와 불쾌감에 대한 감각적 반응에서 출발하여, 건강 위해 해석, 노출 차단과 생활 관리, 행동 정당화의 방향으로 발전하였다.</li>
+</ul>
+<table class="data-table dense">
+<tr><th style="width:22%">추론 변화 범주</th><th style="width:26%">초기 특징</th><th style="width:30%">지식 습득 후 특징</th><th>두드러진 추론 단계</th></tr>
+<tr><td>시야·불쾌감 중심 추론</td><td>답답함, 뿌연 하늘, 환경 훼손의 인상</td><td>감각적 불편을 위험 해석의 출발점으로 삼음</td><td>직관적 반응</td></tr>
+<tr><td>건강 위해 해석 추론</td><td>나쁜 공기 정도의 일반 인식</td><td>기관지, 폐, 신체 상태와 연결된 위해로 해석</td><td>단서 탐색, 설명 구성</td></tr>
+<tr><td>노출 차단·생활 관리 추론</td><td>마스크 같은 단일 중심</td><td>외출 전 확인–외출 후 관리–실내 공기 조절까지 포함</td><td>대응 선택</td></tr>
+<tr><td>행동 정당화 추론</td><td>일반적 보호 행동 제시</td><td>마스크, 물, 세척의 이유를 건강 위해와 정보로 설명</td><td>정당화</td></tr>
+</table>
+<div class="note-box"><b>핵심:</b> 미세먼지를 구체적 위험과 생활 속 관리가 필요한 재난으로 재구성하게 하였으며, 해석과 정보 활용, 생활 조절이 중요한 재난으로 작동하였다.</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">미세먼지 추론 특징</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 23: Ⅳ-A 황사 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 유형별 추론</div><div class="num">황사 프로그램</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>황사 프로그램에서 나타난 추론 특징</h2>
+<ul class="bullet-list" style="margin-bottom:3mm">
+<li>황사 프로그램에서는 학생들이 이미 알고 있는 미세먼지 개념과 새로 접하는 황사 개념을 비교하면서, 두 재난의 차이를 읽고 그에 맞는 대응을 선택하는 방향으로 추론을 발전시키는 특징이 강하게 나타났다.</li>
+</ul>
+<table class="data-table dense">
+<tr><th style="width:22%">추론 변화 범주</th><th style="width:26%">초기 특징</th><th style="width:30%">지식 습득 후 특징</th><th>두드러진 추론 단계</th></tr>
+<tr><td>시각적 구분 추론</td><td>하늘과 땅의 노란빛, 시야 변화 중심 인식</td><td>시각적 차이를 재난 구분의 단서로 활용</td><td>직관적 반응</td></tr>
+<tr><td>비교·구분 추론</td><td>미세먼지와 비슷한 공기 문제로 인식</td><td>미세먼지와의 차이를 통해 황사를 별도 재난으로 이해</td><td>단서 탐색, 설명 구성</td></tr>
+<tr><td>선택적 대응 구성 추론</td><td>단일 보호 행동 중심</td><td>정보 확인–마스크–실내 관리–세척의 구조로 확장</td><td>대응 선택</td></tr>
+<tr><td>행동 정당화 추론</td><td>일반적 보호 행동 제시</td><td>건강 위해, 마스크 기능 차이와 연결해 설명</td><td>정당화</td></tr>
+</table>
+<div class="note-box"><b>핵심:</b> 비교와 구분, 선택과 관리의 구조를 통해 추론이 발달하는 재난이었다.</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">황사 추론 특징</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 24: Ⅳ-A 산사태 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 유형별 추론</div><div class="num">산사태 프로그램</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>산사태 프로그램에서 나타난 추론 특징</h2>
+<ul class="bullet-list" style="margin-bottom:3mm">
+<li>산사태 프로그램에서는 학생들이 처음에는 '산이 무너지는 장면' 자체에 강하게 반응하였으나, 프로그램이 진행되면서 산사태를 단순한 붕괴 결과가 아니라 전조 징후를 읽고, 토사의 이동 방향을 판단하며, 대피 경로를 선택해야 하는 재난으로 이해하게 되었다.</li>
+</ul>
+<table class="data-table dense">
+<tr><th style="width:22%">추론 변화 범주</th><th style="width:26%">초기 특징</th><th style="width:30%">지식 습득 후 특징</th><th>두드러진 추론 단계</th></tr>
+<tr><td>결과 장면 중심 추론</td><td>무너짐, 떠내려감, 흙의 이동 장면에 대한 충격</td><td>장면 반응이 구조적 위험 해석의 출발점이 됨</td><td>직관적 반응</td></tr>
+<tr><td>전조 징후 해석 추론</td><td>산이 무너진 뒤의 상황 중심</td><td>물 솟구침, 나무 흔들림, 비 온 뒤 상태를 전조로 읽음</td><td>단서 탐색</td></tr>
+<tr><td>방향 판단 추론</td><td>빨리 도망가기 수준의 대응</td><td>직각 이동, 높은 곳, 대피시설 선택을 포함</td><td>설명 구성, 대응 선택</td></tr>
+<tr><td>행동 정당화 추론</td><td>일반적 대피와 방지 대책</td><td>토사 속도, 진행 방향, 2차 피해와 연결해 설명</td><td>정당화</td></tr>
+</table>
+<div class="note-box"><b>핵심:</b> 결과 장면의 충격에서 출발하여, 징후 해석과 방향 판단을 포함한 추론 구조를 형성하게 하는 데 있었다.</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">산사태 추론 특징</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 25: Ⅳ-A 대설 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 유형별 추론</div><div class="num">대설 프로그램</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>대설 프로그램에서 나타난 추론 특징</h2>
+<ul class="bullet-list" style="margin-bottom:3mm">
+<li>학생들은 처음에는 "눈이 많이 오는 상황"이나 "미끄럽고 사고가 날 것 같은 장면"으로 대설을 받아들였으나, 프로그램이 진행되면서 대설을 교통 위험, 이동 수단 선택, 생활 유지, 고립 대비를 함께 고려해야 하는 <b>생활 밀착형 재난</b>으로 이해하게 되었다.</li>
+</ul>
+<table class="data-table dense">
+<tr><th style="width:22%">추론 변화 범주</th><th style="width:26%">초기 특징</th><th style="width:30%">지식 습득 후 특징</th><th>두드러진 추론 단계</th></tr>
+<tr><td>생활 장면 반응 추론</td><td>눈길, 차량 미끄러짐, 사고 가능성에 대한 즉각 반응</td><td>생활 장면 반응이 구조적 대응 판단의 출발점이 됨</td><td>직관적 반응</td></tr>
+<tr><td>교통 조건 해석 추론</td><td>단순히 눈이 많이 오는 상황으로 인식</td><td>제동거리, 커브길, 미끄러짐, 정차 불능을 중심으로 해석</td><td>단서 탐색, 설명 구성</td></tr>
+<tr><td>생활 유지·이동 수단 선택 추론</td><td>실내 대기나 단순 회피 중심</td><td>지하철, 스노우 체인, 염화칼슘, 식수·생필품 준비까지 포함</td><td>대응 선택</td></tr>
+<tr><td>행동 정당화 추론</td><td>일반적 조심과 회피 수준</td><td>사고 위험, 균형 문제, 장비 기능 차이와 연결해 설명</td><td>정당화</td></tr>
+</table>
+<div class="note-box"><b>핵심:</b> 눈이 생활 조건을 어떻게 바꾸고, 그 변화 속에서 어떤 대응을 해야 하는가를 구체적으로 판단하게 만드는, 생활 밀착형으로 추론이 발달하였다.</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">대설 추론 특징</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 26: Ⅳ-A 유형별 비교 — 가. 생활 경험과 교육 경험 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 유형별 추론</div><div class="num">8. 유형별 비교 — 가. 생활 경험과 교육 경험</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>유형별 비교 — 생활 경험과 교육 경험</h2>
+<ul class="bullet-list" style="margin-bottom:4mm">
+<li>"생활 경험이 많은 재난"과 "교육 경험이 많은 재난"이 학생들의 추론 출발점을 다르게 만든다.</li>
+<li>생활 경험이 많은 재난일수록 추론은 <span class="hl">감각적·경험적 직관에서 출발하여 점차 구조화</span>되었고, 교육 경험이 많은 재난일수록 <span class="hl">암기된 대응에서 출발하여 실제 상황 판단으로 재구성</span>되었다.</li>
+</ul>
+<table class="data-table">
+<tr><th style="width:18%">구분</th><th style="width:18%">해당 재난</th><th style="width:22%">추론의 출발점</th><th style="width:18%">두드러진 초기 단계</th><th>이후 발달 방향</th></tr>
+<tr><td>생활 경험이 많은 재난</td><td>폭염, 대설</td><td>생활 감각, 몸의 경험, 익숙한 장면</td><td>직관적 반응</td><td>생활 감각이 구조적 설명과 대응 판단으로 발전</td></tr>
+<tr><td>생활 경험이 적은 재난</td><td>산사태</td><td>결과 장면의 충격, 낯선 위험 인상</td><td>직관적 반응</td><td>전조 징후와 방향 판단 추론으로 발전</td></tr>
+<tr><td>교육 경험이 많은 재난</td><td>지진</td><td>암기된 대표 수칙</td><td>직관적 반응, 초기 대응 선택</td><td>공간 위험 식별과 조건 판단으로 발전</td></tr>
+</table>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">유형별 비교 — 생활 경험과 교육 경험</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 27: Ⅳ-A 유형별 비교 — 나. 가시성·비가시성 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 유형별 추론</div><div class="num">8. 유형별 비교 — 나. 가시성∙비가시성</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>유형별 비교 — 가시성과 비가시성</h2>
+<ul class="bullet-list" style="margin-bottom:4mm">
+<li>지진, 태풍, 산사태, 대설은 비교적 <b>가시성이 높은 재난</b>이었다.</li>
+<li>미세먼지와 황사는 <b>비가시적 혹은 반가시적 재난</b>의 성격이 강하였다.</li>
+<li>가시적 재난에서는 "무엇이 보이는가?"가 단서 탐색의 핵심이 되었고, 비가시적 재난에서는 "보이지 않지만 무엇이 위험한가?"를 설명할 수 있는 정보와 개념이 핵심이 되었다.</li>
+</ul>
+<table class="data-table">
+<tr><th style="width:15%">구분</th><th style="width:18%">해당 재난</th><th style="width:25%">핵심 단서</th><th style="width:18%">두드러진 추론 단계</th><th>설명 방식의 특징</th></tr>
+<tr><td>가시적 재난</td><td>지진, 태풍, 산사태, 대설</td><td>파손 장면, 물의 이동, 토사, 미끄러짐 등 시각 장면</td><td>직관적 반응, 단서 탐색</td><td>장면을 공간·방향·물리 조건으로 해석</td></tr>
+<tr><td>비가시적/반가시적 재난</td><td>미세먼지, 황사</td><td>답답함, 색감 변화, 정보 단서, 건강 위해</td><td>단서 탐색, 설명 구성</td><td>보이지 않는 위험을 건강 위해와 정보 개념으로 설명</td></tr>
+</table>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">유형별 비교 — 가시성∙비가시성</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 28: Ⅳ-A 유형별 비교 — 다. 결과 장면 vs 전조 징후 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 유형별 추론</div><div class="num">8. 유형별 비교 — 다. 결과 장면 vs 전조 징후</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>유형별 비교 — 결과 장면 vs 전조 징후</h2>
+<ul class="bullet-list" style="margin-bottom:4mm">
+<li>지진이나 태풍, 대설은 학생들이 먼저 <b>결과 장면이나 진행 중인 장면에 반응</b>하는 경우가 많았다.</li>
+<li>반면 산사태에서는 결과 장면에 대한 반응도 컸지만, 프로그램이 진행될수록 학생들의 사고 중심은 결과보다 <b>전조 징후로 이동</b>하였다.</li>
+</ul>
+<table class="data-table">
+<tr><th style="width:15%">구분</th><th style="width:15%">해당 재난</th><th style="width:22%">학생들이 먼저 주목한 것</th><th style="width:22%">핵심 추론 과제</th><th>교육적 초점</th></tr>
+<tr><td>결과 장면 중심 재난</td><td>지진, 태풍, 대설</td><td>파손, 침수, 미끄러짐 등 진행 중 장면</td><td>장면 해석과 우선순위 판단</td><td>현재 전개되는 위험의 구조 읽기</td></tr>
+<tr><td>전조 징후 중심 재난</td><td>산사태</td><td>물 솟구침, 나무 흔들림, 비 온 뒤 상태</td><td>위험 신호 해석과 예측</td><td>발생 이전의 징후 읽기</td></tr>
+</table>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">유형별 비교 — 결과 장면 vs 전조 징후</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 29: Ⅳ-A 유형별 비교 — 라. 대응 선택의 차이 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 유형별 추론</div><div class="num">8. 유형별 비교 — 라. 대응 선택의 차이</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>유형별 비교 — 대응 선택의 차이</h2>
+<ul class="bullet-list" style="margin-bottom:4mm">
+<li>대응 유형은 <b>생활 환경 변화형</b>, <b>공간 이동형</b>, 그리고 두 요소가 함께 작동하는 <b>혼합형 대응</b>으로 분류하였다.</li>
+<li>태풍과 대설은 여러 위험이 동시에 작동하는 재난에서 학생들의 추론도 단일 행동 선택에 머무르지 않고, 여러 위험의 우선순위를 판단하고 연속적인 대응을 구성하는 방식으로 전개되었다.</li>
+</ul>
+<table class="data-table">
+<tr><th style="width:18%">대응 유형</th><th style="width:18%">해당 재난</th><th style="width:30%">대표 대응</th><th>특징</th></tr>
+<tr><td>생활 환경 변화형</td><td>폭염, 미세먼지, 황사</td><td>물 마시기, 마스크 착용, 창문 닫기, 외출 자제</td><td>몸과 생활 환경을 조절하는 행동 변화가 중심</td></tr>
+<tr><td>공간 이동형 대응</td><td>지진, 산사태</td><td>책상 밑, 계단, 공터, 직각 대피, 높은 곳 이동</td><td>어디로 이동할 것인가가 핵심</td></tr>
+<tr><td>혼합형 대응</td><td>태풍, 대설</td><td>높은 곳 이동 + 생필품 준비, 대중교통 선택 + 일상 유지 대비</td><td>공간 선택과 생활 속 환경 변화가 함께 요구됨</td></tr>
+</table>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">유형별 비교 — 대응 선택의 차이</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 30: Ⅳ-A 유형별 비교 — 마. 종합 가설 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">A. 유형별 추론</div><div class="num">8. 유형별 비교 — 마. 종합 가설</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>자연재해 유형별 추론 과정의 종합 비교</h2>
+<table class="data-table compact">
+<tr><th style="width:25%">자연재해의 특징</th><th style="width:22%">두드러지는 추론 출발점</th><th style="width:30%">중심적으로 발달하는 단계</th><th>대표 재난</th></tr>
+<tr><td>생활 경험이 많은 재난</td><td>생활 감각, 몸의 경험</td><td>직관적 반응 → 설명 구성·정당화</td><td>폭염, 대설</td></tr>
+<tr><td>교육 경험이 많은 재난</td><td>암기된 대표 수칙</td><td>직관적 반응 → 공간 판단·조건 판단</td><td>지진</td></tr>
+<tr><td>위험이 비가시적인 재난</td><td>답답함, 색감 변화</td><td>단서 탐색 → 설명 구성</td><td>미세먼지, 황사</td></tr>
+<tr><td>결과 장면 충격이 큰 재난</td><td>공포, 놀라움</td><td>직관적 반응 → 공간 위험 식별·우선순위 판단</td><td>지진, 태풍</td></tr>
+<tr><td>전조 징후가 중요한 재난</td><td>징후 포착의 필요성</td><td>단서 탐색 → 방향 판단·예측 대응</td><td>산사태</td></tr>
+<tr><td>행동 변화형 대응 재난</td><td>생활 속 행동 변화</td><td>대응 선택 → 정당화</td><td>폭염, 미세먼지, 황사</td></tr>
+<tr><td>공간 이동형 대응 재난</td><td>장소·경로 선택</td><td>설명 구성 → 대응 선택 → 정당화</td><td>지진, 산사태</td></tr>
+<tr><td>혼합형 대응 복합 재난</td><td>공간 선택과 생활 유지</td><td>설명 구성 → 대응 선택 → 정당화</td><td>태풍, 대설</td></tr>
+<tr><td>복합 위험 구조의 재난</td><td>여러 위험의 동시 인식</td><td>설명 구성 → 정당화</td><td>태풍, 대설</td></tr>
+</table>
+<div class="note-box green"><b>결론:</b> 자연재해 교육은 "유형별로 다른 지식을 가르치는 교육"이기 이전에, <b>"유형별로 다른 사고 과정을 조직하는 교육"</b>이다.</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">유형별 비교 — 종합 가설</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 31: Ⅳ-B 추론 단계 + [그림Ⅳ-B-1] + 워드 37쪽 글 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">B. 추론 과정의 흐름</div><div class="num">1. 추론 단계</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>자연재해 교육 프로그램에서 나타난 추론 단계</h2>
+<div style="display:grid;grid-template-columns:1fr 1.3fr;gap:5mm;margin-top:2mm">
+<div>
+<div class="figure-box" style="height:auto;margin-top:0"><img src="../assets/[그림Ⅳ-B-1].jpg" alt="[그림Ⅳ-B-1]" style="max-height:100%;object-fit:contain"/></div>
+<p class="figure-caption">[그림Ⅳ-B-1] 과학 교육의 추론 과정과 자연재해 교육 프로그램의 추론 과정</p>
+</div>
+<div>
+<ul class="bullet-list tight">
+<li>추론 과정은 대체로 <b>직관적 반응, 단서 탐색, 설명 구성, 대응 선택, 정당화</b>의 다섯 단계로 정리되었다.</li>
+<li>이 다섯 단계는 학생들이 실제로 사전 검사지와 활동지에서 보여 준 사고의 흐름을 바탕으로 도출한 것이다.</li>
+<li>각 단계는 분리된 별개의 사고가 아니라, 앞선 단계가 다음 단계의 바탕이 되며 점차 <span class="hl">더 구조적이고 근거 있는 판단</span>으로 나아가는 연속적 흐름으로 나타났다.</li>
+<li>본 연구에서 과학교육 추론 단계는 Lawson의 가설-연역적 탐구 과정을 뼈대로 하되, Sandoval &amp; Millwood(2005)의 정당화 과정을 결합하여 <b>관찰·문제 인식, 가설 생성, 증거 검토, 주장과 설명 정당화</b>의 네 단계로 정의하였다.</li>
+</ul>
+</div>
+</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">추론 단계</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 32: Ⅳ-B 추론 단계별 의미 + 표 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">B. 추론 과정의 흐름</div><div class="num">2. 추론 단계별 의미</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>추론 단계별 의미</h2>
+<ul class="bullet-list" style="margin-bottom:3mm">
+<li><b>직관적 반응:</b> 학생들이 자연재해 장면을 처음 접했을 때 보이는 감정적·감각적·인상적 반응</li>
+<li><b>단서 탐색:</b> 재난 장면 속에서 위험의 신호와 판단의 근거를 찾아내는 과정</li>
+<li><b>설명 구성:</b> 단서를 바탕으로 재난이 왜 위험한지, 어떤 조건에서 심화되는지 설명하는 단계</li>
+<li><b>대응 선택:</b> 설명에 근거하여 "그러면 어떻게 해야 하는가"를 판단하는 단계</li>
+<li><b>정당화:</b> 선택한 대응이 왜 필요한지를 구체적 근거와 연결하여 설명하는 단계</li>
+</ul>
+<table class="data-table dense" style="margin-top:3mm">
+<tr><th>단계</th><th>핵심 특징</th><th>학생 반응의 양상</th></tr>
+<tr><td>직관적 반응</td><td>감정적·감각적·인상적 반응</td><td>"무섭다.", "답답하다.", "많이 더워보인다."</td></tr>
+<tr><td>단서 탐색</td><td>상황 속 핵심 징후·정보·조건 포착</td><td>낙하물, 침수, 기온, 마스크 종류, 물 솟구침, 제동거리</td></tr>
+<tr><td>설명 구성</td><td>단서의 의미를 연결해 위험 원인·전개 설명</td><td>열사병 위험, 여진과 낙하물, 감전, 기관지 위해, 토사 속도</td></tr>
+<tr><td>대응 선택</td><td>설명에 근거하여 적절한 행동 선택</td><td>외출 자제, 높은 곳 대피, KF80 착용, 직각 대피, 지하철 이용</td></tr>
+<tr><td>정당화</td><td>선택한 행동의 이유를 구체적 위험과 연결</td><td>탈수 예방, 갇힘 방지, 감전 방지, 결막염 예방, 미끄럼 방지</td></tr>
+</table>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">추론 단계별 의미</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 33: Ⅳ-B 프로그램 단계와 추론 단계의 연결 + [그림 Ⅳ-B-2] =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">B. 추론 과정의 흐름</div><div class="num">프로그램 단계와 추론 단계의 연결 구조</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>프로그램 단계와 추론 단계의 연결 구조</h2>
+<div class="figure-box" style="height:120mm"><img src="../assets/[그림 Ⅳ-B-2].jpg" alt="[그림 Ⅳ-B-2] 프로그램 단계와 추론 단계의 연결 구조"/></div>
+<p class="figure-caption">[그림 Ⅳ-B-2] 자연재해 교육 프로그램 단계와 추론 단계의 연결 구조</p>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">프로그램 단계와 추론 단계의 연결</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 34: Ⅳ-B 기존 과학교육 추론 비교 — 단계별 분석 (워드 p.40) =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">B. 추론 과정의 흐름</div><div class="num">3. 기존 과학교육 추론과의 비교 — 단계별 분석</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>기존 과학교육 추론과의 비교 — 단계별 분석</h2>
+<ul class="bullet-list tight">
+<li><b>① 직관적 반응:</b> 기존 과학교육에서도 관찰이나 문제 인식이 중요하지만, 자연재해 교육에서는 이 초기 반응이 단순한 관찰을 넘어서 <span class="hl">생존과 위험 회피의 감각</span>과 결합된다.</li>
+<li><b>② 단서 탐색:</b> 기존 과학교육의 관찰이 현상의 원인과 규칙성을 밝히는 데 초점이 있다면, 자연재해 교육의 단서 탐색은 <span class="hl">"지금 무엇이 위험 신호인가?"</span>를 읽어내는 데 더 직접적으로 연결되어 있었다.</li>
+<li><b>③ 설명 구성:</b> 과학교육의 설명 생성과 유사하지만, 자연재해 교육의 설명 구성은 단순히 현상 이해에 머무르지 않고, <span class="hl">이후 대응 선택의 근거</span>가 된다는 점에서 특징적이다.</li>
+<li><b>④ 대응 선택:</b> 자연재해 교육의 추론이 기존 과학교육과 가장 뚜렷하게 구별되는 지점이다. 기존 과학교육의 추론이 설명과 논증의 타당성을 중심으로 조직되는 반면, 자연재해 교육에서는 <b>대응 선택이 독립된 핵심 단계</b>로 드러났다.</li>
+<li><b>⑤ 정당화:</b> 자연재해 교육의 정당화는 설명의 타당성만을 확보하는 것이 아니라, <b>행동의 타당성을 확보</b>한다는 점에서 차이를 가진다. "왜 그렇게 생각하는가?"가 동시에 "왜 그렇게 행동해야 하는가?"로 이어진다.</li>
+</ul>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">기존 과학교육 추론과의 비교 — 단계별 분석</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 35: Ⅳ-B 기존 과학교육 추론과의 비교 + [그림 Ⅳ-B-3] + 표 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">B. 추론 과정의 흐름</div><div class="num">3. 기존 과학교육 추론과의 비교</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>기존 과학교육 추론과의 비교</h2>
+<div style="display:grid;grid-template-columns:1fr 1.2fr;gap:5mm;margin-top:2mm">
+<div>
+<div class="figure-box" style="height:auto;aspect-ratio:1/1;margin-top:0"><img src="../assets/[그림 Ⅳ-B-3].jpg" alt="[그림 Ⅳ-B-3]" style="max-height:100%;object-fit:contain"/></div>
+<p class="figure-caption">[그림 Ⅳ-B-3] 과학교육 추론과 자연재해 교육 추론의 연결 구조</p>
+</div>
+<div>
+<table class="data-table compact">
+<tr><th>추론 단계</th><th>자연재해 교육</th><th>기존 과학교육</th><th>차이점</th></tr>
+<tr><td>직관적 반응</td><td>감정적·감각적 반응, 위험 인식</td><td>관찰, 문제 인식</td><td>정서·생존 감각이 더 강하게 개입</td></tr>
+<tr><td>단서 탐색</td><td>위험 신호, 전조 징후</td><td>원인과 규칙성을 증거로 탐색</td><td>"위험 신호"를 읽는 데 더 직접적</td></tr>
+<tr><td>설명 구성</td><td>원인, 조건, 위험 구조 설명</td><td>원인, 관계, 법칙 설명</td><td>설명이 곧 대응 판단의 근거</td></tr>
+<tr><td>대응 선택</td><td>독립된 핵심 단계</td><td>행동 판단은 상대적으로 약함</td><td>"어떻게 해야 하는가" 필수 포함</td></tr>
+<tr><td>정당화</td><td>행동의 이유·적절성 정당화</td><td>주장-증거-정당화</td><td>행동 정당화까지 확장</td></tr>
+</table>
+</div>
+</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">기존 과학교육 추론과의 비교</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 36: Ⅳ-B 비교 결론 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">B. 추론 과정의 흐름</div><div class="num">3. 기존 과학교육 추론과의 비교 — 결론</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>기존 과학교육 추론과의 비교 — 결론</h2>
+<ul class="bullet-list spacious">
+<li><b>①</b> 자연재해 교육 프로그램에서는 설명 이후에 <b>대응 선택이 독립된 중심 단계</b>로 나타난다. 기존 과학교육의 추론이 현상을 더 잘 설명하고 이해하는 데 주된 목적을 둔다면, 자연재해 교육 프로그램의 추론은 현상을 설명한 뒤 그 설명을 바탕으로 실제 행동을 선택하는 데까지 나아간다.</li>
+<li><b>②</b> 자연재해 교육 프로그램의 정당화는 단순한 주장-근거 관계를 넘어서, <b>행동 정당화의 성격</b>을 띤다. "왜 그런가?"와 함께 "그래서 어떻게 해야 하는가?"를 동시에 묻는 구조를 가진다.</li>
+<li><b>③</b> 직관적 반응의 위상이 다르다. 기존 과학교육에서 관찰이 반드시 감정적·생존 감각과 직접 연결되지는 않으나, 자연재해 교육에서는 "무섭다", "답답하다" 같은 <b>감정·감각 반응이 추론의 출발점</b>으로 매우 뚜렷하게 드러났다.</li>
+</ul>
+<div class="note-box green" style="margin-top:5mm"><b>∴</b> 자연재해 교육 프로그램의 추론은 기존 과학교육의 설명·증거·정당화 구조를 공유하면서도, <b>감정적인 직관적 반응</b>이 나타나며, <b>대응 선택이 독립 단계</b>로 존재하고, <b>행동 정당화</b>까지 요구한다.</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">비교 결론</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 37: Ⅳ-C 프로그램 전후 변화 개요 (워드 p.44) =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">C. 학생의 변화</div><div class="num">변화의 개요</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>프로그램에서 나타난 학생의 변화 — 개요</h2>
+<ul class="bullet-list spacious">
+<li>연구 결과 C는 프로그램 전후를 가로질러 학생들에게 <b>공통적으로 나타난 변화</b>에 초점을 둔다.</li>
+<li>여러 차시를 거치며 학생들이 자연재해를 이해하는 방식과 자신의 판단을 설명하는 방식이 어떻게 달라졌는가에 관한 것이다.</li>
+<li>학생들의 응답은 자연재해를 단편적 장면이나 인상으로 받아들이는 수준에서 벗어나, <span class="hl">원인과 조건, 위험의 전개, 생활세계와의 관련성, 대응 판단의 이유</span>까지 포함하는 방향으로 심화되는 경향을 보였다.</li>
+<li>자연재해 교육 프로그램이 학생들에게 단순한 재난 지식이나 행동요령을 추가한 것이 아니라, <b>자연재해를 해석하는 틀과 그 해석을 설명하는 수준 자체를 변화</b>시키는 과정으로 작동하였음이 드러났다.</li>
+</ul>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">학생의 변화 — 개요</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 38: Ⅳ-C 자연재해 이해의 변화 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">C. 학생의 변화</div><div class="num">1. 자연재해 이해의 변화</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>자연재해 이해의 변화</h2>
+<ul class="bullet-list" style="margin-bottom:3mm">
+<li>결과 장면 중심 이해 → <b>원인과 조건을 포함한 이해</b></li>
+<li>감각·정서 중심 이해 → <b>구체적 위험 요소를 포함한 이해</b></li>
+<li>단일 현상 중심 이해 → <b>전개 과정과 복합 위험을 포함한 이해</b></li>
+<li>생활과 분리된 이해 → <b>생활세계와 연결된 이해</b></li>
+</ul>
+<table class="data-table" style="margin-top:3mm">
+<tr><th style="width:18%">구분</th><th style="width:27%">프로그램 전 특징</th><th style="width:27%">프로그램 후 특징</th><th>변화의 의미</th></tr>
+<tr><td>결과 장면 중심</td><td>재난의 이름, 대표 장면, 눈에 보이는 현상 중심</td><td>원인, 발생 조건, 심화 조건을 포함</td><td>더 구조적으로 해석하게 됨</td></tr>
+<tr><td>감각·정서 중심</td><td>무섭다, 답답하다, 덥다 등 감각적 반응</td><td>열사병, 낙하물, 침수, 호흡기 위해 등 구체적 위험</td><td>위험 요소를 분명하게 식별</td></tr>
+<tr><td>단일 현상 중심</td><td>하나의 대표 장면이나 위험 중심</td><td>전개 과정과 복합 위험을 포함</td><td>동적인 사건으로 이해</td></tr>
+<tr><td>생활과 분리</td><td>특별한 사건, 뉴스 속 재난</td><td>등하교, 외출, 실내 생활, 대피 판단과 연결</td><td>생활세계와 연결해 이해</td></tr>
+</table>
+<div class="note-box" style="margin-top:4mm"><b>핵심:</b> 학생들이 자연재해를 더 <b>구조적이고 현실적인 문제</b>로 이해하게 되었음</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">자연재해 이해의 변화</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 39: Ⅳ-C 판단 근거의 변화 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">C. 학생의 변화</div><div class="num">2. 판단 근거의 변화</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>판단 근거의 변화</h2>
+<ul class="bullet-list" style="margin-bottom:3mm">
+<li>감정·상식 중심 이유 제시 → <b>위험 구조 기반 설명</b>으로 변화</li>
+<li>행동 제시 중심 → <b>목적·효과 설명 중심</b>으로의 변화</li>
+<li>직관적 판단 → <b>단서·징후 활용 판단</b>으로의 변화</li>
+<li>생활 상식 수준 설명 → <b>정보·개념 활용 설명</b>으로의 변화</li>
+</ul>
+<table class="data-table" style="margin-top:3mm">
+<tr><th style="width:18%">구분</th><th style="width:27%">프로그램 전 특징</th><th style="width:27%">프로그램 후 특징</th><th>해석</th></tr>
+<tr><td>감정·상식 중심</td><td>위험하니까, 무서우니까, 다치면 안 되니까</td><td>낙하물, 침수, 감전, 탈수 등 위험 구조 기반 설명</td><td>구조적 설명으로 발전</td></tr>
+<tr><td>행동 제시 중심</td><td>마스크 쓴다, 물 마신다, 대피한다</td><td>행동의 목적과 효과를 함께 설명</td><td>목적 있는 실천으로 바뀜</td></tr>
+<tr><td>직관적 판단</td><td>그냥 위험해 보여서, 답답해서</td><td>장면 속 단서와 징후를 근거로 판단</td><td>관찰 가능한 근거와 연결</td></tr>
+<tr><td>생활 상식 수준</td><td>아프면 안 되니까, 더러우니까</td><td>재난 관련 정보와 개념을 활용한 설명</td><td>개념적·정보적 수준으로 정교화</td></tr>
+</table>
+<div class="note-box" style="margin-top:4mm"><b>핵심:</b> 학생들이 자신의 대응과 판단을 더 <b>설명 가능하고 근거 있게 정당화</b>하게 되었다.</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">판단 근거의 변화</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 40: Ⅳ-D 교육적 의미 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅳ. 연구 결과</div><div class="alpha">D. 교육적 의미</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>자연재해 교육 프로그램의 교육적 의미</h2>
+<div class="three-col" style="margin-top:4mm">
+<div class="card green" style="min-height:48mm"><h3>1. 추론 형성 중심 교육</h3><p>자연재해 교육이 결과 지식의 습득보다 <b>사고 형성 과정</b>으로 이해될 수 있음을 의미한다.</p></div>
+<div class="card green" style="min-height:48mm"><h3>2. 재난 유형별 추론 구조 차이</h3><p>모든 재난에 동일한 사고 방식이 아니라, 재난의 성격에 따라 <b>서로 다른 추론 구조</b>를 요청하는 교육이다.</p></div>
+<div class="card green" style="min-height:48mm"><h3>3. 대응 역량 형성</h3><p>단순한 수칙 암기가 아니라, <b>상황 판단을 수반하는 실천 능력</b>으로 대응 역량을 형성한다.</p></div>
+</div>
+<h3 style="margin-top:6mm">지구과학 교육에서의 자연재해 교육의 의미</h3>
+<ul class="bullet-list spacious" style="margin-top:2mm">
+<li>자연재해 교육은 지구과학 개념을 <b>생활세계 속 문제로 전환</b>한다</li>
+<li>자연재해 교육은 지구과학을 <b>설명 중심 교과에서 판단 중심 교과</b>로 확장한다</li>
+<li>자연재해 교육은 지구과학 교육 안에서 <b>과학적 소양과 재난 문해력</b>을 함께 기른다</li>
+</ul>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">교육적 의미</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 41: Ⅴ-A 결론 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅴ. 결론 및 제언</div><div class="alpha">A. 결론</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>결론</h2>
+<ul class="bullet-list spacious">
+<li><b>첫 번째 결론:</b> 자연재해 교육에서 학생들의 추론 과정은 모든 재난에서 동일하게 나타나지 않으며, 자연재해 유형의 성격에 따라 서로 다른 양상으로 조직된다.</li>
+<li><b>두 번째 결론:</b> 학생들의 추론은 일정한 흐름을 따라 전개되었으며, 기존 과학교육의 설명 중심 추론 구조와 연결되면서도 실제 대응 판단을 포함한다는 점에서 차별성을 가진다.</li>
+<li><b>세 번째 결론:</b> 프로그램 적용 이후 학생들의 자연재해 이해가 구조적이고 생활세계와 연결된 방향으로 변화하였다.</li>
+<li><b>네 번째 결론:</b> 학생들의 판단 근거가 감정과 상식에 기대던 수준에서 구체적이고 설명 가능한 수준으로 발전하였다.</li>
+<li><b>다섯 번째 결론:</b> 본 프로그램이 추론 구조 형성, 재난 유형별 사고 구조 이해, 대응 역량 형성, 지구과학 교육의 확장이라는 측면에서 중요한 교육적 의미를 가진다.</li>
+</ul>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">결론</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 42: Ⅴ-B 교육적 제언 =============== -->
+<section class="page">
+<div class="side-label"><div class="roman">Ⅴ. 결론 및 제언</div><div class="alpha">B. 교육적 제언</div></div>
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<h2>교육적 제언</h2>
+<ul class="bullet-list spacious">
+<li><b>첫째,</b> 학교 자연재해 교육은 자연재해 <b>유형별 사고 구조의 차이를 반영</b>하는 방향으로 설계될 필요가 있다.</li>
+<li><b>둘째,</b> 자연재해 교육은 단순한 행동 요령 중심 교육을 넘어, <b>추론 과정 중심 교육</b>으로 확대될 필요가 있다.</li>
+<li><b>셋째,</b> 중학생 대상 자연재해 교육에서는 학생들의 <b>선이해와 생활 경험</b>을 교육의 출발점으로 적극 활용할 필요가 있다.</li>
+<li><b>넷째,</b> 자연재해 교육의 자료와 과제는 장면 해석, 정보 활용, 대응 판단을 함께 연결할 수 있도록 구성될 필요가 있다.</li>
+<li><b>다섯째,</b> 자연재해 교육의 평가는 단순한 정답 확인을 넘어 학생들의 이해와 판단 구조를 드러내는 방향으로 확장될 필요가 있다.</li>
+<li><b>여섯째,</b> 후속 연구에서는 다양한 대상과 자료, 재난 유형, 장기적 관점, 학교 적용 맥락을 포함하는 확장된 연구가 이루어질 필요가 있다.</li>
+</ul>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">교육적 제언</div><div class="pg"></div></footer>
+</section>
+
+<!-- =============== SLIDE 43: THANK YOU =============== -->
+<section class="page closing">
+<header><img alt="Ewha" src="../assets/ewha-rect-logo.jpg"/></header>
+<div class="thanks">
+<img alt="" src="../assets/ewha-square-logo.png"/>
+<h1>감사합니다</h1>
+<p style="font-size:14.5pt;color:var(--muted);margin-top:4mm">지구과학 관련 재해 교육 프로그램에서 나타난 중학생의 추론 특성</p>
+<p style="font-size:13pt;color:#455a4e;margin-top:3mm">이화여자대학교 대학원 과학교육학과 · 212SIG01 고은아</p>
+</div>
+<footer><div class="foot-brand"><img alt="" src="../assets/ewha-square-logo.png"/>이화여자대학교 대학원</div><div class="foot-title">Thank You</div><div class="pg"></div></footer>
+</section>
+
+</body>
+</html>

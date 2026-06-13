@@ -1,0 +1,33 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# dependencies
+node_modules/
+.env
+.env.*
+
+# temp files
+tmp/
+temp/
+.cache/
+*.tmp
+
+# Office temp files
+~$*.docx
+~$*.pptx
+~$*.xlsx
+
+# private / restricted
+private/
+restricted/
+AI-Sessions/raw-private/
+
+# build cache
+outputs/tmp/
+outputs/cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
