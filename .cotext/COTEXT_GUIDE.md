@@ -53,6 +53,7 @@ Cotext is a **context engineering tool**. This repository (`alvintracer/deck-mak
 ```
 
 ### Active Rooms
+- `scripts` → `scripts/.cotext/cotext.md`
 - `projects` → `projects/.cotext/cotext.md`
 
 ---
