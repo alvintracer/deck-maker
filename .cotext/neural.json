@@ -1,7 +1,48 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-22T21:01:02.511Z",
-  "clusters": [],
-  "nodes": [],
+  "updatedAt": "2026-06-24T00:57:12.249Z",
+  "clusters": [
+    {
+      "id": "project",
+      "name": "Project",
+      "color": "#2563eb"
+    },
+    {
+      "id": "wallet",
+      "name": "wallet",
+      "color": "#d97706"
+    },
+    {
+      "id": "crypto",
+      "name": "crypto",
+      "color": "#0891b2"
+    },
+    {
+      "id": "non-custodial",
+      "name": "non-custodial",
+      "color": "#16a34a"
+    },
+    {
+      "id": "cross-chain",
+      "name": "cross-chain",
+      "color": "#dc2626"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "w-ai-sessions-wiki-projects-took-wallet-overview",
+      "room": "AI-Sessions/wiki/projects/took-wallet-overview.md",
+      "blockTs": "2026-06-23",
+      "label": "Took Wallet Service Features and Vision",
+      "clusters": [
+        "project",
+        "wallet",
+        "crypto",
+        "non-custodial",
+        "cross-chain"
+      ],
+      "source": "wiki"
+    }
+  ],
   "edges": []
 }

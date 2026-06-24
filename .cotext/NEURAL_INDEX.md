@@ -18,8 +18,43 @@ When asked about a topic, first match against cluster names below, then fan out 
 
 ## Summary
 
-- Nodes: **0**
-- Clusters: **0**
+- Nodes: **1**
+- Clusters: **5**
 - Edges: **0**
 
-_No nodes yet. Nodify a block in the Cotext app to seed this graph._
+## Clusters
+
+### cross-chain `cross-chain` (1 node)
+
+| Node | Label | Room | Block | Source |
+|---|---|---|---|---|
+| `w-ai-sessions-wiki-projects-took-wallet-overview` | Took Wallet Service Features and Vision | `AI-Sessions/wiki/projects/took-wallet-overview.md` | `2026-06-23` | wiki |
+
+### crypto `crypto` (1 node)
+
+| Node | Label | Room | Block | Source |
+|---|---|---|---|---|
+| `w-ai-sessions-wiki-projects-took-wallet-overview` | Took Wallet Service Features and Vision | `AI-Sessions/wiki/projects/took-wallet-overview.md` | `2026-06-23` | wiki |
+
+### non-custodial `non-custodial` (1 node)
+
+| Node | Label | Room | Block | Source |
+|---|---|---|---|---|
+| `w-ai-sessions-wiki-projects-took-wallet-overview` | Took Wallet Service Features and Vision | `AI-Sessions/wiki/projects/took-wallet-overview.md` | `2026-06-23` | wiki |
+
+### Project `project` (1 node)
+
+| Node | Label | Room | Block | Source |
+|---|---|---|---|---|
+| `w-ai-sessions-wiki-projects-took-wallet-overview` | Took Wallet Service Features and Vision | `AI-Sessions/wiki/projects/took-wallet-overview.md` | `2026-06-23` | wiki |
+
+### wallet `wallet` (1 node)
+
+| Node | Label | Room | Block | Source |
+|---|---|---|---|---|
+| `w-ai-sessions-wiki-projects-took-wallet-overview` | Took Wallet Service Features and Vision | `AI-Sessions/wiki/projects/took-wallet-overview.md` | `2026-06-23` | wiki |
+
+## Explicit edges
+
+_No explicit edges yet — relationships are implicit via shared clusters above._
+
